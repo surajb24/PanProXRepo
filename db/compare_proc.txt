@@ -1,0 +1,339 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `compare`(IN `id` VARCHAR(18))
+begin
+    if(id="")
+    then
+	   select '';
+	else
+	INSERT INTO `cust_compare_appl_info`( `FORM_ID,C,18`) VALUES (id);
+	INSERT INTO `cust_compare_personal_info`(`FORM_ID,C,18`) VALUES (id);
+	INSERT INTO `cust_compare_address_info`(`FORM_ID,C,18`) VALUES (id);
+	
+	set @flagtrue="";
+	
+	SELECT `FORM_TYPE,C,1`, `APPLN_NO,C,10`, `INWARD_NO,N,10,0`, `COUPON_NO,C,10` into        @app_type1,@app_no1,@inward1,@coupan1 FROM `cust_appl_info_l1` WHERE `FORM_ID,C,18`=id;
+	
+	SELECT `FORM_TYPE,C,1`, `APPLN_NO,C,10`, `INWARD_NO,N,10,0`, `COUPON_NO,C,10` into @app_type2,@app_no2,@inward2,@coupan2 FROM `cust_appl_info_l2` WHERE  `FORM_ID,C,18`=id;
+	
+    SELECT  `AS_TITLE,C,1`, `AS_LAST,C,75`, `AS_FIRST,C,25`, `AS_MIDDLE,C,25`, `PAN_NAME,C,85`, `FTH_LAST,C,25`, `FTH_FIRST,C,25`, `FTH_MIDDLE,C,25`, `SEX,C,1`, `DOB,D` into @title1,@lname1,@fname1,@mname1,@pan1,@flname1,@ffname1,@fmname1,@gender1,@dob1 FROM `cust_personal_info_l2` WHERE `FORM_ID,C,18`=id;
+	
+	SELECT `AS_TITLE,C,1`, `AS_LAST,C,75`, `AS_FIRST,C,25`, `AS_MIDDLE,C,25`, `PAN_NAME,C,85`,`FTH_LAST,C,25`, `FTH_FIRST,C,25`, `FTH_MIDDLE,C,25`, `SEX,C,1`, `DOB,D` 
+	into @title2,@lname2,@fname2,@mname2,@pan2,@flname2,@ffname2,@fmname2,@gender2,@dob2
+	FROM `cust_personal_info_l1` where `FORM_ID,C,18`=id;
+	
+	SELECT `ADDR_FLAG,C,1`, `RES_ADDR1,C,25`, `RES_ADDR2,C,25`, `RES_ADDR3,C,25`, `RES_ADDR4,C,25`, `RES_DIST,C,25`, `RES_STATE,C,2`, `RES_PIN,C,6`, `RES_CNTRY,C,3`, `OFF_NAME,C,75`, `OFF_ADDR1,C,25`, `OFF_ADDR2,C,25`, `OFF_ADDR3,C,25`, `OFF_ADDR4,C,25`, `OFF_DIST,C,25`, `OFF_STATE,C,2`, `OFF_PIN,C,6`, `OFF_CNTRY,C,3` into @adflag1,@res11,@res21,@res31,@res41,@rdist1,@rstate1,@rpin1,@rcountry1,@ofname1,@off11,@off21,@off31,@off41,@odist1,@ostate1,@opin1,@ocountry1 FROM `cust_address_info_l1` WHERE `FORM_ID,C,18`=id;
+	
+	SELECT `ADDR_FLAG,C,1`, `RES_ADDR1,C,25`, `RES_ADDR2,C,25`, `RES_ADDR3,C,25`, `RES_ADDR4,C,25`, `RES_DIST,C,25`, `RES_STATE,C,2`, `RES_PIN,C,6`, `RES_CNTRY,C,3`, `OFF_NAME,C,75`, `OFF_ADDR1,C,25`, `OFF_ADDR2,C,25`, `OFF_ADDR3,C,25`, `OFF_ADDR4,C,25`, `OFF_DIST,C,25`, `OFF_STATE,C,2`, `OFF_PIN,C,6`, `OFF_CNTRY,C,3` into @adflag2,@res12,@res22,@res32,@res42,@rdist2,@rstate2,@rpin2,@rcountry2,@ofname2,@off12,@off22,@off32,@off42,@odist2,@ostate2,@opin2,@ocountry2 FROM `cust_address_info_l2` WHERE `FORM_ID,C,18`=id;
+	
+if @app_type1=@app_type2
+then
+		SET @flagtrue = CONCAT(@flagtrue, "1");
+		UPDATE `cust_compare_appl_info` SET `FORM_TYPE,C,1`=@app_type1 WHERE `FORM_ID,C,18`=id;
+		
+else
+		SET @flagtrue = CONCAT(@flagtrue, "0");
+end if;	
+
+if @app_no1=@app_no2
+then
+		SET @flagtrue = CONCAT(@flagtrue, '1');
+		UPDATE `cust_compare_appl_info` SET `APPLN_NO,C,10`=@app_no1 WHERE `FORM_ID,C,18`=id;
+		
+else
+		SET @flagtrue = CONCAT(@flagtrue, '0');
+end if;
+
+if @inward1=@inward2
+then
+		SET @flagtrue = CONCAT(@flagtrue, '1');
+		UPDATE `cust_compare_appl_info` SET `INWARD_NO,N,10,0`=@inward1 WHERE `FORM_ID,C,18`=id;
+		
+else
+		SET @flagtrue = CONCAT(@flagtrue, '0');
+end if;
+
+
+if @coupan1=@coupan2
+then
+		SET @flagtrue = CONCAT(@flagtrue, '1');
+		UPDATE `cust_compare_appl_info` SET `COUPON_NO,C,10`=@coupan1 WHERE `FORM_ID,C,18`=id;
+		
+else
+		SET @flagtrue = CONCAT(@flagtrue, '0');
+end if;
+
+
+if @title1=@title2
+then
+		SET @flagtrue = CONCAT(@flagtrue, '1');
+		UPDATE `cust_compare_personal_info` SET `AS_TITLE,C,1`=@title1 WHERE `FORM_ID,C,18`=id;
+		
+else
+		SET @flagtrue = CONCAT(@flagtrue, '0');
+end if;
+
+if @lname1=@lname2
+then
+		SET @flagtrue = CONCAT(@flagtrue, '1');
+		UPDATE `cust_compare_personal_info` SET `AS_LAST,C,75`=@lname1 WHERE `FORM_ID,C,18`=id;
+		
+else
+		SET @flagtrue = CONCAT(@flagtrue, '0');
+end if;
+
+if @fname1=@fname2
+then
+		SET @flagtrue = CONCAT(@flagtrue, '1');
+		UPDATE `cust_compare_personal_info` SET `AS_FIRST,C,25`=@fname1 WHERE `FORM_ID,C,18`=id;
+		
+else
+		SET @flagtrue = CONCAT(@flagtrue, '0');
+end if;
+
+if @mname1=@mname2
+then
+		SET @flagtrue = CONCAT(@flagtrue, '1');
+		UPDATE `cust_compare_personal_info` SET `AS_MIDDLE,C,25`=@mname1 WHERE `FORM_ID,C,18`=id;
+		
+else
+		SET @flagtrue = CONCAT(@flagtrue, '0');
+end if;
+
+if @pan1=@pan2
+then
+		SET @flagtrue = CONCAT(@flagtrue, '1');
+		UPDATE `cust_compare_personal_info` SET `PAN_NAME,C,85`=@pan1 WHERE `FORM_ID,C,18`=id;
+		
+else
+		SET @flagtrue = CONCAT(@flagtrue, '0');
+end if;
+
+if @flname1=@flname2
+then
+		SET @flagtrue = CONCAT(@flagtrue, '1');
+		UPDATE `cust_compare_personal_info` SET `FTH_LAST,C,25`=@flname1 WHERE `FORM_ID,C,18`=id;
+		
+else
+		SET @flagtrue = CONCAT(@flagtrue, '0');
+end if;
+
+if @ffname1=@ffname2
+then
+		SET @flagtrue = CONCAT(@flagtrue, '1');
+		UPDATE `cust_compare_personal_info` SET `FTH_FIRST,C,25`=@ffname1 WHERE `FORM_ID,C,18`=id;
+		
+else
+		SET @flagtrue = CONCAT(@flagtrue, '0');
+end if;
+
+if @fmname1=@fmname2
+then
+		SET @flagtrue = CONCAT(@flagtrue, '1');
+		UPDATE `cust_compare_personal_info` SET `FTH_MIDDLE,C,25`=@fmname1 WHERE `FORM_ID,C,18`=id;
+		
+else
+		SET @flagtrue = CONCAT(@flagtrue, '0');
+end if;
+
+if @gender1=@gender2
+then
+		SET @flagtrue = CONCAT(@flagtrue, '1');
+		UPDATE `cust_compare_personal_info` SET `SEX,C,1`=@gender1 WHERE `FORM_ID,C,18`=id;
+		
+else
+		SET @flagtrue = CONCAT(@flagtrue, '0');
+end if;
+
+
+if @dob1=@dob2
+then
+		SET @flagtrue = CONCAT(@flagtrue, '1');
+		UPDATE `cust_compare_personal_info` SET `DOB,D`=@dob1 WHERE `FORM_ID,C,18`=id;
+		
+else
+		SET @flagtrue = CONCAT(@flagtrue, '0');
+end if;
+
+
+if @adflag1=@adflag2
+then
+		SET @flagtrue = CONCAT(@flagtrue, '1');
+		UPDATE `cust_compare_address_info` SET `ADDR_FLAG,C,1`=@adflag1 WHERE `FORM_ID,C,18`=id;
+		
+else
+		SET @flagtrue = CONCAT(@flagtrue, '0');
+end if;
+
+if @res11=@res12
+then
+		SET @flagtrue = CONCAT(@flagtrue, '1');
+		UPDATE `cust_compare_address_info` SET `RES_ADDR1,C,25`=@res11 WHERE `FORM_ID,C,18`=id;
+		
+else
+		SET @flagtrue = CONCAT(@flagtrue, '0');
+end if;
+
+if @res21=@res22
+then
+		SET @flagtrue = CONCAT(@flagtrue, '1');
+		UPDATE `cust_compare_address_info` SET `RES_ADDR2,C,25`=@res21 WHERE `FORM_ID,C,18`=id;
+		
+else
+		SET @flagtrue = CONCAT(@flagtrue, '0');
+end if;
+
+if @res31=@res32
+then
+		SET @flagtrue = CONCAT(@flagtrue, '1');
+		UPDATE `cust_compare_address_info` SET `RES_ADDR3,C,25`=@res31 WHERE `FORM_ID,C,18`=id;
+		
+else
+		SET @flagtrue = CONCAT(@flagtrue, '0');
+end if;
+
+if @res41=@res42
+then
+		SET @flagtrue = CONCAT(@flagtrue, '1');
+		UPDATE `cust_compare_address_info` SET `RES_ADDR4,C,25`=@res41 WHERE `FORM_ID,C,18`=id;
+		
+else
+		SET @flagtrue = CONCAT(@flagtrue, '0');
+end if;
+
+if @rdist1=@rdist2
+then
+		SET @flagtrue = CONCAT(@flagtrue, '1');
+		UPDATE `cust_compare_address_info` SET `RES_DIST,C,25`=@rdist1 WHERE `FORM_ID,C,18`=id;
+		
+else
+		SET @flagtrue = CONCAT(@flagtrue, '0');
+end if;
+
+if @rstate1=@rstate2
+then
+		SET @flagtrue = CONCAT(@flagtrue, '1');
+		UPDATE `cust_compare_address_info` SET `RES_STATE,C,2`=@rstate1 WHERE `FORM_ID,C,18`=id;
+		
+else
+		SET @flagtrue = CONCAT(@flagtrue, '0');
+end if;
+
+if @rpin1=@rpin2
+then
+		SET @flagtrue = CONCAT(@flagtrue, '1');
+		UPDATE `cust_compare_address_info` SET `RES_PIN,C,6`=@rpin1 WHERE `FORM_ID,C,18`=id;
+		
+else
+		SET @flagtrue = CONCAT(@flagtrue, '0');
+end if;
+
+if @rcountry1=@rcountry2
+then
+		SET @flagtrue = CONCAT(@flagtrue, '1');
+		UPDATE `cust_compare_address_info` SET `RES_CNTRY,C,3`=@rcountry1 WHERE `FORM_ID,C,18`=id;
+		
+else
+		SET @flagtrue = CONCAT(@flagtrue, '0');
+end if;
+
+if @ofname1=@ofname2
+then
+		SET @flagtrue = CONCAT(@flagtrue, '1');
+		UPDATE `cust_compare_address_info` SET `OFF_NAME,C,75`=@ofname1 WHERE `FORM_ID,C,18`=id;
+		
+else
+		SET @flagtrue = CONCAT(@flagtrue, '0');
+end if;
+
+if @off11=@off12
+then
+		SET @flagtrue = CONCAT(@flagtrue, '1');
+		UPDATE `cust_compare_address_info` SET `OFF_ADDR1,C,25`=@off11 WHERE `FORM_ID,C,18`=id;
+		
+else
+		SET @flagtrue = CONCAT(@flagtrue, '0');
+end if;
+
+if @off21=@off22
+then
+		SET @flagtrue = CONCAT(@flagtrue, '1');
+		UPDATE `cust_compare_address_info` SET `OFF_ADDR2,C,25`=@off21 WHERE `FORM_ID,C,18`=id;
+		
+else
+		SET @flagtrue = CONCAT(@flagtrue, '0');
+end if;
+
+if @off31=@off32
+then
+		SET @flagtrue = CONCAT(@flagtrue, '1');
+		UPDATE `cust_compare_address_info` SET `OFF_ADDR3,C,25`=@off31 WHERE `FORM_ID,C,18`=id;
+		
+else
+		SET @flagtrue = CONCAT(@flagtrue, '0');
+end if;
+
+if @off41=@off42
+then
+		SET @flagtrue = CONCAT(@flagtrue, '1');
+		UPDATE `cust_compare_address_info` SET `OFF_ADDR4,C,25`=@off41 WHERE `FORM_ID,C,18`=id;
+		
+else
+		SET @flagtrue = CONCAT(@flagtrue, '0');
+end if;
+
+if @odist1=@odist2
+then
+		SET @flagtrue = CONCAT(@flagtrue, '1');
+		UPDATE `cust_compare_address_info` SET `OFF_DIST,C,25`=@odist1 WHERE `FORM_ID,C,18`=id;
+		
+else
+		SET @flagtrue = CONCAT(@flagtrue, '0');
+end if;
+
+if @ostate1=@ostate2
+then
+		SET @flagtrue = CONCAT(@flagtrue, '1');
+		UPDATE `cust_compare_address_info` SET `OFF_STATE,C,2`=@ostate1 WHERE `FORM_ID,C,18`=id;
+		
+else
+		SET @flagtrue = CONCAT(@flagtrue, '0');
+end if;
+
+if @opin1=@opin2
+then
+		SET @flagtrue = CONCAT(@flagtrue, '1');
+		UPDATE `cust_compare_address_info` SET `OFF_PIN,C,6`=@opin1 WHERE `FORM_ID,C,18`=id;
+		
+else
+		SET @flagtrue = CONCAT(@flagtrue, '0');
+end if;
+
+if @ocountry1=@ocountry2
+then
+		SET @flagtrue = CONCAT(@flagtrue, '1');
+		UPDATE `cust_compare_address_info` SET `OFF_CNTRY,C,3`=@ocountry1 WHERE `FORM_ID,C,18`=id;
+		
+else
+		SET @flagtrue = CONCAT(@flagtrue, '0');
+end if;
+
+	 SELECT POSITION(0 in @flagtrue) into @pos;
+	
+	 if(@pos=0)
+     then
+	    UPDATE `appl_status` SET `FINAL_STATUS,N,1`='11' WHERE `FORM_ID,C,18`=id;
+		DELETE FROM `cust_compare_appl_info` WHERE `FORM_ID,C,18`=id;
+		DELETE FROM `cust_compare_personal_info` WHERE `FORM_ID,C,18`=id;
+		DELETE FROM `cust_compare_address_info` WHERE `FORM_ID,C,18`=id;
+		
+		INSERT INTO `cust_qc_appl_info`(`FORM_ID,C,18`) VALUES (id);
+		INSERT INTO `cust_qc_personal_info`(`FORM_ID,C,18`) VALUES (id);
+		INSERT INTO `cust_qc_address_info`(`FORM_ID,C,18`) VALUES (id);
+		INSERT INTO `cust_qc_other_info`(`FORM_ID,C,18`) VALUES (id);
+		INSERT INTO `cust_qc_ra_info`(`FORM_ID,C,18`) VALUES (id);
+		INSERT INTO `cust_qc_verification_info`(`FORM_ID,C,18`) VALUES (id);
+	 else
+	    UPDATE `appl_status` SET `FINAL_STATUS,N,1`='6' WHERE `FORM_ID,C,18`=id;
+	 end if;
+	
+end if;	
+end $$

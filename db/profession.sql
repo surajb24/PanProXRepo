@@ -1,0 +1,81 @@
+-- phpMyAdmin SQL Dump
+-- version 4.2.7.1
+-- http://www.phpmyadmin.net
+--
+-- Host: 127.0.0.1
+-- Generation Time: Jul 02, 2015 at 03:07 PM
+-- Server version: 5.6.20
+-- PHP Version: 5.5.15
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Database: `cld_pan`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `profession`
+--
+
+CREATE TABLE IF NOT EXISTS `profession` (
+`PROF_ID,N,2` int(2) NOT NULL,
+  `PROF_NAME,C,30` varchar(30) NOT NULL
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=21 ;
+
+--
+-- Dumping data for table `profession`
+--
+
+INSERT INTO `profession` (`PROF_ID,N,2`, `PROF_NAME,C,30`) VALUES
+(1, 'MEDICAL PROFESSION AND BUSINES'),
+(2, 'ENGINEERING'),
+(3, 'ARCHITECTURE'),
+(4, 'CHARTERED ACCOUNTANT/ACCOUNTS'),
+(5, 'INTERIOR DECORATION'),
+(6, 'TECHNICAL CONSULTANT'),
+(7, 'COMPANY SECRETARY'),
+(8, 'LEGAL PRACTIONER/ SOLICITOR'),
+(9, 'GOVERNMENT CONTRACTOR'),
+(10, 'INSURANCE AGENCY'),
+(11, 'FILM / TV AND OTHER ENTERTAIN'),
+(12, 'INFORMATION TECHNOLOGY'),
+(13, 'BUILDERS AND DEVELOPERS'),
+(14, 'STOCK EXCH. MEMBER,SHARE BROKE'),
+(15, 'PERFORMIMG ARTS AND YATRA'),
+(16, 'SHIP, HOVERCRAFT,AIRCRAFT,HELI'),
+(17, 'TAXIES,LORRIES,TRUCKS,BUSES'),
+(18, 'OWNERSHIP OF HORSES OR JOCKEY'),
+(19, 'CINEMA HALLS AND OTHER THEATER'),
+(20, 'OTHERS');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `profession`
+--
+ALTER TABLE `profession`
+ ADD PRIMARY KEY (`PROF_ID,N,2`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `profession`
+--
+ALTER TABLE `profession`
+MODIFY `PROF_ID,N,2` int(2) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=21;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

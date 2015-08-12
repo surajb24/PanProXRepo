@@ -1,0 +1,11 @@
+create table trunc
+begin
+	 TRUNCATE TABLE `batch_info`;
+    TRUNCATE TABLE `appl_status`;
+    TRUNCATE TABLE `cust_address_info_l1`;
+    TRUNCATE TABLE cust_appl_info_l1;
+    TRUNCATE TABLE cust_other_info;
+    TRUNCATE TABLE cust_personal_info_l1;
+    TRUNCATE TABLE cust_ra_info;
+    TRUNCATE TABLE cust_verification_info;
+end $$
