@@ -1,0 +1,87 @@
+
+
+#wrapper
+{
+	width:100%;
+  
+
+}
+
+#tabbox
+{
+    height: 41px;
+  width: 99%;
+}
+#panel
+{
+background-color: #FAFAFA;
+  height: auto;
+   border-bottom: 1px solid #DDDDDD; 
+  border-radius: 5px;
+  margin-top: -8px;
+  overflow-y: scroll;
+ border-right: 1px solid #DDDDDD; 
+ border-left: 1px solid #DDDDDD; 
+ border-top: 0px solid #FAFAFA; 
+}
+
+
+.tab
+{
+  background: #DDDDDD;
+  display: block;
+  text-align: center;
+  width: 11%;
+  float: left;
+  /* font-weight: bold; */
+  -webkit-border-top-left-radius: 4px;
+  -webkit-border-top-right-radius: 4px;
+  -moz-border-radius: 4px 4px 0px 0;
+  FONT-SIZE: 75%;
+  margin-left: 1%;
+
+}
+
+a
+{
+    color: #000;
+  margin: 0;
+  padding: 7px;
+  text-decoration: none;
+  MARGIN-TOP: 3PX;
+}
+
+
+.two,.three,.four,.five,.six,.seven,.nine,.ten
+{
+	margin-left:8px;
+	
+}
+
+
+.select
+{
+	background-color:#FAFAFA;
+	border-bottom:none;
+	border-top:1px solid #DDDDDD;
+	border-left:1px solid #DDDDDD;
+	border-right:1px solid #DDDDDD;
+	border-radius:3px;
+}
+#Tab1I,#Tab8I
+{
+	height:auto;
+	padding:10px;
+}
+#Tab2I,#Tab3I,#Tab4I,#Tab5I,#Tab6I,#Tab7I,#Tab9I,#Tab10I
+{
+	height:auto;
+	padding:10px;
+	display:none;
+}
+
+
+
+
+
+

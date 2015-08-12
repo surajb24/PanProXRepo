@@ -1,0 +1,265 @@
+
+@font-face
+{
+    font-family: ForteFont;
+    src: url(font/FORTE.TTF);
+}
+
+
+body
+{
+  font:1em normal Arial,sans-serif;
+  color:#34495E;
+  margin:0;
+}
+
+.logo
+{
+float:left;
+margin-left:2%;
+margin-top:0.4%;
+font-size:1.4em;
+opacity:0.9;
+}
+
+.span1
+{
+font-family:ForteFont;
+font-weight:none;
+color:white;
+}
+
+.span2
+{
+font-family:Helvetica;
+font-weight:bold;
+color:#306EFF;
+}
+
+.span3
+{
+font-family:forte;
+font-weight:none;
+color: rgb(121, 95, 95);
+}
+
+.container
+{
+width:98%;
+}
+
+.form-container
+{
+width:90%;
+padding:0.5%;
+}
+
+textarea,input[type="date"],input[type="text"],input[type="password"]
+{
+width:170px;
+font-family:Arial;
+padding:0.4%;
+-ms-box-sizing:content-box;
+-moz-box-sizing:content-box;
+box-sizing:content-box;
+-webkit-box-sizing:content-box; 
+}
+
+
+select {
+font-family:Arial;
+width:176px; 
+overflow:hidden; 
+white-space:pre; 
+text-overflow:ellipsis;
+/*-webkit-appearance: none;*/
+padding:0.3%;
+
+}
+/*
+option {
+          border: solid 1px #DDDDDD; 
+}
+*/
+.reg-buttons
+{
+
+  margin-left: 0%;
+
+}
+.sub{
+font-size:10px;
+color:red;
+}
+
+.subb{
+font-size:10px;
+color:grey;
+}
+
+form
+{
+width:80%;
+}
+
+
+ legend
+{
+width: 100%;
+  text-align: left;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  /* background: #DFDFDF; */
+  padding: 6px 1px;
+  font-size: 0.8em;
+  color:black;
+    padding-top: 10px;
+  padding-bottom: 10px;
+  /* background: #043d70; */
+  
+  font-family: Tahoma, Geneva, sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 12px;
+  background: rgb(201, 209, 222);
+  }
+
+
+fieldset {
+  /* background: #FAFAFA; */
+  border: none;
+  padding:0%;
+  /* border: none; */
+}
+
+/*
+button
+{
+
+background-color:#6495ED;
+border:1px solid #6495ED;
+border-radius:3px;
+width:70px;
+padding:3px;
+font-size:0.8em;
+color:white;
+font-weight:none;
+margin-left: 39%;
+
+}
+
+button:hover
+{
+background-color:#2868DA;
+}
+*/
+.register{width:100px; opacity:0.3;}
+
+.popup1
+{
+position:absolute;
+margin-left:10%;
+margin-top:0%;
+opacity:1;
+background:#fff; 
+box-shadow:10px #fff;
+border-radius:10px;
+width:78%;
+height:580px; 
+overflow-x:hidden;
+-moz-box-shadow: 0 0 25px #fff;
+-webkit-box-shadow: 0 0 25px #fff;
+box-shadow: 0 0 25px #fff;
+border:1px solid #D79E9E;
+color:black;
+
+}
+
+.hint
+{
+width:90%;
+}
+
+input::-webkit-input-placeholder { /* WebKit browsers */
+    font-size:10px;
+	padding:3px;
+}
+input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+        font-size:10px;
+		padding:3px;
+}
+input::-moz-placeholder { /* Mozilla Firefox 19+ */
+        font-size:10px;
+		padding:3px;
+}
+input:-ms-input-placeholder { /* Internet Explorer 10+ */
+       font-size:10px;
+	   padding:3px;
+}
+
+/*textarea::-webkit-input-placeholder { /* WebKit browsers *
+    font-size:10px;
+	padding:3px;
+}
+textarea:-moz-placeholder { /* Mozilla Firefox 4 to 18 
+        font-size:10px;
+		padding:3px;
+}
+textarea::-moz-placeholder { /* Mozilla Firefox 19+ 
+        font-size:10px;
+		padding:3px;
+}
+textarea:-ms-input-placeholder { /* Internet Explorer 10+ 
+       font-size:10px;
+	   padding:3px;
+}
+*/
+/*Progress bar css
+
+#progress 
+{
+width: 600px;  
+border:none; 
+/*border: 1px solid rgb(186, 185, 185);
+
+font-size:0.9em;
+
+}*/
+
+span{
+ 
+   color: rgb(95, 92, 92);
+}
+/*
+.BlueGrid{
+background: -moz-linear-gradient(top,  rgba(178,224,255,0.84) 0%, rgba(49,196,237,0.8) 50%, rgba(7,185,234,0.8) 51%, rgba(178,224,255,0.76) 100%); 
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(178,224,255,0.84)), color-stop(50%,rgba(49,196,237,0.8)), color-stop(51%,rgba(7,185,234,0.8)), color-stop(100%,rgba(178,224,255,0.76))); 
+background: -webkit-linear-gradient(top,  rgba(178,224,255,0.84) 0%,rgba(49,196,237,0.8) 50%,rgba(7,185,234,0.8) 51%,rgba(178,224,255,0.76) 100%); 
+background: -o-linear-gradient(top,  rgba(178,224,255,0.84) 0%,rgba(49,196,237,0.8) 50%,rgba(7,185,234,0.8) 51%,rgba(178,224,255,0.76) 100%);
+background: -ms-linear-gradient(top,  rgba(178,224,255,0.84) 0%,rgba(49,196,237,0.8) 50%,rgba(7,185,234,0.8) 51%,rgba(178,224,255,0.76) 100%); 
+background: linear-gradient(to bottom,  rgba(178,224,255,0.84) 0%,rgba(49,196,237,0.8) 50%,rgba(7,185,234,0.8) 51%,rgba(178,224,255,0.76) 100%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d6b2e0ff', endColorstr='#c2b2e0ff',GradientType=0 );
+}
+
+.RedGrid{
+
+background: -moz-linear-gradient(top,  rgba(254,204,177,0.8) 0%, rgba(241,116,50,0.81) 50%, rgba(234,85,7,0.81) 51%, rgba(251,149,94,0.81) 100%); 
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(254,204,177,0.8)), color-stop(50%,rgba(241,116,50,0.81)), color-stop(51%,rgba(234,85,7,0.81)), color-stop(100%,rgba(251,149,94,0.81))); 
+background: -webkit-linear-gradient(top,  rgba(254,204,177,0.8) 0%,rgba(241,116,50,0.81) 50%,rgba(234,85,7,0.81) 51%,rgba(251,149,94,0.81) 100%); 
+background: -o-linear-gradient(top,  rgba(254,204,177,0.8) 0%,rgba(241,116,50,0.81) 50%,rgba(234,85,7,0.81) 51%,rgba(251,149,94,0.81) 100%); 
+background: -ms-linear-gradient(top,  rgba(254,204,177,0.8) 0%,rgba(241,116,50,0.81) 50%,rgba(234,85,7,0.81) 51%,rgba(251,149,94,0.81) 100%); 
+background: linear-gradient(to bottom,  rgba(254,204,177,0.8) 0%,rgba(241,116,50,0.81) 50%,rgba(234,85,7,0.81) 51%,rgba(251,149,94,0.81) 100%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccfeccb1', endColorstr='#cffb955e',GradientType=0 );
+
+}
+
+
+#bar1, #bar2, #bar3, #bar4, #bar5, #bar6, #bar7, #bar8 
+{
+float:left;
+height: 20px;
+width: 12%;
+border:1px solid rgb(186, 185, 185);
+
+}
+/*Progress bar css Ends*/
