@@ -76,28 +76,28 @@
             <tr class="ra1">
                 <th>Flat/Room/Door/Block No</th>
                     <td>
-                        <input type="text" name="Rflat" id="Rflat" class="Rflat" maxlength="25" placeholder="FLAT/BLOCK NO" onkeyup="ValidFirstSpace(this);" style="text-transform: uppercase;" onblur="this.value = this.value.toUpperCase();"
+                        <input type="text" name="Rflat" id="Rflat" class="Rflat radd" maxlength="25" placeholder="FLAT/BLOCK NO" onkeyup="ValidFirstSpace(this);" style="text-transform: uppercase;" onblur="this.value = this.value.toUpperCase();"
                                value="<?php echo $_SESSION['2-5-5']; ?>">
                     </td>
             </tr>
             <tr class="ra1">
                 <th>Name of Premises/Building/Village</th>
                     <td>
-                        <input type="text" name="Rbuilding" id="Rbuilding" class="Rbuilding" maxlength="25" placeholder="NAME OF PREMISES" onkeyup="ValidFirstSpace(this);" style="text-transform: uppercase;" onblur="this.value = this.value.toUpperCase();"
+                        <input type="text" name="Rbuilding" id="Rbuilding" class="Rbuilding radd" maxlength="25" placeholder="NAME OF PREMISES" onkeyup="ValidFirstSpace(this);" style="text-transform: uppercase;" onblur="this.value = this.value.toUpperCase();"
                                value="<?php echo $_SESSION['2-5-6']; ?>">
                     </td>
             </tr>
             <tr class="ra1">
                 <th>Road/Street/Lane/Post Office</th>
                     <td>
-                        <input type="text" name="Rroad" id="Rroad" class="Rroad" maxlength="25" placeholder="ROAD/STREET/POST OFFICE" onkeyup="ValidFirstSpace(this);" style="text-transform: uppercase;" onblur="this.value = this.value.toUpperCase();"
+                        <input type="text" name="Rroad" id="Rroad" class="Rroad radd" maxlength="25" placeholder="ROAD/STREET/POST OFFICE" onkeyup="ValidFirstSpace(this);" style="text-transform: uppercase;" onblur="this.value = this.value.toUpperCase();"
                                value="<?php echo $_SESSION['2-5-7']; ?>">
                     </td>
             </tr>
             <tr class="ra1">
                 <th>Area/Locality/Taluka/Sub-Division</th>
                     <td>
-                        <input type="text" name="Rarea" id="Rarea" class="Rarea" maxlength="25" placeholder="AREA/LOCALITY/TALUKA" onkeyup="ValidFirstSpace(this);" style="text-transform: uppercase;" onblur="this.value = this.value.toUpperCase();"
+                        <input type="text" name="Rarea" id="Rarea" class="Rarea radd" maxlength="25" placeholder="AREA/LOCALITY/TALUKA" onkeyup="ValidFirstSpace(this);" style="text-transform: uppercase;" onblur="this.value = this.value.toUpperCase();"
                                value="<?php echo $_SESSION['2-5-8']; ?>">
                     </td>
             </tr>

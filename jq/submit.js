@@ -1108,6 +1108,40 @@ function Valid_Conatct_level2()
      
 //end contact level2
 
+//ra adress valid
+function valid_raaddr(flag)
+{
+
+     var b = document.getElementsByClassName('radd');
+     var len = b.length;
+	 
+	 var chk2=0;
+	 for(var i = 0; i < len; i++){
+           		  
+			if(b[i].value !== '')
+			{
+				chk2++;
+                                
+                               
+			}
+		
+	}
+        
+        
+	
+	if(chk2<1)
+	{
+		return "Please Fill atleast one RA Address Field" + "\n";
+		
+	}
+	else 
+	{
+		return "";
+	}
+
+}
+
+
 //start RA onsubmit
 
 
@@ -1126,7 +1160,7 @@ function Valid_RA()
         var selecttown = document.getElementById("Rtown").value;
         var selectstate = document.getElementById("Rstate").value;
         var selectpin = document.getElementById("Rpincode").value;
-        
+        var chk="1"
         
         if(selectrtitle == "")
                      {
@@ -1148,6 +1182,11 @@ function Valid_RA()
                     summary+=valid_required((document.getElementById("Rfirst")),f,"1");
                  
                 }
+                
+         if(chk == "1"){
+                                       summary +=valid_raaddr(chk);
+                       }
+                                              
         if(selecttown == '')
                          {
                          var c=document.getElementById("Rtown").getAttribute("placeholder");
@@ -1191,16 +1230,16 @@ function Valid_RA()
                                                  represent[i].style.backgroundColor="white";
                                     }
                                 }
-                                /* $(function(){
-                                        $('.Photo,.Sign,.POI,.POA,.date,.Capacity').css("background","#eeac9a");
+                                 $(function(){
+                                        $('.Rtitle,.Rstate').css("background","#eeac9a");
                                         
-                                        if($(".Photo,.Sign,.POI,.POA,.Capacity").val()!=="")
+                                        if($(".Rtitle,.Rstate").val()!=="")
                                          {
-                                                $(".Photo,.Sign,.POI,.POA,.Capacity").css('background-color','white');
+                                                $(".Rtitle,.Rstate").css('background-color','white');
                                           }  
                                         
                                     });    
-     */
+     
      
        return false;
         
