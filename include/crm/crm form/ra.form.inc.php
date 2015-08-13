@@ -136,7 +136,7 @@
        
         <div align="center" class="buttons">
 		
-	<button type="submit" id="Rasubmit" class="Rasubmit btns" name="Rasubmit">Submit</button>
+            <button type="submit" id="Rasubmit" class="Rasubmit btns" name="Rasubmit" onclick="return Valid_RA();">Submit</button>
 	<button type="button" id="Rapre"  name="Rapre" class="Rapre btns">Previous</button>
 	<button type="button" id="Ranext"  name="Ranext" class="Ranext btns">Next</button>
 	<button type="submit" class="btns" id=""  name="Level1_Final" >Final Submit</button>

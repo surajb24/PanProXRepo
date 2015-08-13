@@ -1117,6 +1117,113 @@ function Valid_Conatct_level2()
      
 //end contact level2
 
+//start RA onsubmit
+
+
+
+function Valid_RA()
+{
+    
+    var selectraval = document.getElementById("Rdetail").value;
+     if(selectraval=="Y")
+     {
+        var summary ="";
+    
+        var selectrtitle = document.getElementById("Rtitle").value;
+        var selectlname = document.getElementById("Rlast").value;
+        var selectfname = document.getElementById("Rfirst").value;
+        var selecttown = document.getElementById("Rtown").value;
+        var selectstate = document.getElementById("Rstate").value;
+        var selectpin = document.getElementById("Rpincode").value;
+        
+        
+        if(selectrtitle == "")
+                     {
+                            
+                       summary+=valid_select(this,"Title","1");
+                           
+                     }
+                     
+        if(selectlname == ''){
+                      
+                    var f=document.getElementById("Rlast").getAttribute("placeholder");
+                    summary+=valid_required((document.getElementById("Rlast")),f,"1");
+                 
+                }
+                
+        if(selectfname == ''){
+                      
+                    var f=document.getElementById("Rfirst").getAttribute("placeholder");
+                    summary+=valid_required((document.getElementById("Rfirst")),f,"1");
+                 
+                }
+        if(selecttown == '')
+                         {
+                         var c=document.getElementById("Rtown").getAttribute("placeholder");
+                         summary+=valid_required((document.getElementById("Rtown")),c,"1");
+                   
+                        }        
+        
+        if(selectstate == "")
+                     {
+                            
+                       summary+=valid_select(this,"State","1");
+                           
+                     }
+        
+        if(selectpin =='')
+                    {
+                        var c=document.getElementById("Rpincode").getAttribute("placeholder");
+                        summary+=valid_required((document.getElementById("Rpincode")),c,"1");
+                       
+
+                    }
+                     
+                     
+          if(summary!="")
+    {
+        alert(summary);
+        
+        
+                var represent = document.forms["ra"].querySelectorAll("input");
+                                
+                                for(var i=0; i< represent.length; i++)
+                                {                         
+                                    
+                                        if(represent[i].type == "text" &&  represent[i].value == "")
+                                    {
+                                                $(".Rmiddle,.Rflat,.Rbuilding,.Rroad,.Rarea").css("background","white");
+                                             
+                                                represent[i].style.backgroundColor = "#eeac9a";
+                                                
+                                    }else{
+                                                 represent[i].style.backgroundColor="white";
+                                    }
+                                }
+                                /* $(function(){
+                                        $('.Photo,.Sign,.POI,.POA,.date,.Capacity').css("background","#eeac9a");
+                                        
+                                        if($(".Photo,.Sign,.POI,.POA,.Capacity").val()!=="")
+                                         {
+                                                $(".Photo,.Sign,.POI,.POA,.Capacity").css('background-color','white');
+                                          }  
+                                        
+                                    });    
+     */
+     
+       return false;
+        
+      }else return true;
+      }
+   else
+     {
+        
+      }
+ 
+}
+
+//End RA onsubmit
+
 //start verification onsubmit
 
 function Valid_Verification()
