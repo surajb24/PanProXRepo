@@ -595,6 +595,107 @@ function valid_Other()
  }
 
 
+function valid_textbox(flag)
+{
+
+     var b = document.getElementsByClassName('resii');
+	 var cnt=0;
+	 var chk2=0;
+	 for(var i = 0; i < b.length; i++){
+		 if(b[i].type == 'text') 
+		 {		  
+			if(b[i] == '')
+			{
+				chk2++;
+			}
+			else
+			{ 
+				cnt++;
+			}
+		 }
+	}
+	
+	if(chk2<1)
+	{
+		return "Please Fill atleast one Residence Address Field" + "\n";
+		
+	}
+	else 
+	{
+		return "";
+	}
+
+}
+
+
+
+function valid_office(flag)
+{
+
+     var b = document.getElementsByClassName('offye');
+	 var cnt=0;
+	 var chk2=0;
+	 for(var i = 0; i < b.length; i++){
+		 if(b[i].type == 'text') 
+		 {		  
+			if(b[i] == '')
+			{
+				chk2++;
+			}
+			else
+			{ 
+				cnt++;
+			}
+		 }
+	}
+	
+	if(chk2<1)
+	{
+		return "Please Fill atleast one Office Address Field" + "\n";
+		
+	}
+	else 
+	{
+		return "";
+	}
+
+}
+
+
+
+function valid_communication(flag)
+{
+
+     var b = document.getElementsByClassName('comm');
+	 var cnt=0;
+	 var chk2=0;
+	 for(var i = 0; i < b.length; i++){
+		 if(b[i].type == 'text') 
+		 {		  
+			if(b[i] == '')
+			{
+				chk2++;
+			}
+			else
+			{ 
+				cnt++;
+			}
+		 }
+	}
+	
+	if(chk2<1)
+	{
+		return "Please Fill Atleast Telephone or Email" + "\n";
+		
+	}
+	else 
+	{
+		return "";
+	}
+
+}
+
+
 //start level1 onsubmit contact 
 
 function Valid_Conatct()
@@ -603,20 +704,18 @@ function Valid_Conatct()
     var summary ="";
     
     var selectaddcont = document.getElementById("addcom").value;
-    
-    /*var Radd = document.getElementById("RAdd").value;
-    var RALT = document.getElementById("RALT").value;
-    var RTCD = document.getElementById("RTCD").value;*/
+    var selectoffice = document.getElementById("selectyes").value;
+    var RTCD = document.getElementById("RTCD").value;
     var RState = document.getElementById("RState").value;
-  //  var RPZcode = document.getElementById("RPZcode").value;
+    var RPZcode = document.getElementById("RPZcode").value;
     var RCountry = document.getElementById("RCountry").value;  
-  /*  var ONameoffice = document.getElementById("ONameofoffice").value;
-    var OFRDB = document.getElementById("OFRDB").value;
-   var OALTS = document.getElementById("OALTS").value;
-    var OTCD = document.getElementById("OTCD").value;*/
+    var ONameoffice = document.getElementById("ONameofoffice").value;
     var Ostate = document.getElementById("OState").value;
-   // var OPZcode = document.getElementById("OPZcode").value;
+    var OPZcode = document.getElementById("OPZcode").value;
     var OCountry = document.getElementById("OCountry").value;
+    var chk="1";
+    var office="1";
+    var etel="1";
     
    // var TelNo = document.getElementById("TelNo").value;
  
@@ -628,7 +727,6 @@ function Valid_Conatct()
                      }
            else{
                                 
-            
                    if((selectaddcont == "RESIDANCE") )
                    {
                         $(".addcom").css("backgroundColor","white");
@@ -641,35 +739,18 @@ function Valid_Conatct()
                         }
                         else
                           {
-                                /* if(Radd =='')
-                         {
-                             var c=document.getElementById("RAdd").getAttribute("placeholder");
-                             summary+=valid_required((document.getElementById("RAdd")),c,"1");
-
-
-                         } 
-
-
-                        if(RALT == '')
-                             {
-                                var c=document.getElementById("RALT").getAttribute("placeholder");
-                                summary+=valid_required((document.getElementById("RALT")),c,"1");
-
-                             }
-
-                         if(RTCD == '')
+                              
+                              
+                               if(chk == "1"){
+                                                summary +=valid_textbox(chk);
+                                            }
+                                            
+                        if(RTCD == '')
                          {
                          var c=document.getElementById("RTCD").getAttribute("placeholder");
                          summary+=valid_required((document.getElementById("RTCD")),c,"1");
-
-                          }
-
-                            if(TelNo =='')
-                         {
-                             var c=document.getElementById("TelNo").getAttribute("placeholder");
-                             summary+=valid_required((document.getElementById("TelNo")),c,"1");
-
-                         }
+                   
+                        }
 
                         if(RPZcode == '')
                          {
@@ -677,7 +758,7 @@ function Valid_Conatct()
                          summary+=valid_required((document.getElementById("RPZcode")),c,"1");
                    
                         }
-                        */
+                        
                        if(RState == "")
                         {
                             summary+=valid_select(this,'State',"1");
@@ -689,6 +770,14 @@ function Valid_Conatct()
                                summary+=valid_select(this,'Country',"1");
 
                         }
+                        
+                        
+                        if(selectoffice == "")
+                        {
+                                summary+=valid_select(this,'Office Address Yes or No',"1");
+
+                         }
+                         
                      }
                   }
                      //office  Address
@@ -703,30 +792,20 @@ function Valid_Conatct()
                          }
                         else
                           {
-                     
-                   /*  if(ONameoffice =='')
+                              
+                          
+                    if(ONameoffice =='')
                     {
                         var c=document.getElementById("ONameofoffice").getAttribute("placeholder");
                         summary+=valid_required((document.getElementById("ONameofoffice")),c,"1");
                        
 
                     } 
-                                                                  
-                    if(OFRDB =='')
-                    {
-                        var c=document.getElementById("OFRDB").getAttribute("placeholder");
-                        summary+=valid_required((document.getElementById("OFRDB")),c,"1");
+               
+                     if(office == "1"){
+                                                summary +=valid_office(office);
+                                              }
                      
-
-                    }                    
-                 
-                     if(OALTS =='')
-                    {
-                        var c=document.getElementById("OALTS").getAttribute("placeholder");
-                        summary+=valid_required((document.getElementById("OALTS")),c,"1");
-                        
-
-                    }
                     
                     if(OTCD =='')
                     {
@@ -743,17 +822,7 @@ function Valid_Conatct()
                        
 
                     }
-                    
-                       if(TelNo =='')
-                    {
-                        var c=document.getElementById("TelNo").getAttribute("placeholder");
-                        summary+=valid_required((document.getElementById("TelNo")),c,"1");
-                       
 
-                    }
-                    
-                  
-                     */
                      if(Ostate == ""){
                             summary+=valid_select(this,'State',"1");
                            
@@ -766,33 +835,71 @@ function Valid_Conatct()
                       }  
                                                            
                 }    
-         }    
-                     
+         } 
+         
+         
+                       if(etel == "1"){
+                                                summary +=valid_communication(etel);
+                                              }
     
     if(summary!=="")
     {
         alert(summary);
                                 
-                            /*   var contact = document.forms["contact"].querySelectorAll("input");
-                                
+                      var contact = document.forms["contact"].querySelectorAll("input");
+                      var selectadd=$("#addcom").val();      
                                 for(var i=0; i< contact.length; i++)
                                 {                         
-                                    
+                                   if(selectadd == "RESIDANCE"){
                                         if(contact[i].type === "text" &&  contact[i].value === "")
                                     {
+                                                $(".RAdd").css("background","white");
                                                 $(".RNPremises").css("background","white");
+                                                $(".RALT").css("background","white");
                                                 $(".RRSL").css("background","white");
+                                                $(".ONameofoffice").css("background","white");
+                                                $(".OFRDB").css("background","white");
                                                 $(".OPremises").css("background","white");
                                                 $(".ORSLP").css("background","white");
+                                                $(".OALTS").css("background","white");
+                                                $(".OTCD").css("background","white");
+                                                $(".OPZcode").css("background","white");
                                                 $(".Ccode").css("background","white");
                                                 $(".OAScode").css("background","white");
-                                                $(".Email").css("background","white");
+                                                $(".TelNo").css("background","white");
+                                              
                                                 contact[i].style.backgroundColor = "#eeac9a";
+                                                 $(".Email").css("background","white");
                                                 
                                     }else{
                                                  contact[i].style.backgroundColor="white";
                                     }
-                                }  /*/
+                                }
+                                
+                                 if(selectadd == "OFFICE"){
+                                        if(contact[i].type === "text" &&  contact[i].value === "")
+                                    {
+                                                $(".RAdd").css("background","white");
+                                                $(".RNPremises").css("background","white");
+                                                $(".RALT").css("background","white");
+                                                $(".RRSL").css("background","white");
+                                                $(".RPZcode").css("background","white");
+                                                $(".RTCD").css("background","white");
+                                                $(".OFRDB").css("background","white");
+                                                $(".OPremises").css("background","white");
+                                                $(".ORSLP").css("background","white");
+                                                $(".OALTS").css("background","white");
+                                                $(".Ccode").css("background","white");
+                                                $(".OAScode").css("background","white");
+                                                $(".TelNo").css("background","white");
+                                                contact[i].style.backgroundColor = "#eeac9a";
+                                                 $(".Email").css("background","white");
+                                                
+                                    }else{
+                                                 contact[i].style.backgroundColor="white";
+                                    }
+                                }
+                                } 
                                  $(function(){
                                          if($(".addcom,.RState,.RCountry,.OState,.OCountry").val()!=='')
                                         {
