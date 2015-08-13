@@ -795,14 +795,7 @@ if(isset($_POST['Rasubmit']))
                 $RTitle = select_id($ID, $TabelName, $ColumnName, $Condition);
                 $_SESSION['Rep_Title']  = $RTitle;
                 
-                $Rflag = $_POST['Rtitle'];
-                
-                if($Rflag!="")
-                {
-                    $Rflag='Y';
-                }else{
-                    $Rflag='N';
-                }
+               
                 
                 $_SESSION['RFlag'] = $Rflag;
                 
@@ -844,6 +837,8 @@ if(isset($_POST['Rasubmit']))
                 $RPincode =$_POST['Rpincode'];
                 $_SESSION['5-5-11'] = $RPincode;
                 
+                $Rflag = $_POST['Rdetail'];
+                $_SESSION['5-5-12'] = $Rflag;
                
                 
 	$sql = " UPDATE `cust_qc_ra_info` SET 

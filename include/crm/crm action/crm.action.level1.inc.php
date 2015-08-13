@@ -765,15 +765,7 @@ if(isset($_POST['Rasubmit']))
                 $RTitle = $_POST['Rtitle'];
                 $_SESSION['2-5-1'] = $RTitle;
                 
-                $Rflag = $_POST['Rtitle'];
-                
-                
-                if($Rflag!="")
-                {
-                    $Rflag='Y';
-                }else{
-                    $Rflag='N';
-                }
+               
     
                 $ID='SR_NO,N,1';
                 $TabelName='title';
@@ -819,7 +811,10 @@ if(isset($_POST['Rasubmit']))
                 $RPincode =$_POST['Rpincode'];
                 $_SESSION['2-5-11'] = $RPincode;
                 
-               
+                $Rflag = $_POST['Rdetail'];
+                $_SESSION['2-5-12'] = $Rflag;
+                
+             
                 
 	$sql = " UPDATE `cust_ra_info` SET 
 	

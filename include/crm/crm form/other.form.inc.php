@@ -78,7 +78,7 @@
 
                         <input type="text" name="AadharNo"  id="AadharNo" class="AadharNo"  placeholder="AADHAR NO" minlength="12" maxlength="12" onkeypress="return ValidNum(event);" onblur="adhr(this);"
           
-                               value="<?php echo $_SESSION['2-4-5']; ?>"><div id="idaddar" style="color:red;"></div>
+                               value="<?php echo $_SESSION['2-4-5']; ?>">
                     </td><td></td>
                     
 		</tr>

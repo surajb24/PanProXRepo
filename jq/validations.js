@@ -476,7 +476,7 @@ function adhr(e){
 	var lenadhar=adhar.length;
         if(lenadhar<12)
         {
-            document.getElementById("idaddar").innerHTML="Aadhar No should be 12 digits";
+            //document.getElementById("idaddar").innerHTML="Aadhar No should be 12 digits";
             e.value = "";
         }
 }
