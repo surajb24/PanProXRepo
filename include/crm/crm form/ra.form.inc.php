@@ -13,10 +13,6 @@
                 </tr>
             
             <tr >
-                <th colspan="2">Full Name(Full expanded name:Initials are not permitted)</th>
-            </tr>
-            
-            <tr >
                 <th>Is Representative Assessee Details Available(Yes or No)</th>
                 <td>
                     <select name="Rdetail" id="Rdetail" class="Rdetail" onblur="valid_select(this,'Detail','0');">
@@ -28,7 +24,13 @@
                             <option value="N">No</option>
                     </select>
                 </td>   
+            </tr>    
+                
+            <tr class="ra1">
+                <th colspan="2">Full Name(Full expanded name:Initials are not permitted)</th>
             </tr>
+            
+            
             
             <tr class="ra1">
                 <th>Please select title,as applicable</th>

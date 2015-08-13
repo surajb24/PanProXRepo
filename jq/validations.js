@@ -120,7 +120,7 @@ function validatedob(e) {
       
     var today =new Date();
     var str=e.value;
-    
+    var t=1;
     
     var dateformat =/^([0-9]{2})\/([0-9]{2})\/([0-9]{4})$/;//pattern to match
   // Match the date format through regular expression  
@@ -147,18 +147,20 @@ function validatedob(e) {
          {
               document.getElementById("dterequre").innerHTML = "Month cant be less than 1";
            e.value='';
-
+           t=0;
             }
         else if(mm >12)
         {
             document.getElementById("dterequre").innerHTML = "Month cant be greater than 12";
              e.value='';
+             t=0;
          } 
          
          if(yy<1900 || yy>3000)
          {
             document.getElementById("dterequre").innerHTML = "Year should be greater than 1900 and less than 3000";
             e.value='';
+            t=0;
             return false;
          }
             // Create list of days of a month [assume there is no leap year by default]  
@@ -169,6 +171,7 @@ function validatedob(e) {
             {  
                 document.getElementById("dterequre").innerHTML = "Invalid days in date format!";
             e.value='';
+            t=0;
              return false;  
              }  
           }  
@@ -183,12 +186,14 @@ function validatedob(e) {
          {  
                document.getElementById("dterequre").innerHTML = "Invalid feb date format!";
              e.value='';
+             t=0;
              return false;  
          }  
              if ((lyear==true) && (dd>29))  
         {  
              document.getElementById("dterequre").innerHTML = "Invalid leap year date format!";
               e.value='';
+              t=0;
                return false;  
         }  
          }
@@ -199,6 +204,7 @@ function validatedob(e) {
         {
                document.getElementById("dterequre").innerHTML = " Date cant be greater than today";
                e.value='';
+               t=0;
                 return false;
         }
         
@@ -208,9 +214,13 @@ function validatedob(e) {
     {
         
         document.getElementById("dterequre").innerHTML = "Invalid date format!";
+        t=0;
         return false;
     }
- 
+  if(t==1)
+  {
+      document.getElementById("dterequre").innerHTML = "";
+  }
 	
 }        
 
@@ -267,6 +277,10 @@ if(str.length < 10 )
         document.getElementById("idreturn").innerHTML = "Enter valid PAN";
           e.value="";
 }
+else
+{
+     document.getElementById("idreturn").innerHTML = "";
+}
 
 var res = str.substring(0,5);
 var res1= str.substring(5,9);
@@ -316,6 +330,7 @@ var validNo = ['1','2','3','4','5','6','7','8','9','0'];
 	if(t==1)
 {
 //alert("It is a valid PanCARD No");
+   document.getElementById("idreturn").innerHTML = "";
 }	
 else if(t==0)
 {
@@ -411,6 +426,7 @@ var dotsplt=part2.split('.');  //alert(“After @ :”+part2);
 
 if(t==1)
 {
+    document.getElementById("idreturns").innerHTML="";
 //alert("It is a valid email");
 }
 }
@@ -472,8 +488,12 @@ function adhr(e){
 	var lenadhar=adhar.length;
         if(lenadhar<12)
         {
-            //document.getElementById("idaddar").innerHTML="Aadhar No should be 12 digits";
+            document.getElementById("idaddar").innerHTML="Aadhar No should be 12 digits";
             e.value = "";
+        }
+        else
+        {
+            document.getElementById("idaddar").innerHTML="";
         }
 }
 
