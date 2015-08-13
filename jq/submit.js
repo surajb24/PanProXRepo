@@ -599,20 +599,15 @@ function valid_textbox(flag)
 {
 
      var b = document.getElementsByClassName('resii');
-	 var cnt=0;
+	
 	 var chk2=0;
 	 for(var i = 0; i < b.length; i++){
-		 if(b[i].type == 'text') 
-		 {		  
-			if(b[i] == '')
+				  
+			if(b[i].value !== '')
 			{
 				chk2++;
 			}
-			else
-			{ 
-				cnt++;
-			}
-		 }
+		
 	}
 	
 	if(chk2<1)
@@ -633,21 +628,21 @@ function valid_office(flag)
 {
 
      var b = document.getElementsByClassName('offye');
-	 var cnt=0;
+     var len = b.length;
+	 
 	 var chk2=0;
-	 for(var i = 0; i < b.length; i++){
-		 if(b[i].type == 'text') 
-		 {		  
-			if(b[i] == '')
+	 for(var i = 0; i < len; i++){
+           		  
+			if(b[i].value !== '')
 			{
 				chk2++;
+                                
+                               
 			}
-			else
-			{ 
-				cnt++;
-			}
-		 }
+		
 	}
+        
+        
 	
 	if(chk2<1)
 	{
@@ -667,20 +662,16 @@ function valid_communication(flag)
 {
 
      var b = document.getElementsByClassName('comm');
-	 var cnt=0;
+      var len = b.length;
+	
 	 var chk2=0;
-	 for(var i = 0; i < b.length; i++){
-		 if(b[i].type == 'text') 
-		 {		  
-			if(b[i] == '')
+	 for(var i = 0; i < len; i++){
+				  
+			if(b[i].value !== '')
 			{
 				chk2++;
 			}
-			else
-			{ 
-				cnt++;
-			}
-		 }
+			
 	}
 	
 	if(chk2<1)
