@@ -61,7 +61,7 @@
             <tr class="residence">
                 <th>Area/Locality/Taluka/Sub-Division</th>
                     <td>
-                        <input type="text" name="RALT" id="RALT" class="RALT req" placeholder="AREA/LOCALITY/TALUKA" maxlength="25" onkeyup="ValidFirstSpace(this);" style="text-transform: uppercase;" onblur="valid_required(this,'Area/Taluka','0'),this.value = this.value.toUpperCase();"
+                        <input type="text" name="RALT" id="RALT" class="RALT req" placeholder="AREA/LOCALITY/TALUKA" maxlength="25" onkeyup="ValidFirstSpace(this);" style="text-transform: uppercase;" onblur="valid_required(this,'Area/Taluka','0'),this.value = this.value.toUpperCase(),validResAddr();"
                                value="<?php echo $_SESSION['2-3-5'];?>">
                     </td>
             </tr>
@@ -172,7 +172,7 @@
             <tr class="office">
                 <th>Area/Locality/Taluka/Sub-Division</th>
                 <td>
-                    <input type="text" name="OALTS" id="OALTS" class="OALTS req" placeholder="AREA/LOCALITY/TALUKA" maxlength="25" onkeyup="ValidFirstSpace(this);" onblur="this.value = this.value.toUpperCase();" style="text-transform: uppercase;"                            value="<?php echo $_SESSION['2-3-14']; ?>">
+                    <input type="text" name="OALTS" id="OALTS" class="OALTS req" placeholder="AREA/LOCALITY/TALUKA" maxlength="25" onkeyup="ValidFirstSpace(this);" onblur="this.value = this.value.toUpperCase(),validOffAddr();" style="text-transform: uppercase;"                            value="<?php echo $_SESSION['2-3-14']; ?>">
                     </td>
             </tr>
             

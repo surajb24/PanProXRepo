@@ -508,8 +508,60 @@ function ValidNum(e) {
     return ((k > 47 && k < 58)||k==8);
 }
 
+//ra address validation
+function validAdd()
+{
+    var str1 =document.getElementById('Rflat').value;
 
+    var str2=document.getElementById('Rbuilding').value;
+   
+    var str3=document.getElementById('Rroad').value;
+    
+    var str4=document.getElementById('Rarea').value;
+    
+    if((str1=="")&&(str2=="")&&(str3=="")&&(str4==""))
+    {
 
+        alert("Atleast One Address Field Should be Filled");
+        
+    }
+}
+
+function validResAddr()
+{
+    var str1 =document.getElementById('RAdd').value;
+
+    var str2=document.getElementById('RNPremises').value;
+   
+    var str3=document.getElementById('RRSL').value;
+    
+    var str4=document.getElementById('RALT').value;
+    
+    if((str1=="")&&(str2=="")&&(str3=="")&&(str4==""))
+    {
+
+        alert("Atleast One Address Field Should be Filled");
+ 
+    }
+}
+
+function validOffAddr()
+{
+    var str1 =document.getElementById('OFRDB').value;
+
+    var str2=document.getElementById('OPremises').value;
+   
+    var str3=document.getElementById('ORSLP').value;
+    
+    var str4=document.getElementById('OALTS').value;
+    
+    if((str1=="")&&(str2=="")&&(str3=="")&&(str4==""))
+    {
+
+        alert("Atleast One Address Field Should be Filled");
+ 
+    }
+}
 
 
  

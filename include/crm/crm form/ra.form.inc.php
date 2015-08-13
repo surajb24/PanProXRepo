@@ -95,7 +95,7 @@
             <tr class="ra1">
                 <th>Area/Locality/Taluka/Sub-Division</th>
                     <td>
-                        <input type="text" name="Rarea" id="Rarea" class="Rarea" maxlength="25" placeholder="AREA/LOCALITY/TALUKA" onkeyup="ValidFirstSpace(this);" style="text-transform: uppercase;" onblur="this.value = this.value.toUpperCase();"
+                        <input type="text" name="Rarea" id="Rarea" class="Rarea" maxlength="25" placeholder="AREA/LOCALITY/TALUKA" onkeyup="ValidFirstSpace(this);" style="text-transform: uppercase;" onblur="validAdd(),this.value = this.value.toUpperCase();"
                                value="<?php echo $_SESSION['2-5-8']; ?>">
                     </td>
             </tr>
