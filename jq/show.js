@@ -1,6 +1,6 @@
 $(document).ready(function() {
    
-        $('.app1').hide();
+        
         $('.AppC').hide();
         $('.app2').hide();
         $('.appisd').hide();
@@ -22,7 +22,7 @@ $(document).ready(function() {
                 $('#raTable').hide();
                 $('.buttons').show();
                 $('.selectoffice').hide();
-               
+                $('.app1').hide();
         
         }
         else if(check ==="49A")
@@ -31,7 +31,7 @@ $(document).ready(function() {
             $('.appcom').show();
             $('.adarAA').show();
             $('#raTable').show();
-           
+            $('.app1').show();
         }    
         else
         {
@@ -41,7 +41,7 @@ $(document).ready(function() {
             $('.ra').show();
             $('.adarAA').hide();
             $('#raTable').show();
-            
+            $('.app1').show();
         }
         
      
