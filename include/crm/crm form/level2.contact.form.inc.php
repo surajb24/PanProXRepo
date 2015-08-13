@@ -38,7 +38,7 @@
 
 
                         <input type="text" name="level2ReFlat" id="level2ReFlat" class="level2ReFlat req" placeholder="FLAT/ROOM NO" 
-                               maxlength="25" onkeyup="ValidFirstSpace(this);" style="text-transform: uppercase;" onblur="valid_required(this,'Flat No','0'),this.value = this.value.toUpperCase();"
+                               maxlength="25" onkeyup="ValidFirstSpace(this);" style="text-transform: uppercase;" onblur="this.value = this.value.toUpperCase();"
                                value="<?php echo $_SESSION['3-3-2']; ?>">
                     </td>
             </tr>
@@ -60,14 +60,14 @@
                 <th>Area/Locality/Taluka/Sub-Division</th>
                     <td>
                         <input type="text" name="level2ReArea" id="level2ReArea" class="level2ReArea req" placeholder="AREA/LOCALITY/TALUKA" maxlength="25" onkeyup="ValidFirstSpace(this);" style="text-transform: uppercase;"
-                               onblur="valid_required(this,'Area/Taluka','0'),this.value = this.value.toUpperCase();"
+                               onblur="this.value = this.value.toUpperCase();"
                                value="<?php echo $_SESSION['3-3-5']; ?>">
                     </td>
             </tr>
             <tr class="residence">
                 <th>Town/City/District</th>
                     <td>
-                        <input type="text" name="level2ReTown" id="level2ReTown" class="level2ReTown req" placeholder="TOWN/CITY/DISTRICT" maxlength="25" onkeyup="ValidFirstSpace(this);" onblur="valid_required(this,'Town/City','0'),this.value = this.value.toUpperCase();"
+                        <input type="text" name="level2ReTown" id="level2ReTown" class="level2ReTown req" placeholder="TOWN/CITY/DISTRICT" maxlength="25" onkeyup="ValidFirstSpace(this);" onblur="this.value = this.value.toUpperCase();"
                            style="text-transform: uppercase;"    value="<?php echo $_SESSION['3-3-6']; ?>">
                     </td>
             </tr>
@@ -75,7 +75,7 @@
                 <th class="required">State/Union Territory</th>
                     <td>
                         
-                            <select name="level2ReState" id='level2ReState' class='level2ReState req' onblur="valid_select(this,'State','0');" placeholder="STATE/UNION TERRITORY">
+                        <select name="level2ReState" id='level2ReState' class='level2ReState req' <!--onblur="valid_select(this,'State','0');"--> placeholder="STATE/UNION TERRITORY">
                                 <option value="<?php if(!empty($_SESSION['3-3-7'])) { echo $_SESSION['3-3-7']; } else { "";}?>">
                                 <?php if(!empty($_SESSION['3-3-7'])) { echo $_SESSION['337']; } else { echo "Select State"; } ?></option>
                                  </option>  					
@@ -91,7 +91,7 @@
                 <th>Pin code/Zip code</th>
                     <td>
 
-                        <input type="text" name="level2RePin" id="level2RePin" class="level2RePin req" placeholder="PINCODE/ZIP CODE" maxlength="6" onkeypress="return ValidNum(event);" onblur="valid_required(this,'Pincode','0')"
+                        <input type="text" name="level2RePin" id="level2RePin" class="level2RePin req" placeholder="PINCODE/ZIP CODE" maxlength="6" onkeypress="return ValidNum(event);" 
                                value="<?php echo $_SESSION['3-3-8']; ?>">
 
                         
@@ -102,7 +102,7 @@
             <tr class="residence">
                 <th class="required">Country Name</th>
                     <td>
-                        <select name="level2ReCoun" id="level2ReCoun" class="level2ReCoun req" onblur="valid_select(this,'Country','0');" Placeholder="COUNTRY" onchange="return address(this);">
+                        <select name="level2ReCoun" id="level2ReCoun" class="level2ReCoun req" <!--onblur="valid_select(this,'Country','0');"--> Placeholder="COUNTRY" onchange="return address(this);">
                                 <option value="<?php if(!empty($_SESSION['3-3-9'])) { echo $_SESSION['3-3-9']; } else { echo ""; } ?>">
                                         <?php if(!empty($_SESSION['3-3-9'])) { echo $_SESSION['3-3-9']; } else { echo "Select Country"; } ?>
                                 </option>  
