@@ -1,13 +1,13 @@
 $(document).ready(function() {
    
-        
+        $('.app1').hide();
         $('.AppC').hide();
         $('.app2').hide();
         $('.appisd').hide();
         $('.appA').hide();
         $('.Resig').hide();
         $('.selectoffice').hide();
-       
+        $('.ra1').hide();
        
       
        //Onload common events
@@ -440,6 +440,23 @@ $(document).ready(function() {
                 
             }
               
+    //RA yes Or No onchange
+  
+           var selectedval1=$("#Rdetail").val();
+
+             if(selectedval1 == "Y" )
+           {
+                 $('.ra1').show();
+
+           }
+           else
+           {
+               $('.ra1').hide();
+             
+
+           }
+
+       
     
     // onchange event for application type selection
     
@@ -967,7 +984,23 @@ $(document).ready(function() {
             }
             });       
         
-        
+            //Ra yes or no
+        $("#Rdetail").change(function() { 
+           var selectedval1=$("#Rdetail").val();
+
+             if(selectedval1 == "Y" )
+           {
+                 $('.ra1').show();
+
+           }
+           else
+           {
+               $('.ra1').hide();
+             
+
+           }
+
+        });
 
 }); 
     
