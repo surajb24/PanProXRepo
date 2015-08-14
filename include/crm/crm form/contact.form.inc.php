@@ -67,9 +67,9 @@
             </tr>
             
             <tr class="residence">
-                <th>Town/City/District</th>
+                <th class="required">Town/City/District</th>
                     <td>
-                        <input type="text" name="RTCD" id="RTCD" class="RTCD" placeholder="TOWN/CITY/DISTRICT" maxlength="25" onkeyup="ValidFirstSpace(this);" style="text-transform: uppercase;" onblur="this.value = this.value.toUpperCase();"
+                        <input type="text" name="RTCD" id="RTCD" class="RTCD req" placeholder="TOWN/CITY/DISTRICT" maxlength="25" onkeyup="ValidFirstSpace(this);" style="text-transform: uppercase;" onblur="this.value = this.value.toUpperCase();"
                                value="<?php echo $_SESSION['2-3-6'];?>">
                     </td>
             </tr>
@@ -90,7 +90,7 @@
             </tr>
             
             <tr class="residence">
-                <th>Pin code/Zip code</th>
+                <th class="required">Pin code/Zip code</th>
                     <td>
 
                         <input type="text" name="RPZcode" id="RPZcode" class="RPZcode" placeholder="PINCODE/ZIP CODE" maxlength="6" onkeypress="return ValidNum(event);" 
@@ -122,7 +122,7 @@
     
                 
             <tr class="selectoffice">
-                <th>Please Select Office address</th>
+                <th class="required">Please Select Office address</th>
                 <td>
                     <select name="selectyes" id="selectyes" class="selectyes">
                         <option>---Select---</option>
@@ -138,7 +138,7 @@
             </tr>
             
             <tr class="office">
-                <th>Name of office</th>
+                <th class="required">Name of office</th>
                     <td>
                         <input type="text" name="ONameofoffice" id="ONameofoffice" class="ONameofoffice" placeholder="NAME OF OFFICE" maxlength="75" onkeyup="ValidFirstSpace(this);" onblur="this.value = this.value.toUpperCase();"
                                style="text-transform: uppercase;"
