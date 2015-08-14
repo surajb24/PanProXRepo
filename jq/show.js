@@ -32,6 +32,7 @@ $(document).ready(function() {
             $('.adarAA').show();
             $('#raTable').show();
             $('.app1').show();
+             $('.selectoffice').show();
         }    
         else
         {
@@ -42,6 +43,7 @@ $(document).ready(function() {
             $('.adarAA').hide();
             $('#raTable').show();
             $('.app1').show();
+            $('.selectoffice').show();
         }
         
      

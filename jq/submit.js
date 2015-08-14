@@ -603,7 +603,7 @@ function valid_textbox(flag)
 	 var chk2=0;
 	 for(var i = 0; i < b.length; i++){
 				  
-			if(b[i].value !== '')
+			if(b[i] !== '')
 			{
 				chk2++;
 			}
@@ -667,7 +667,7 @@ function valid_communication(flag)
 	 var chk2=0;
 	 for(var i = 0; i < len; i++){
 				  
-			if(b[i].value !== '')
+			if(b[i] !== '')
 			{
 				chk2++;
 			}
