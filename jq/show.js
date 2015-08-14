@@ -1,7 +1,7 @@
 $(document).ready(function() {
            
        
-        $('.app1').hide();
+      
         $('.AppC').hide();
         $('.app2').hide();
         $('.appisd').hide();
@@ -13,40 +13,45 @@ $(document).ready(function() {
       
        //Onload common events
         var check = $('#apptype').val();
-         var add =  $('#addcom').val();
-        
-        if(check === "CORRECTION") 
+        var add =  $('#addcom').val();
+         
+         if(check === "49A")
         {
-                $(".AppC").show();
-                $('.adarAA').show();
-                $('.appcom').hide();
-                $('#raTable').hide();
-                $('.buttons').show();
-                $('.selectoffice').hide();
-                $('.app1').hide();
-        
-        }
-        else if(check ==="49A")
-        {
+            $('.app1').show();
             $(".AppC").hide();
             $('.appcom').show();
             $('.adarAA').show();
             $('#raTable').show();
-            $('.app1').show();
-             $('.selectoffice').show();
-        }    
-        else
-        {
+            $('.selectoffice').show();
+            $(".office").hide();
+        } 
+        
+        
+        else if(check === "49AA")
+        {   
+            $(".app1").show();
             $(".AppC").hide();
             $('.appcom').show();
             $('.appisd').show();
             $('.ra').show();
             $('.adarAA').hide();
             $('#raTable').show();
-            $('.app1').show();
             $('.selectoffice').show();
+            $(".office").hide();
         }
+      
+        else if(check === "CORRECTION") 
+        {
+                $('.app1').hide();
+                $(".AppC").show();
+                $('.adarAA').show();
+                $('.appcom').hide();
+                $('#raTable').hide();
+                $('.buttons').show();
+                $('.selectoffice').hide();
+                
         
+        }
      
    
         //onload event for address for comm
@@ -60,16 +65,84 @@ $(document).ready(function() {
 
             if(add === "OFFICE")
             {
-                
                 $(".office").show();
                 $(".residence").hide();
+                 var $form = $("#addcom").closest('form');
+             
+               if($form.attr('name') == 'contact')
+              
+               {
+                                
+                document.contact.ONameofoffice.setAttribute("onblur","valid_required(this,'Office Name','0')");
+                document.contact.OTCD.setAttribute("onblur","valid_required(this,'Town/City','0')");
+                document.contact.OState.setAttribute("onblur","valid_select(this,'State','0'");
+                document.contact.OPZcode.setAttribute("onblur","valid_required(this,'Pincode','0')");
+                document.contact.OCountry.setAttribute("onblur","valid_select(this,'Country','0')");
+                   
+                $("#RTCD").removeAttr("onblur","valid_required(this,'Town/City','0')");
+                $("#RState").removeAttr("onblur","valid_select(this,'State','0'");
+                $("#RPZcode").removeAttr("onblur","valid_required(this,'Pincode','0')");
+                $("#RCountry").removeAttr("onblur","valid_select(this,'Country','0')");
+
+               
+            }
+            else
+            {
+                
+                $("#level2ReTown").removeAttr("onblur","valid_required(this,'Town/City','0')");
+                $("#level2ReState").removeAttr("onblur","valid_select(this,'State','0'");
+                $("#level2RePin").removeAttr("onblur","valid_required(this,'Pincode','0')");
+                $("#level2ReCoun").removeAttr("onblur","valid_select(this,'Country','0')");
+              
+                document.contact2.level2NameOffice.setAttribute("onblur","valid_required(this,'Name of Office','0')");
+                document.contact2.level2OfTown.setAttribute("onblur","valid_required(this,'Town/City','0')");
+                document.contact2.level2OfState.setAttribute("onblur","valid_select(this,'State','0'");
+                document.contact2.level2OfPin.setAttribute("onblur","valid_required(this,'Pincode','0')");
+                document.contact2.level2OfCoun.setAttribute("onblur","valid_select(this,'Country','0')");
+                
+            }
             }
 
             if(add === "RESIDANCE")
             {
-
                 $(".residence").show();
                 $(".office").hide();
+                var $form = $("#addcom").closest('form');
+               if($form.attr('name') == 'contact')
+              
+               {
+                   //level 1 contact form
+
+                document.contact.RTCD.setAttribute("onblur","valid_required(this,'Town/City','0')");
+                document.contact.RState.setAttribute("onblur","valid_select(this,'State','0'");
+                document.contact.RPZcode.setAttribute("onblur","valid_required(this,'Pincode','0')");
+                document.contact.RCountry.setAttribute("onblur","valid_select(this,'Country','0')");
+                
+                $("#ONameofoffice").removeAttr("onblur","valid_required(this,'Office Name','0')");
+                $("#OTCD").removeAttr("onblur","valid_required(this,'Town/City','0')");
+                $("#OState").removeAttr("onblur","valid_select(this,'State','0'");
+                $("#OPZcode").removeAttr("onblur","valid_required(this,'Pincode','0')");
+                $("#OCountry").removeAttr("onblur","valid_select(this,'Country','0')");
+               }
+              else
+              
+               {
+                    //level 2 contact form
+                   
+                document.contact2.level2ReTown.setAttribute("onblur","valid_required(this,'Town/City','0')");
+                document.contact2.level2ReState.setAttribute("onblur","valid_select(this,'State','0'");
+                document.contact2.level2RePin.setAttribute("onblur","valid_required(this,'Pincode','0')");
+                document.contact2.level2ReCoun.setAttribute("onblur","valid_select(this,'Country','0')");
+                
+                
+                  
+                $("#level2NameOffice").removeAttr("onblur","valid_required(this,'Name of Office','0')");
+                $("#level2OfTown").removeAttr("onblur","valid_required(this,'Town/City','0')");
+                $("#level2OfState").removeAttr("onblur","valid_select(this,'State','0'");
+                $("#level2OfPin").removeAttr("onblur","valid_required(this,'Pincode','0')");
+                $("#level2OfCoun").removeAttr("onblur","valid_select(this,'Country','0')");
+                  
+               }
             }
 
         }
@@ -77,13 +150,137 @@ $(document).ready(function() {
         if(b === "49A" || b === "49AA")
         {
 
-            $(".office").show();
-            $(".residence").show();
+           
+            if(add === "RESIDANCE")
+            {
+                $(".residence").show();
+                $(".office").hide();
+                $(".selectoffice").show();
+                var $form = $("#addcom").closest('form');
+               if($form.attr('name') == 'contact')
+              
+               {
+                   //level 1 contact form
+
+                document.contact.RTCD.setAttribute("onblur","valid_required(this,'Town/City','0')");
+                document.contact.RState.setAttribute("onblur","valid_select(this,'State','0'");
+                document.contact.RPZcode.setAttribute("onblur","valid_required(this,'Pincode','0')");
+                document.contact.RCountry.setAttribute("onblur","valid_select(this,'Country','0')");
+                
+                $("#ONameofoffice").removeAttr("onblur","valid_required(this,'Office Name','0')");
+                $("#OTCD").removeAttr("onblur","valid_required(this,'Town/City','0')");
+                $("#OState").removeAttr("onblur","valid_select(this,'State','0'");
+                $("#OPZcode").removeAttr("onblur","valid_required(this,'Pincode','0')");
+                $("#OCountry").removeAttr("onblur","valid_select(this,'Country','0')");
+               }
+              else
+              
+               {
+                    //level 2 contact form
+                   
+                document.contact2.level2ReTown.setAttribute("onblur","valid_required(this,'Town/City','0')");
+                document.contact2.level2ReState.setAttribute("onblur","valid_select(this,'State','0'");
+                document.contact2.level2RePin.setAttribute("onblur","valid_required(this,'Pincode','0')");
+                document.contact2.level2ReCoun.setAttribute("onblur","valid_select(this,'Country','0')");
+                
+                
+                  
+                $("#level2NameOffice").removeAttr("onblur","valid_required(this,'Name of Office','0')");
+                $("#level2OfTown").removeAttr("onblur","valid_required(this,'Town/City','0')");
+                $("#level2OfState").removeAttr("onblur","valid_select(this,'State','0'");
+                $("#level2OfPin").removeAttr("onblur","valid_required(this,'Pincode','0')");
+                $("#level2OfCoun").removeAttr("onblur","valid_select(this,'Country','0')");
+                  
+               }
+            }
+            
+             if(add === "OFFICE")
+            {
+               
+                  $(".office").show();
+                  $(".residence").show();
+                    $(".selectoffice").hide();
+                   var $form = $("#addcom").closest('form');
+             
+               if($form.attr('name') == 'contact')
+              
+               {
+                                
+                document.contact.ONameofoffice.setAttribute("onblur","valid_required(this,'Office Name','0')");
+                document.contact.OTCD.setAttribute("onblur","valid_required(this,'Town/City','0')");
+                document.contact.OState.setAttribute("onblur","valid_select(this,'State','0'");
+                document.contact.OPZcode.setAttribute("onblur","valid_required(this,'Pincode','0')");
+                document.contact.OCountry.setAttribute("onblur","valid_select(this,'Country','0')");
+                   
+                $("#RTCD").removeAttr("onblur","valid_required(this,'Town/City','0')");
+                $("#RState").removeAttr("onblur","valid_select(this,'State','0'");
+                $("#RPZcode").removeAttr("onblur","valid_required(this,'Pincode','0')");
+                $("#RCountry").removeAttr("onblur","valid_select(this,'Country','0')");
+
+               
+            }
+            else
+            {
+                
+                $("#level2ReTown").removeAttr("onblur","valid_required(this,'Town/City','0')");
+                $("#level2ReState").removeAttr("onblur","valid_select(this,'State','0'");
+                $("#level2RePin").removeAttr("onblur","valid_required(this,'Pincode','0')");
+                $("#level2ReCoun").removeAttr("onblur","valid_select(this,'Country','0')");
+              
+                document.contact2.level2NameOffice.setAttribute("onblur","valid_required(this,'Name of Office','0')");
+                document.contact2.level2OfTown.setAttribute("onblur","valid_required(this,'Town/City','0')");
+                document.contact2.level2OfState.setAttribute("onblur","valid_select(this,'State','0'");
+                document.contact2.level2OfPin.setAttribute("onblur","valid_required(this,'Pincode','0')");
+                document.contact2.level2OfCoun.setAttribute("onblur","valid_select(this,'Country','0')");
+                
+            }
+             
+            }
 
 
         }
-                
-                
+         
+    
+    //onload add office address
+    
+      var addoffice = $('#selectyes').val();
+
+            
+	if (addoffice === 'Y') 
+        {
+            $('.office').show();
+            
+            document.contact.ONameofoffice.setAttribute("onblur","valid_required(this,'Office Name','0')");
+            document.contact.OTCD.setAttribute("onblur","valid_required(this,'Town/City','0')");
+            document.contact.OState.setAttribute("onblur","valid_select(this,'State','0'");
+            document.contact.OPZcode.setAttribute("onblur","valid_required(this,'Pincode','0')");
+            document.contact.OCountry.setAttribute("onblur","valid_select(this,'Country','0')");
+    
+        }
+        else
+        {
+            $('.office').hide();
+            $('#ONameofoffice').val('');
+            $('#OFRDB').val('');
+            $('#OPremises').val('');
+            $('#ORSLP').val('');
+            $('#OALTS').val('');
+            $('#OTCD').val('');
+            $('#OState').val('');
+            $('#OPZcode').val('');
+            $('#OCountry').val('');
+            
+            
+             
+                $("#ONameofoffice").removeAttr("onblur","valid_required(this,'Office Name','0')");
+                $("#OTCD").removeAttr("onblur","valid_required(this,'Town/City','0')");
+                $("#OState").removeAttr("onblur","valid_select(this,'State','0'");
+                $("#OPZcode").removeAttr("onblur","valid_required(this,'Pincode','0')");
+                $("#OCountry").removeAttr("onblur","valid_select(this,'Country','0')");
+        }
+
+    
+    
 // onload events for title selection
  
  
@@ -501,7 +698,7 @@ $(document).ready(function() {
        
     
     // onchange event for application type selection
-    
+   // $('.app1').hide(); 
 	$('select[name=apptype]').change(function () {
             
 	if ($(this).val() == '49A') 

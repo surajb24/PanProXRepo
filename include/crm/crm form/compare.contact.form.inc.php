@@ -26,7 +26,7 @@
                  </tr>
             
             <tr class="residence">
-                <th colspan="2">Residence Address</th>
+                 <th colspan="2" style="color:green">Residence Address</th>
                                 
             </tr> 
             
@@ -37,47 +37,51 @@
 
                         <?php if(empty($_SESSION['4-3-2'])) { echo '<p>'.$_SESSION['2-3-2'].'</p>'; }?>
                           
-                        <input type="text" name="level2ReFlat" id="level2ReFlat" class="level2ReFlat" placeholder="FLAT/ROOM NO" 
+                        <input type="text" name="level2ReFlat" id="level2ReFlat" class="level2ReFlat resii" placeholder="FLAT/ROOM NO" 
                                maxlength="25" onkeyup="ValidFirstSpace(this);" style="text-transform: uppercase;" onblur="valid_required(this,'Flat No','0'),this.value = this.value.toUpperCase();"
                                value="<?php echo $_SESSION['4-3-2']; ?>">
                         
                         <?php if(empty($_SESSION['4-3-2'])) { echo '<p>'.$_SESSION['3-3-2'].'</p>'; }?>
                     </td>
             </tr>
+            
             <tr class="residence">
                 <th>Name of Premises/Building/Village</th>
                     <td>
                         <?php if(empty($_SESSION['4-3-3'])) { echo '<p>'.$_SESSION['2-3-3'].'</p>'; }?>
                         
-                        <input type="text" name="level2ReBuid" id="level2ReBuid" class="level2ReBuid" placeholder="NAME OF PREMISES" maxlength="25" onkeyup="ValidFirstSpace(this);" style="text-transform: uppercase;"
+                        <input type="text" name="level2ReBuid" id="level2ReBuid" class="level2ReBuid resii" placeholder="NAME OF PREMISES" maxlength="25" onkeyup="ValidFirstSpace(this);" style="text-transform: uppercase;"
                                onblur="this.value = this.value.toUpperCase();"    value="<?php echo $_SESSION['4-3-3']; ?>">
                         
                        <?php if(empty($_SESSION['4-3-3'])) { echo '<p>'.$_SESSION['3-3-3'].'</p>'; }?>
                     </td>
             </tr>
+            
             <tr class="residence">
                 <th>Road/Street/Lane/Post Office</th>
                     <td>
                         <?php if(empty($_SESSION['4-3-4'])) { echo '<p>'.$_SESSION['2-3-4'].'</p>'; }?>
                         
-                        <input type="text" name="level2ReRoad" id="level2ReRoad" class="level2ReRoad" placeholder="ROAD/STREET/LANE" maxlength="25" onkeyup="ValidFirstSpace(this);" style="text-transform: uppercase;"
+                        <input type="text" name="level2ReRoad" id="level2ReRoad" class="level2ReRoad resii" placeholder="ROAD/STREET/LANE" maxlength="25" onkeyup="ValidFirstSpace(this);" style="text-transform: uppercase;"
                           onblur="this.value = this.value.toUpperCase();"     value="<?php echo $_SESSION['4-3-4']; ?>">
                         
                         <?php if(empty($_SESSION['4-3-4'])) { echo '<p>'.$_SESSION['3-3-4'].'</p>'; }?>
                     </td>
             </tr>
+            
             <tr class="residence">
                 <th>Area/Locality/Taluka/Sub-Division</th>
                     <td>
                         <?php if(empty($_SESSION['4-3-5'])) { echo '<p>'.$_SESSION['2-3-5'].'</p>'; }?>
                         
-                        <input type="text" name="level2ReArea" id="level2ReArea" class="level2ReArea" placeholder="AREA/LOCALITY/TALUKA" maxlength="25" onkeyup="ValidFirstSpace(this);" style="text-transform: uppercase;" 
+                        <input type="text" name="level2ReArea" id="level2ReArea" class="level2ReArea resii" placeholder="AREA/LOCALITY/TALUKA" maxlength="25" onkeyup="ValidFirstSpace(this);" style="text-transform: uppercase;" 
                                onblur="valid_required(this,'Area/Taluka','0'),this.value = this.value.toUpperCase();"
                                value="<?php echo $_SESSION['4-3-5']; ?>">
                         
                         <?php if(empty($_SESSION['4-3-5'])) { echo '<p>'.$_SESSION['3-3-5'].'</p>'; }?>
                     </td>
             </tr>
+            
             <tr class="residence">
                 <th class="required">Town/City/District</th>
                     <td>
@@ -134,9 +138,21 @@
                     </td>
             </tr>
             
+                                   
+            <tr class="selectoffice">
+                <th class="required">Please Select Office address</th>
+                <td>
+                    <select name="selectyes" id="selectyes" class="selectyes">
+                        <option>---Select---</option>
+                        <option value="Y">Yes</option>
+                        <option value="N">No</option>
+                    </select>
+                </td>
+            </tr>
             
-            <tr class="office">
-                <th colspan="2">Office Address</th>
+            
+           <tr class="office">
+                <th colspan="2" style="color:green;">Office Address <span style="color:red;">(Please fill atleast one address field like Flat/Room/Door No or Name Of Premises/Building/Village)</span></th>
             </tr>
             
             <tr class="office">
@@ -150,50 +166,58 @@
                         <?php if(empty($_SESSION['4-3-10'])) { echo '<p>'.$_SESSION['3-3-10'].'</p>'; }?>
                     </td>
             </tr>
+            
+            
             <tr class="office">
                 <th>Flat/Room/Door/Block No</th>
                     <td>
                             <?php if(empty($_SESSION['4-3-11'])) { echo '<p>'.$_SESSION['2-3-11'].'</p>'; }?>    
                                 
-                                <input type="text" name="level2OfFlat" id="level2OfFlat" class="level2OfFlat" placeholder="FLAT/ROOM NO" maxlength="25" onkeyup="ValidFirstSpace(this);" style="text-transform: uppercase;" 
+                                <input type="text" name="level2OfFlat" id="level2OfFlat" class="level2OfFlat offye" placeholder="FLAT/ROOM NO" maxlength="25" onkeyup="ValidFirstSpace(this);" style="text-transform: uppercase;" 
                               onblur="this.value = this.value.toUpperCase();"  value="<?php echo $_SESSION['4-3-11']; ?>">
                                 
                             <?php if(empty($_SESSION['4-3-11'])) { echo '<p>'.$_SESSION['3-3-11'].'</p>'; }?>
                     </td>
             </tr>
+            
             <tr class="office">
                 <th>Name of Premises/Building/Village</th>
                     <td>
                             <?php if(empty($_SESSION['4-3-12'])) { echo '<p>'.$_SESSION['2-3-12'].'</p>'; }?>
                                 
-                                <input type="text" name="level2OfBuil" id="level2OfBuil" class="level2OfBuil" placeholder="NAME OF PREMISES" maxlength="25" onkeyup="ValidFirstSpace(this);" style="text-transform: uppercase;" onblur="this.value = this.value.toUpperCase();" 
+                                <input type="text" name="level2OfBuil" id="level2OfBuil" class="level2OfBuil offye" placeholder="NAME OF PREMISES" maxlength="25" onkeyup="ValidFirstSpace(this);" style="text-transform: uppercase;" onblur="this.value = this.value.toUpperCase();" 
                                 value="<?php echo $_SESSION['4-3-12']; ?>">
                                 
                             <?php if(empty($_SESSION['4-3-12'])) { echo '<p>'.$_SESSION['3-3-12'].'</p>'; }?>
                     </td>
             </tr>
+            
+            
             <tr class="office">
                 <th>Road/Street/Lane/Post Office</th>
                     <td>
                             <?php if(empty($_SESSION['4-3-13'])) { echo '<p>'.$_SESSION['2-3-13'].'</p>'; }?>
                                 
-                                <input type="text" name="level2OfRoad" id="level2OfRoad" class="level2OfRoad" placeholder="ROAD/STREET/LANE" maxlength="25" onkeyup="ValidFirstSpace(this);" style="text-transform: uppercase;" onblur="this.value = this.value.toUpperCase();" 
+                                <input type="text" name="level2OfRoad" id="level2OfRoad" class="level2OfRoad offye" placeholder="ROAD/STREET/LANE" maxlength="25" onkeyup="ValidFirstSpace(this);" style="text-transform: uppercase;" onblur="this.value = this.value.toUpperCase();" 
                                 value="<?php echo $_SESSION['4-3-13']; ?>">
                                 
                             <?php if(empty($_SESSION['4-3-13'])) { echo '<p>'.$_SESSION['3-3-13'].'</p>'; }?>
                     </td>
             </tr>
+            
+            
             <tr class="office">
                 <th>Area/Locality/Taluka/Sub-Division</th>
                 <td>
                     <?php if(empty($_SESSION['4-3-14'])) { echo '<p>'.$_SESSION['2-3-14'].'</p>'; }?>    
                         
-                        <input type="text" name="level2OfArea" id="level2OfArea" class="level2OfArea" placeholder="AREA/LOCALITY/TALUKA" maxlength="25" onkeyup="ValidFirstSpace(this);" style="text-transform: uppercase;" 
+                        <input type="text" name="level2OfArea" id="level2OfArea" class="level2OfArea offye" placeholder="AREA/LOCALITY/TALUKA" maxlength="25" onkeyup="ValidFirstSpace(this);" style="text-transform: uppercase;" 
                           onblur="this.value = this.value.toUpperCase();"      value="<?php echo $_SESSION['4-3-14']; ?>">
                         
                         <?php if(empty($_SESSION['4-3-14'])) { echo '<p>'.$_SESSION['3-3-14'].'</p>'; }?>
                     </td>
             </tr>
+            
             <tr class="office">
                 <th class="required">Town/City/District</th>
                     <td>
@@ -223,6 +247,7 @@
 					
                     </td>
             </tr>
+            
             <tr class="office">
                 <th class="required">Pin code/Zip code</th>
                     <td>
@@ -235,6 +260,8 @@
 
                     </td>
             </tr>
+            
+            
             <tr class="office">
                 <th class="required">Country Name</th>
                     <td>

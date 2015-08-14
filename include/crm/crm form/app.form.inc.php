@@ -57,7 +57,7 @@
                         <input type="text" name="ac"  id="ac" class="ac req"  placeholder="AC" maxlength="3" size="3" onblur="valid_required(this,'Area Code number','0'),this.value = this.value.toUpperCase();" onkeypress="return ValidAlpha(event);" onkeyup="ValidFirstSpace(this);" style="text-transform: uppercase;" value="<?php echo $_SESSION['2-1-5'];?>"/>
                     </td>
                     
-	</tr>
+                </tr>
 			
                     <tr class="app1" >
 			

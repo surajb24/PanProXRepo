@@ -30,7 +30,7 @@
             
             
             <tr class="residence" >
-                <th colspan="2">Residence Address</th>
+                <th colspan="2" style="color:green">Residence Address</th>
             </tr> 
             
             <tr class="residence">
@@ -134,7 +134,7 @@
             
            
             <tr class="office">
-                <th colspan="2">Office Address</th>
+                <th colspan="2" style="color:green;">Office Address <span style="color:red;">(Please fill atleast one address field like Flat/Room/Door No or Name Of Premises/Building/Village)</span></th>
             </tr>
             
             <tr class="office">
