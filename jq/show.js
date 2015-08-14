@@ -1,5 +1,6 @@
 $(document).ready(function() {
-   
+           
+       
         $('.app1').hide();
         $('.AppC').hide();
         $('.app2').hide();
@@ -8,7 +9,7 @@ $(document).ready(function() {
         $('.Resig').hide();
         $('.selectoffice').hide();
         $('.ra1').hide();
-       
+        
       
        //Onload common events
         var check = $('#apptype').val();

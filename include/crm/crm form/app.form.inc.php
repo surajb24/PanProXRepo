@@ -59,7 +59,7 @@
                     
 	</tr>
 			
-        <tr class="app1" >
+                    <tr class="app1" >
 			
                     <th class="required">AO Type</th>
                     <td>
@@ -68,7 +68,7 @@
                     
 		</tr>
            
-                <tr class="app1">
+                <tr class="app1" >
 			
                     <th class="required">Range Code</th>
                     <td>
@@ -77,7 +77,7 @@
                     
                 </tr>
                 
-                <tr class="app1">
+                <tr class="app1" >
 			
                     <th class="required">Ao No</th>
                     <td>
