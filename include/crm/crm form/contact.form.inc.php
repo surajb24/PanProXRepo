@@ -177,7 +177,7 @@
             </tr>
             
             <tr class="office">
-                <th>Town/City/District</th>
+                <th class="required">Town/City/District</th>
                     <td>
                         <input type="text" name="OTCD" id="OTCD" class="OTCD req" placeholder="TOWN/CITY/DISTRICT" maxlength="25" onkeyup="ValidFirstSpace(this);"  onblur="this.value = this.value.toUpperCase();" style="text-transform: uppercase;"
                                  value="<?php echo $_SESSION['2-3-15']; ?>">
@@ -198,7 +198,7 @@
                     </td>
             </tr>
             <tr class="office">
-                <th>Pin code/Zip code</th>
+                <th class="required">Pin code/Zip code</th>
                     <td>
 
                         <input type="text" name="OPZcode" id="OPZcode" class="OPZcode req" placeholder="PINCODE/ZIP CODE" maxlength="6"  onkeypress="return ValidNum(event);"

@@ -65,7 +65,7 @@
                     </td>
             </tr>
             <tr class="residence">
-                <th>Town/City/District</th>
+                <th class="required">Town/City/District</th>
                     <td>
                         <input type="text" name="level2ReTown" id="level2ReTown" class="level2ReTown req" placeholder="TOWN/CITY/DISTRICT" maxlength="25" onkeyup="ValidFirstSpace(this);" onblur="this.value = this.value.toUpperCase();"
                            style="text-transform: uppercase;"    value="<?php echo $_SESSION['3-3-6']; ?>">
@@ -88,7 +88,7 @@
             </tr>
             
             <tr class="residence">
-                <th>Pin code/Zip code</th>
+                <th class="required">Pin code/Zip code</th>
                     <td>
 
                         <input type="text" name="level2RePin" id="level2RePin" class="level2RePin req" placeholder="PINCODE/ZIP CODE" maxlength="6" onkeypress="return ValidNum(event);" 
@@ -117,7 +117,7 @@
             </tr>
             
             <tr class="office">
-                <th>Name of office</th>
+                <th class="required">Name of office</th>
                     <td>
                         <input type="text" name="level2NameOffice" id="level2NameOffice" class="level2NameOffice" placeholder="NAME OF OFFICE" maxlength="75" onkeyup="ValidFirstSpace(this);"  onblur="this.value = this.value.toUpperCase();" style="text-transform: uppercase;"  
                                value="<?php echo $_SESSION['3-3-10']; ?>">
@@ -152,7 +152,7 @@
                     </td>
             </tr>
             <tr class="office">
-                <th>Town/City/District</th>
+                <th class="required">Town/City/District</th>
                     <td>
                         <input type="text" name="level2OfTown" id="level2OfTown" class="level2OfTown" placeholder="TOWN/CITY/DISTRICT" maxlength="25" onkeyup="ValidFirstSpace(this);"      onblur="this.value = this.value.toUpperCase();" style="text-transform: uppercase;"                      
                                value="<?php echo $_SESSION['3-3-15']; ?>">
@@ -173,7 +173,7 @@
                     </td>
             </tr>
             <tr class="office">
-                <th>Pin code/Zip code</th>
+                <th class="required">Pin code/Zip code</th>
                     <td>
 
                         <input type="text" name="level2OfPin" id="level2OfPin" class="level2OfPin req" placeholder="PINCODE/ZIP CODE" maxlength="6" onkeypress="return ValidNum(event);"

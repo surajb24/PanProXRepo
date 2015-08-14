@@ -488,13 +488,10 @@ function adhr(e){
 	var lenadhar=adhar.length;
         if(lenadhar<12)
         {
-            document.getElementById("idaddar").innerHTML="Aadhar No should be 12 digits";
+            alert("Aadhar No should be 12 digits");
             e.value = "";
         }
-        else
-        {
-            document.getElementById("idaddar").innerHTML="";
-        }
+        
 }
 
 //first character space

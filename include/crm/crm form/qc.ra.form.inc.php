@@ -12,7 +12,7 @@
             </tr>
             
              <tr >
-                <th>Is Representative Assessee Details Available(Yes or No)</th>
+                <th class="required">Is Representative Assessee Details Available(Yes or No)</th>
                 <td>
                     <select name="Rdetail" id="Rdetail" class="Rdetail" onblur="valid_select(this,'Detail','0');">
                            
@@ -26,7 +26,7 @@
             </tr>
             
             <tr >
-                <th>Please select title,as applicable</th>
+                <th class="required">Please select title,as applicable</th>
                 <td>
                     <select name="Rtitle" id="Rtitle" class="Rtitle" onblur="valid_select(this,'Title','0');">
                            
@@ -39,7 +39,7 @@
             </tr>
             
             <tr>
-                <th>Last Name / Surname</th>
+                <th class="required">Last Name / Surname</th>
                     <td>
                         <input type="text" name="Rlast" id="Rlast" class="Rlast" placeholder="LAST NAME/SURNAME" class="" maxlength="25" onkeypress="return ValidAlpha(event);" style="text-transform: uppercase;" onKeyup="ValidFirstSpace(this);" onblur="this.value = this.value.toUpperCase();"
                                value="<?php echo $_SESSION['5-5-2']; ?>">
@@ -47,7 +47,7 @@
                 
             </tr>
             <tr>
-                <th>First Name</th>
+                <th class="required">First Name</th>
                     <td>
                         <input type="text" name="Rfirst" id="Rfirst" class="Rfirst" placeholder="FIRST NAME" class="" maxlength="25" onkeypress="return ValidAlpha(event);" style="text-transform: uppercase;" onKeyup="ValidFirstSpace(this);" onblur="this.value = this.value.toUpperCase();"
                                value="<?php echo $_SESSION['5-5-3']; ?>">
@@ -95,14 +95,14 @@
                     </td>
             </tr>
             <tr>
-                <th>Town/City/District</th>
+                <th class="required">Town/City/District</th>
                     <td>
                         <input type="text" name="Rtown" id="Rtown" class="Rtown" maxlength="25" placeholder="TOWN/CITY" onkeyup="ValidFirstSpace(this);" style="text-transform: uppercase;" onblur="this.value = this.value.toUpperCase();"
                                value="<?php echo $_SESSION['5-5-9']; ?>">
                     </td>
             </tr>
             <tr>
-                <th>State/Union Territory</th>
+                <th class="required">State/Union Territory</th>
                     <td>
                         <select name="RState" id="Rstate" class="Rstate" onblur="valid_select(this,'State','0');">
                                 <option value="<?php if(!empty($_SESSION['5-5-10'])) { echo $_SESSION['5-5-10']; } else { "";}?>">
@@ -114,7 +114,7 @@
                     </td>
             </tr>
             <tr>
-                <th>Pincode</th>
+                <th class="required">Pincode</th>
                     <td>
                         <input type="text" name="Rpincode" id="Rpincode" class="Rpincode" placeholder="PINCODE" maxlength="6" min="6" onkeypress="return ValidNum(event);"
                                value="<?php echo $_SESSION['5-5-11']; ?>">

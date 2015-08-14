@@ -32,7 +32,7 @@
             
             <tr class="residence">
 
-                <th class="required">Flat/Room/Door/Block No</th>
+                <th>Flat/Room/Door/Block No</th>
                     <td>
 
                         <?php if(empty($_SESSION['4-3-2'])) { echo '<p>'.$_SESSION['2-3-2'].'</p>'; }?>
@@ -67,7 +67,7 @@
                     </td>
             </tr>
             <tr class="residence">
-                <th class="required">Area/Locality/Taluka/Sub-Division</th>
+                <th>Area/Locality/Taluka/Sub-Division</th>
                     <td>
                         <?php if(empty($_SESSION['4-3-5'])) { echo '<p>'.$_SESSION['2-3-5'].'</p>'; }?>
                         
@@ -151,7 +151,7 @@
                     </td>
             </tr>
             <tr class="office">
-                <th class="required">Flat/Room/Door/Block No</th>
+                <th>Flat/Room/Door/Block No</th>
                     <td>
                             <?php if(empty($_SESSION['4-3-11'])) { echo '<p>'.$_SESSION['2-3-11'].'</p>'; }?>    
                                 
@@ -184,7 +184,7 @@
                     </td>
             </tr>
             <tr class="office">
-                <th class="required">Area/Locality/Taluka/Sub-Division</th>
+                <th>Area/Locality/Taluka/Sub-Division</th>
                 <td>
                     <?php if(empty($_SESSION['4-3-14'])) { echo '<p>'.$_SESSION['2-3-14'].'</p>'; }?>    
                         

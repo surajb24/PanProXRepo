@@ -78,7 +78,47 @@
 
                         <input type="text" name="AadharNo"  id="AadharNo" class="AadharNo"  placeholder="AADHAR NO" minlength="12" maxlength="12" onkeypress="return ValidNum(event);" onblur="adhr(this);"
           
-                               value="<?php echo $_SESSION['2-4-5']; ?>"><div id="idaddar" style="color:red;"></div>
+                               value="<?php echo $_SESSION['2-4-5']; ?>">
+                    </td><td></td>
+                    
+		</tr>
+                
+                <tr class="adinfo">
+			
+                    <th >Name On AADHAR Card</th>
+                    <td>
+
+                        <input type="text" name="AName"  id="AName" class="AName"  placeholder="AADHAR NAME" maxlength="80" onkeypress="return ValidAlpha(event);" onkeyup="ValidFirstSpace(this);" onblur="this.value = this.value.toUpperCase();" 
+          
+                            style="text-transform: uppercase;"   value="<?php echo $_SESSION['2-4-17']; ?>">
+                    </td><td></td>
+                    
+		</tr>
+                
+                <tr class="adinfo">
+			
+                    <th >Year Of Birth On AADHAR Card</th>
+                    <td>
+
+                        <input type="text" name="Ayob"  id="Ayob" class="Ayob"  placeholder="AADHAR YOB" minlength="4" maxlength="4" onkeypress="return ValidNum(event);" 
+          
+                             value="<?php echo $_SESSION['2-4-18']; ?>">
+                    </td><td></td>
+                    
+		</tr>
+                
+                 <tr class="adinfo">
+			
+                    <th >Gender On AADHAR Card</th>
+                    <td>
+
+                        
+                        <select name="Agen" id="Agen" class="Agen" onblur="valid_select(this,'Aadhar Gender ','0');">
+                           <option value="<?php if(!empty($_SESSION['2-4-19'])) { echo $_SESSION['2-4-19']; } else { "";}?>">
+                               <?php if(!empty($_SESSION['2-4-19'])) { echo $_SESSION['2-4-19']; } else { echo 'Select Gender'; } ?></option>
+                           <?php Gender(); ?>
+		            
+	                </select>
                     </td><td></td>
                     
 		</tr>

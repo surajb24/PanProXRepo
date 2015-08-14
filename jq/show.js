@@ -9,7 +9,7 @@ $(document).ready(function() {
         $('.Resig').hide();
         $('.selectoffice').hide();
         $('.ra1').hide();
-        
+        $('.adinfo').hide();
       
        //Onload common events
         var check = $('#apptype').val();
@@ -248,6 +248,7 @@ $(document).ready(function() {
            }
         });
        
+
        
           //onload other yes or no
         
@@ -269,6 +270,23 @@ $(document).ready(function() {
          
        }
        
+       
+            
+       //code For Aadhar Card Info onload
+       
+     
+           var ano=$("#AadharNo").val();
+           if(ano!="")
+           {
+            
+             $('.adinfo').show();
+
+           }
+           else
+           {
+               $('.adinfo').hide();
+           }
+     
    
 //onload event for photo checkbox
     
@@ -442,7 +460,28 @@ $(document).ready(function() {
                 $('#IOS').attr('checked', false);
                 
             }
+     
+           
+       //code For Aadhar Card Info Onblur
+       
+       $("#AadharNo").blur(function () {
+           var ano=$("#AadharNo").val();
+           if(ano!="")
+           {
               
+           if (confirm("Aadhar Card Info Display!")==true ) {
+             $('.adinfo').show();
+            
+             } else {
+                $('.adinfo').hide();
+            }
+           }
+           else
+           {
+               $('.adinfo').hide();
+           }
+        });
+    
     //RA yes Or No onchange
   
            var selectedval1=$("#Rdetail").val();
