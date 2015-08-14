@@ -67,7 +67,7 @@ margin-left:1%;
 
     <div id="tabbox">
 
-        <a href="#" id="Tab11" class="tab Select">Batch Details</a>
+        <a href="#" id="Tab11" class="tab Select">Agency Details</a>
 
     </div>
 
@@ -78,7 +78,7 @@ margin-left:1%;
         <form action="" method="POST">
             
             <center>
-            <table >
+            <table>
                 
                 <tr>
                     
@@ -103,7 +103,7 @@ margin-left:1%;
                 
                 <tr>
                     
-                    <th>Agency Name 1:</th>
+                    <th>Agency Address 1:</th>
 
                     <td>
                         
@@ -116,7 +116,7 @@ margin-left:1%;
                 
                 <tr>
                     
-                    <th>Agency Name 2:</th>
+                    <th>Agency Address 2:</th>
 
                     <td>
                         
@@ -128,7 +128,7 @@ margin-left:1%;
                 
                 <tr>
                     
-                    <th>Agency Name 3:</th>
+                    <th>Agency Address 3:</th>
 
                     <td>
                         
@@ -139,12 +139,44 @@ margin-left:1%;
                     
                 </tr>
                 
+                <tr>
+                                    
+                    <th>Pin Code:</th>
+
+                    <td>
+                        
+                       <input type="text" name="pincode" placeholder="Pin Code">
+                       
+                       
+                    </td>
+                    
+                </tr>
+                
+                <tr>
+                    
+                    <th>PDC Code:</th>
+
+                    <td>
+                        
+                        <select name="pdc_co">
+
+                            <option value="001">001</option>
+                            <option value="002">002</option>
+                            <option value="003">003</option>
+                            <option value="004">004</option>
+                        
+                        </select>
+                        
+                    </td>
+                    
+                </tr>
+                
                 
                 
                 <tr>
                     
                     <td colspan="2" style="text-align:right;">
-                        <input type="submit" name="batch_submit" value="Import" >
+                        <input type="submit" name="agency_submit" value="Agency" >
                         <input type="reset" name="" value="Reset" >
                     </td>
                     
@@ -161,7 +193,7 @@ margin-left:1%;
 
 <?php
 
-if(isset($_POST['batch_submit']))
+if(isset($_POST['agency_submit']))
 {
     $Date = date('d-m-Y');
     $AG_Code = $_POST['ag_co']; 
