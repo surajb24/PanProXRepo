@@ -127,6 +127,7 @@ if($_SESSION['PAN_User_Role'] !== '2')
                                     <li id="2.compare"><a id="2.compare-a" href='2.compare.php'>Compare</a></li>
                                     <li id="2.qc"><a id="2.qc-a" href='2.qc.php'>QC</a></li>
                                     <li id="2.import"><a id="2.import-a" href='2.import.php'>Import</a></li>
+                                    <li id="2.aagency"><a id="2.aagency-a" href='2.add_agency.php'>Add Agency</a></li>
                                     
                                </ul>
 				
