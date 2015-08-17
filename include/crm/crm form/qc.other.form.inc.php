@@ -78,6 +78,46 @@
                     
 		</tr>
                 
+                   <tr class="adinfo">
+			
+                    <th class="required">Name On AADHAR Card</th>
+                    <td>
+
+                        <input type="text" name="AName"  id="AName" class="AName"  placeholder="AADHAR NAME" maxlength="80" onkeypress="return ValidAlpha(event);" onkeyup="ValidFirstSpace(this);" onblur="this.value = this.value.toUpperCase();" 
+          
+                            style="text-transform: uppercase;"   value="<?php echo $_SESSION['5-4-17']; ?>">
+                    </td><td></td>
+                    
+		</tr>
+                
+                <tr class="adinfo">
+			
+                    <th class="required">Year Of Birth On AADHAR Card</th>
+                    <td>
+
+                        <input type="text" name="Ayob"  id="Ayob" class="Ayob"  placeholder="AADHAR YOB" minlength="4" maxlength="4" onkeypress="return ValidNum(event);" 
+          
+                             value="<?php echo $_SESSION['5-4-18']; ?>">
+                    </td><td></td>
+                    
+		</tr>
+                
+                 <tr class="adinfo">
+			
+                    <th class="required">Gender On AADHAR Card</th>
+                    <td>
+
+                        
+                        <select name="Agen" id="Agen" class="Agen" onblur="valid_select(this,'Aadhar Gender ','0');">
+                           <option value="<?php if(!empty($_SESSION['5-4-19'])) { echo $_SESSION['5-4-19']; } else { "";}?>">
+                               <?php if(!empty($_SESSION['5-4-19'])) { echo $_SESSION['5-4-19']; } else { echo 'Select Gender'; } ?></option>
+                           <?php Gender(); ?>
+		            
+	                </select>
+                    </td><td></td>
+                    
+		</tr>
+                
                 <tr class="appcom">
 			
                     <th ROWSPAN="4" class="required">Source Of Income</th>
