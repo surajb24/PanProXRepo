@@ -85,7 +85,7 @@ margin-left:1%;
                     <th>Agency Code:</th>
 
                     <td>	
-                        <input type="text" name="ag_co" placeholder="Agency Code">
+                        <input type="text" name="ag_co" placeholder="Agency Code" required>
                     </td>
                 
                 </tr>
@@ -197,256 +197,36 @@ if(isset($_POST['agency_submit']))
 {
     $Date = date('d-m-Y');
     $AG_Code = $_POST['ag_co']; 
-    $DOR = $_POST['dor'];
+    $Agency_name = $_POST['agencyname'];
+    $Agency_add1 = $_POST['add1'];
+    $Agency_add2 = $_POST['add2'];
+    $Agency_add3 = $_POST['add3'];
+    $Agency_pincode = $_POST['pincode'];
     $PDC_Code = $_POST['pdc_co']; 
-    $Batch_Type = $_POST['bat_type']; 
-    
+   
+    /*
     $flag = '0';
     $year = date("Y");
     $month = date("M");
     $date1 = date('Y/m/d');
     $time = date('h:i:s a');
-
-    $sql = 'SELECT MAX(`SR_NO,N,11`) FROM `batch_info`';
+    */
     
-    if($result = mysqli_query($conn, $sql))
-    {
-        
-        if($row = mysqli_fetch_array($result))
-        {
-
-            $Max_BatchID = $row[0];
-            $Max_BatchID1 = $row[0];
-            $Max_BatchID2 = $row[0];
-
-            $Max_BatchID = $Max_BatchID + 1;
-            $Max_BatchID1 = $Max_BatchID1 + 1;
-            $Max_BatchID2 = $Max_BatchID2 + 1;
-        }
-        
-     
-    }
-    
-    
-    $date = date("Y_d_m");
-    $desired_dir = "../d.data/".$date;
-
-    if(is_dir("$desired_dir/")==false)
-    {
-
-        mkdir("$desired_dir/", 0777);		// Create directory if it does not exist
-
-    }
-
-    $dir = "../d.input/";
-
-    $dh  = opendir($dir);
-
-    while(false !== ($batchname = readdir($dh))) 
-    {
-        $batches[] = $batchname;
-        if($batchname !== '.' && $batchname !== '..' && $batchname !== '.ftpquota')
-        {
-            $batch[] = $batchname.$Max_BatchID1;
-            $Max_BatchID1++;
-        }
-         
-    }
-
-    foreach($batches as $batchkey)
-    {
-        $Max_BatchID;
-        $batch_name = basename($batchkey);
-        $batch_name1 = $batch_name.$Max_BatchID;
-        $Inword_Char = $AG_Code.'0'.$Max_BatchID;
-        $BatchNo = $batch_name.$Max_BatchID;
-       
-        if($batch_name !== '.' && $batch_name !== '..' && $batch_name !== '.ftpquota')
-        {   
-            
-            
-            $sql = "INSERT IGNORE INTO `pcc_info` (`PCC_CODE,C,8`) VALUES ('$batch_name')";
-
-            if($result = mysqli_query($conn, $sql))
-            {  
-
-                $RowCount = mysql_affected_rows();
-
-                if($RowCount == '0')
+    $query = "INSERT INTO `agency_details`
+    (`AGC_CODE,C,3`, `AGC_NAME,C,20`, `AGC_ADD1,C,1`, `AGC_ADD1,C,2`, `AGC_ADD1,C,3`, `AGC,PN,D`, `DOR_AT_PDC,D`, `STATUS,N,1`, `Flag6`) 
+    VALUES('$AG_Code', '$Agency_name', '$Agency_add1', '$Agency_add2', '$Agency_add3', '$Agency_pincode', '$PDC_Code', '1','1');";
+    if(mysqli_query($conn, $query))
                 {
-                    $sql = "SELECT `SR_NO,N,1` FROM `pcc_info` WHERE `PCC_CODE,C,8` = '$batch_name';";
-
-                    if($result = mysqli_query($conn, $sql))
-                    {   
-                        if($row = mysqli_fetch_array($result))
-                        {
-                            $PCCID = $row[0];
-                        }
-                    }
+        
+                    echo "<script>alert('Agency Detail Submmited Successfully');window.location.href='2.home.php';</script>";
+                 
                 }
-                else 
-                {
-                    $query = "SELECT MAX(`SR_NO,N,1`) FROM `pcc_info`;";
-
-                    if($result = mysqli_query($conn, $query))
-                    {
-
-                        if($row = mysqli_fetch_array($result))
-                        {
-                            $PCCID = $row[0];
-                        }
-
-                    }
-                }
-
-            }
-
-            if(is_dir("$desired_dir/".$batch_name)==false)
-            {
-                rename("$dir/".$batch_name, "$desired_dir/".$batch_name1);
-                $batch_path = "$desired_dir/".$batch_name1;
-
-                $query = "INSERT INTO `batch_info` (`PCC_CODE,C,8`, `BATCH_NO,C,20`, `BATCH_TYPE,C,25`, `IMPORT_BY,C,30`, `IMPORT_DATE,D`, `IMPORT_TIME,C,8`, `PDC_CODE,C,3`, `AGENCY_CD,C,5`, `DOE_AT_AG,D`, `DOR_AT_PDC,D`, `STATUS,N,1`) 
-                                VALUES('$PCCID', '$BatchNo', '$Batch_Type', '".$_SESSION["PAN_User_Name"]."', '$date1', '$time', '$PDC_Code', '$AG_Code', '$Date', $DOR, '1');";
                 
-                if(mysqli_query($conn, $query))
-                {
-                  
-                    $flag = '1';
-
-                    $batchkey = $batchkey;
-                   
-                    $batchkey.'<br/>';
-
-                }
                 else
                 {
-                        echo 'Error: '.mysqli_error($conn);
-                        $flag = '0';
+                echo 'Error: '.mysqli_error($conn);
+                
                 }
-            }
-            else
-            {
-            echo 'File already exist!';
-
-            }
-            
-            $Max_BatchID++;
-            
-        }
-   
+     
     }
-
-
-    if($flag == '1')
-    {
-
-        foreach($batch as $batchkey)
-        {
-            
-            unset($files);	
-
-            $batch_name = basename($batchkey);
-
-            if($batch_name !== '.' && $batch_name !== '..')
-            {
-
-                $filedir = "../d.data/$date/$batch_name/";
-                $filedir_path = "d.data/$date/$batch_name/";
-
-                $filedh  = opendir($filedir);
-
-                while (false !== ($filename = readdir($filedh))) 
-                {
-                        $files[] = $filename;
-                }
-
-                foreach($files as $filekey)
-                {
-
-                    $file_name = basename($filekey);
-                    
-                    if($file_name !== '.' && $file_name !== '..' && $file_name !== 'Thumbs.db')
-                    {
-
-                        $file_path = "$filedir_path".$file_name;
-
-
-                        $query = "INSERT INTO `doc_path` (`APP_PATH,C,100`) VALUES('$file_path'); ";
-
-                        if($result = mysqli_query($conn, $query))
-                        {
-
-                            $flag = '1';
-
-                            $query = "SELECT `FORM_ID,C,18` FROM `doc_path` WHERE `APP_PATH,C,100` = '$file_path';";
-
-                            if($result = mysqli_query($conn, $query))
-                            {
-
-                                while($row = mysqli_fetch_array($result))
-                                {
-                                    $FormID = $row[0];
-                                }
-
-                                $query = "INSERT INTO `appl_status` (`FORM_ID,C,18`, `BATCH_ID,N,11`, `FINAL_STATUS,N,1`) VALUES('$FormID', '$Max_BatchID2', '1'); ";
-                                mysqli_query($conn, $query);
-
-                                $query = "INSERT INTO `cust_appl_info_l1` (`FORM_ID,C,18`, `INWARD_NO,N,10,0`,  `STATUS,N,1`) VALUES('$FormID', '$FormID', '1'); ";
-                                mysqli_query($conn, $query);
-
-                                $query = "INSERT INTO `cust_personal_info_l1` (`FORM_ID,C,18`, `STATUS,N,1`) VALUES('$FormID', '1'); ";
-                                mysqli_query($conn, $query);
-
-                                $query = "INSERT INTO `cust_address_info_l1` (`FORM_ID,C,18`, `STATUS,N,1`) VALUES('$FormID', '1'); ";
-                                mysqli_query($conn, $query);
-
-                                $query = "INSERT INTO `cust_other_info` (`FORM_ID,C,18`, `STATUS,N,1`) VALUES('$FormID', '1'); ";
-                                mysqli_query($conn, $query);
-
-                                $query = "INSERT INTO `cust_ra_info` (`FORM_ID,C,18`, `STATUS,N,1`) VALUES('$FormID', '1'); ";
-                                mysqli_query($conn, $query);
-
-                                $query = "INSERT INTO `cust_verification_info` (`FORM_ID,C,18`, `STATUS,N,1`) VALUES('$FormID', '1'); ";
-                                mysqli_query($conn, $query);
-                                
-                                $query = "INSERT INTO `cust_other_col` (`FORM_ID,C,18`, `STATUS,N,1`) VALUES('$FormID', '1'); ";
-                                mysqli_query($conn, $query);
-
-                            }
-
-                        }
-                        else
-                        {
-                                echo 'Error: '.mysqli_error($conn);
-                                $flag = '0';
-                        }
-
-                    }
-                }
-
-            }
-            
-            $Max_BatchID2++;
-        }
-
-    }
-
-    if($flag == '1')
-    {   
-        echo '<script>';
-        echo "alert('Batches have been successfully imported!')";
-        echo '</script>';
-       
-         
-    }
-
-    if($flag == '0')
-    {
-        echo '<script>';
-        echo "alert('Nothing to import! Input folder is empty!')";
-        echo '</script>';
-    }
-
-}
 ?>
