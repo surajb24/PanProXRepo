@@ -15,7 +15,7 @@
             <tr >
                 <th class="required">Is Representative Assessee Details Available(Yes or No)</th>
                 <td>
-                    <select name="Rdetail" id="Rdetail" class="Rdetail" onblur="valid_select(this,'Detail','0');">
+                    <select name="Rdetail" id="Rdetail" class="Rdetail" onblur="valid_select(this,'RADetail','0');">
                            
                            <option value="<?php if(!empty($_SESSION['2-5-12'])) { echo $_SESSION['2-5-12']; } else { "";}?>">
                                <?php if(!empty($_SESSION['2-5-12'])) { echo $_SESSION['2-5-12']; } else { echo 'Select RA Info'; } ?></option>
@@ -147,4 +147,3 @@
         
     
 </div>
-
