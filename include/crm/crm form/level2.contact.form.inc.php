@@ -201,7 +201,7 @@
             <tr class="office">
                 <th class="required">Country Name</th>
                     <td>
-                        <select name="level2OfCoun" id="level2OfCoun" class="level2OfCoun req"  placeholder="COUNTRY" <!--onblur="valid_select(this,'Country','0');"-->>
+                        <select name="level2OfCoun" id="level2OfCoun" class="level2OfCoun"  placeholder="COUNTRY" <!--onblur="valid_select(this,'Country','0');"-->>
                                 <option value="<?php if(!empty($_SESSION['3-3-18'])) { echo $_SESSION['3-3-18']; } else { echo ""; } ?>">
                                         <?php if(!empty($_SESSION['3-3-18'])) { echo $_SESSION['3-3-18']; } else { echo "Select Country"; } ?>
                                 </option>  
