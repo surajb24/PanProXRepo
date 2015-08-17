@@ -1234,9 +1234,17 @@ function Valid_RA()
 {
     
     var selectraval = document.getElementById("Rdetail").value;
-     if(selectraval=="Y")
-     {
-        var summary ="";
+    
+       var summary ="";
+        if(selectraval == "")
+         {
+         
+            summary+=valid_select(this,"RADetail","1");
+                           
+        }
+        else if(selectraval=="Y")
+        {
+             var summary ="";
     
         var selectrtitle = document.getElementById("Rtitle").value;
         var selectlname = document.getElementById("Rlast").value;
@@ -1328,11 +1336,30 @@ function Valid_RA()
        return false;
         
       }else return true;
-      }
-   else
-     {
+      
+      
+        }
         
-      }
+        
+         if(summary!="")
+        {
+            alert(summary);
+        
+                 $(function(){
+                        $('.Rdetail').css("background","#eeac9a");
+                                        
+                             if($(".Rdetail").val()!=="")
+                               {
+                                $(".Rdetail").css('background-color','white');
+                                }  
+                                        
+                 });    
+     
+     
+       return false;
+        
+      }else return true;
+    
  
 }
 
@@ -1442,8 +1469,6 @@ function Valid_Verification()
    
    }
   
-    
-    //end verification
 
 
 
