@@ -85,7 +85,7 @@
                 
                 <tr class="adinfo">
 			
-                    <th >Name On AADHAR Card</th>
+                    <th class="required">Name On AADHAR Card</th>
                     <td>
 
                         <input type="text" name="AName"  id="AName" class="AName"  placeholder="AADHAR NAME" maxlength="80" onkeypress="return ValidAlpha(event);" onkeyup="ValidFirstSpace(this);" onblur="this.value = this.value.toUpperCase();" 
@@ -97,7 +97,7 @@
                 
                 <tr class="adinfo">
 			
-                    <th >Year Of Birth On AADHAR Card</th>
+                    <th class="required">Year Of Birth On AADHAR Card</th>
                     <td>
 
                         <input type="text" name="Ayob"  id="Ayob" class="Ayob"  placeholder="AADHAR YOB" minlength="4" maxlength="4" onkeypress="return ValidNum(event);" 
@@ -109,7 +109,7 @@
                 
                  <tr class="adinfo">
 			
-                    <th >Gender On AADHAR Card</th>
+                    <th class="required">Gender On AADHAR Card</th>
                     <td>
 
                         
