@@ -595,10 +595,13 @@ if(isset($_POST['OtherSubmit']))
                     
                 }
                 
+                $SCode=$_POST['SCode'];
+                $_SESSION['2-4-11'] = $SCode;
                 
                 if(isset($_POST['Salary']))
                 {
                         $Salary="Y";
+                        $SCode=50;
                 }else{
                         $Salary="N";
                     
@@ -609,6 +612,7 @@ if(isset($_POST['OtherSubmit']))
                 if(isset($_POST['CG']))
                 {
                         $CG="Y";
+                       
                 }else{
                         $CG="N";
                 }    
@@ -626,6 +630,7 @@ if(isset($_POST['OtherSubmit']))
                 if(isset($_POST['IOS']))
                 {
                         $IOS="Y";
+                        $SCode=99;
                 }else{
                         $IOS="N";
                 }
@@ -642,17 +647,19 @@ if(isset($_POST['OtherSubmit']))
                 
                 $_SESSION['2-4-10'] = $BPC;
                 
-                $SCode=$_POST['SCode'];
-                $_SESSION['2-4-11'] = $SCode;
+                
                 
                 if(isset($_POST['NI']))
                 {
                         $NI="Y";
+                        $SCode=89;
                 }else{
                         $NI="N";
                 }
                 
                 $_SESSION['2-4-12'] = $NI;
+                
+                
                 
                 $PAN1=$_POST['PAN1'];
                 $_SESSION['2-4-13'] = $PAN1;
@@ -1020,7 +1027,7 @@ if(isset($_POST['VerificationSubmit']))
                         $("#Tab3").removeClass("select");
                         $("#Tab2").removeClass("select");
                         $("#Tab1").removeClass("select");
-			$("#Tab7").addClass("select");
+			$("#Tab7").removeClass("select");
                         $("#Tab6").addClass("select");
 			$("#Tab1I").slideUp();
 			$("#Tab2I").slideUp();
