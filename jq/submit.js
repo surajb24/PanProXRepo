@@ -459,6 +459,7 @@ function valid_Other()
 
             var smo = document.getElementById("SOA").value;
             var rgno = document.getElementById("RegNo").value;
+            var AadharNo = document.getElementById("AadharNo").value;
             var countryv = document.getElementById("CountryC").value;
             var isd=document.getElementById("ISD").value;
             var chk="1";
@@ -501,8 +502,7 @@ function valid_Other()
                      
                 }
                 
-            }
-             
+            }        
             
             if($('.Resig').css('display') == 'none')
             {
@@ -522,6 +522,24 @@ function valid_Other()
                 
             }
             
+            
+            if($('.adarAA').css('display') == 'none')
+            {
+            
+               
+            }
+            else
+            {
+               
+                if(AadharNo !== '')
+                {
+                    var f=document.getElementById("AadharNo").getAttribute("placeholder");
+                    summary+=adhr((document.getElementById("AadharNo")),f,"1");
+                     
+                }
+       
+                
+            }
           
             
             if($('.appcom').css('display') == 'none')
@@ -564,7 +582,7 @@ function valid_Other()
                             for(var i=0; i < textFields.length; i++){
                             if(textFields[i].type == "text" && textFields[i].value == "")
                             {
-                                $(".AadharNo").css("background","white");
+                                $(".AadharNo").css("background","white");    var etel="1";
                                 $(".PAN1").css("background","white");
                                 $(".PAN2").css("background","white");
                                 $(".PAN3").css("background","white");
@@ -599,11 +617,11 @@ function valid_textbox(flag)
 {
 
      var b = document.getElementsByClassName('resii');
-	
+	 var len = b.length;
 	 var chk2=0;
-	 for(var i = 0; i < b.length; i++){
+	 for(var i = 0; i < len; i++){
 				  
-			if(b[i] !== '')
+			if(b[i].value !== '')
 			{
 				chk2++;
 			}
@@ -667,7 +685,7 @@ function valid_communication(flag)
 	 var chk2=0;
 	 for(var i = 0; i < len; i++){
 				  
-			if(b[i] !== '')
+			if(b[i].value !== '')
 			{
 				chk2++;
 			}
@@ -695,7 +713,7 @@ function Valid_Conatct()
     var summary ="";
     
     var selectaddcont = document.getElementById("addcom").value;
-    var selectoffice = document.getElementById("selectyes").value;
+    var selectyesss = document.getElementById("selectyes").value;
     var RTCD = document.getElementById("RTCD").value;
     var RState = document.getElementById("RState").value;
     var RPZcode = document.getElementById("RPZcode").value;
@@ -704,7 +722,7 @@ function Valid_Conatct()
     var Ostate = document.getElementById("OState").value;
     var OPZcode = document.getElementById("OPZcode").value;
     var OCountry = document.getElementById("OCountry").value;
-    var chk="1";
+    var resid="1";
     var office="1";
     var etel="1";
     
@@ -732,9 +750,12 @@ function Valid_Conatct()
                           {
                               
                               
-                               if(chk == "1"){
-                                                summary +=valid_textbox(chk);
-                                            }
+                        if(resid == "1"){
+           
+                                                summary +=valid_textbox(resid);
+                                               
+                                              }
+                     
                                             
                         if(RTCD == '')
                          {
@@ -763,13 +784,24 @@ function Valid_Conatct()
                         }
                         
                         
-                        if(selectoffice == "")
-                        {
-                                summary+=valid_select(this,'Office Address Yes or No',"1");
-
-                         }
-                         
+                    
                      }
+                  
+                     if($('.selectoffice').css('display') == 'none')
+                        {
+            
+                        
+                        }
+                        else
+                          {
+                             
+                        if(selectyesss == "")
+                        {
+                            
+                            summary+=valid_select(this,'Office Select',"1");
+                          
+                          } 
+                          }
                   }
                      //office  Address
                      
@@ -827,12 +859,12 @@ function Valid_Conatct()
                                                            
                 }    
          } 
+
          
-         
-                       if(etel == "1"){
-                                                summary +=valid_communication(etel);
+                             if(etel == "1"){
+                      
+                                                summary +=valid_communication(office);
                                               }
-    
     if(summary!=="")
     {
         alert(summary);
@@ -917,192 +949,244 @@ function Valid_Conatct()
 function Valid_Conatct_level2()
 {
         
-    var summary ="";
+   var summary ="";
     
     var selectaddcont = document.getElementById("addcom").value;
-   /* var Flat= document.getElementById("level2ReFlat").value;
-    var Area = document.getElementById("level2ReArea").value;
-    var Town = document.getElementById("level2ReTown").value;*/
-    var State = document.getElementById("level2ReState").value;
-   // var pin = document.getElementById("level2RePin").value;
-    var Country = document.getElementById("level2ReCoun").value;
-     
+    var selectyes = document.getElementById("selectyes").value;
+    var level2ReTown = document.getElementById("level2ReTown").value;
+    var level2ReState = document.getElementById("level2ReState").value;
+    var level2RePin = document.getElementById("level2RePin").value;
+    var level2ReCoun = document.getElementById("level2ReCoun").value;  
+    var level2NameOffice = document.getElementById("level2NameOffice").value;
+    var level2OfTown = document.getElementById("level2OfTown").value;
+    var level2OfPin = document.getElementById("level2OfPin").value;
+    var level2OfState = document.getElementById("level2OfState").value;
+    var level2OfCoun = document.getElementById("level2OfCoun").value;
+    var chk="1";
+    var office="1";
 
-   /* var Officename = document.getElementById("level2NameOffice").value;
-    var Oflat = document.getElementById("level2OfFlat").value;
-    var Oarea= document.getElementById("level2OfArea").value;
-    var Otown = document.getElementById("level2OfTown").value;*/
-    var Ostate = document.getElementById("level2OfState").value;
-  //  var Opin = document.getElementById("level2OfPin").value;
-    var Ocountry = document.getElementById("level2OfCoun").value;
     
-                    
+   // var TelNo = document.getElementById("TelNo").value;
+ 
+
+
                     if(selectaddcont == ""){
                             summary+=valid_select(this,'Address For Communication',"1");
                           
                      }
-                else{
+           else{
                                 
-            
                    if((selectaddcont == "RESIDANCE") )
                    {
-                       
                         $(".addcom").css("backgroundColor","white");
                                 
                         //Residence Address  
                          if($('.residence').css('display') == 'none')
                         {
             
+               
+                        }
+                        else
+                          {
+                              
+                              
+                               if(chk == "1"){
+                                                summary +=valid_textbox(chk);
+                                            }
+                                            
+                        if(level2ReTown == '')
+                         {
+                         var c=document.getElementById("level2ReTown").getAttribute("placeholder");
+                         summary+=valid_required((document.getElementById("level2ReTown")),c,"1");
+                   
+                        }
+
+                        if(level2RePin == '')
+                         {
+                         var c=document.getElementById("level2RePin").getAttribute("placeholder");
+                         summary+=valid_required((document.getElementById("level2RePin")),c,"1");
+                   
+                        }
+                        
+                       if(level2ReState == "")
+                        {
+                            summary+=valid_select(this,'State',"1");
+                          
+                        }
+
+                        if(level2ReCoun == "")
+                        {
+                               summary+=valid_select(this,'Country',"1");
+
+                        }
+
+                         
+                     }
+                             if($('.selectoffice').css('display') == 'none')
+                        {
+            
                         
                         }
                         else
+                          {
+                             
+                        if(selectyes == "")
                         {
                             
-                          /*  if(Flat =='')
-                            { 
-                              
-                                var c=document.getElementById("level2ReFlat").getAttribute("placeholder");
-                                summary+=valid_required((document.getElementById("level2ReFlat")),c,"1");
-                               
-                            } 
-                            
-                            if(Area == '')
-                            {
-                                var c=document.getElementById("level2ReArea").getAttribute("placeholder");
-                                summary+=valid_required((document.getElementById("level2ReArea")),c,"1");
-
-                            }
-
-                            if(Town == '')
-                            {
-                                var c=document.getElementById("level2ReTown").getAttribute("placeholder");
-                                summary+=valid_required((document.getElementById("level2ReTown")),c,"1");
-
-                            }*/
-
-                            if(State =='')
-                            {
-                                var c=document.getElementById("level2ReState").getAttribute("placeholder");
-                                summary+=valid_required((document.getElementById("level2ReState")),c,"1");
-
-                            }
-                               /*
-                            if(pin == '')
-                             {
-                             var c=document.getElementById("level2RePin").getAttribute("placeholder");
-                             summary+=valid_required((document.getElementById("level2RePin")),c,"1");
-
-                            }*/
-                             if(Country == '')
-                             {
-                             var c=document.getElementById("level2ReCoun").getAttribute("placeholder");
-                             summary+=valid_required((document.getElementById("level2ReCoun")),c,"1");
-
-                            }
-                           
-                        }
-                    }
+                            summary+=valid_select(this,'Office Select',"1");
+                          
+                          } 
+                          }
+                  }
                      //office  Address
                      
                    if( (selectaddcont == "OFFICE"))
-                       {
-                            $(".addcom").css("backgroundColor","white");
-                             if($('.office').css('display') == 'none')
+                          {
+                        $(".addcom").css("backgroundColor","white");
+                          if($('.office').css('display') == 'none')
                         {
             
                
                          }
-                   else
+                        else
+                          {
+                              
+                          
+                    if(level2NameOffice =='')
                     {
+                        var c=document.getElementById("level2NameOffice").getAttribute("placeholder");
+                        summary+=valid_required((document.getElementById("level2NameOffice")),c,"1");
+                       
+
+                    }
+                    
+                    
+                     if(office == "1"){
+                                                summary +=valid_office(office);
+                                              }
                      
-                      /*  if(Officename =='')
-                       {
-                           var c=document.getElementById("level2NameOffice").getAttribute("placeholder");
-                           summary+=valid_required((document.getElementById("level2NameOffice")),c,"1");
-                        } 
-                                                                  
-                        if(Oflat =='')
-                        {
-                            var c=document.getElementById("level2OfFlat").getAttribute("placeholder");
-                            summary+=valid_required((document.getElementById("level2OfFlat")),c,"1");
-
-                        }                    
-                 
-                        if(Oarea =='')
-                       {
-                           var c=document.getElementById("level2OfArea").getAttribute("placeholder");
-                           summary+=valid_required((document.getElementById("level2OfArea")),c,"1");
-
-                       }
+                     
                     
-                        if(Otown =='')
-                        {
-                            var c=document.getElementById("level2OfTown").getAttribute("placeholder");
-                            summary+=valid_required((document.getElementById("level2OfTown")),c,"1");
-
-                        }
-                        */
-                        if(Ostate =='')
-                       {
-                           var c=document.getElementById("level2OfState").getAttribute("placeholder");
-                           summary+=valid_required((document.getElementById("level2OfState")),c,"1");
-                        }
-                    
-                     /*  if(Opin =='')
-                        {
-                            var c=document.getElementById("level2OfPin").getAttribute("placeholder");
-                            summary+=valid_required((document.getElementById("level2OfPin")),c,"1");
-
-                        }*/
+                    if(level2OfTown =='')
+                    {
+                        var c=document.getElementById("level2OfTown").getAttribute("placeholder");
+                        summary+=valid_required((document.getElementById("level2OfTown")),c,"1");
                         
-                        if(Ocountry =='')
-                        {
-                            var c=document.getElementById("level2OfCoun").getAttribute("placeholder");
-                            summary+=valid_required((document.getElementById("level2OfCoun")),c,"1");
 
-                        }
+                    }
                     
-               
-                      }  
+                     if(level2OfPin =='')
+                    {
+                        var c=document.getElementById("level2OfPin").getAttribute("placeholder");
+                        summary+=valid_required((document.getElementById("level2OfPin")),c,"1");
+                       
+
+                    }
+
+                     if(level2OfState == "")
+                     {
+                            summary+=valid_select(this,'State',"1");
+                           
+                     }
+                     
+                     if(level2OfCoun == "")
+                     {
+                            summary+=valid_select(this,'Country',"1");
+                            
+                     }
+                    }  
                                                            
                 }    
-         }    
-                     
-                if(summary!="")
-
-                {  
-                        alert(summary);
-                            
-                           /* var textFields = document.forms["contact2"].querySelectorAll("input");
-                          
-                            for(var i=0; i < textFields.length; i++){
-                            if(textFields[i].type == "text" && textFields[i].value == "")
-                            {
-                                $(".level2ReBuid").css("background","white");
-                                $(".level2ReRoad").css("background","white");
-                                $(".level2OfBuil").css("background","white");
-                                $(".level2OfRoad").css("background","white");
-                                textFields[i].style.backgroundColor = "#eeac9a";
-                            }
-                            else {
-                             textFields[i].style.backgroundColor = "white";
-                            }
-                        }
-                        */
-                        $(function(){
-                           
-                                     if($(".addcomleve2,.level2ReState,.level2ReCoun,.level2OfState,.level2OfCoun").val()=="")
-                                        {
-                                        $(".addcomleve2,.level2ReState,.level2ReCoun,.level2OfState,.level2OfCoun").css('background-color','#eeac9a');
-                                        }
-                                        
-                                      });
-                                                                                         
-                        return false;
-                }
+         } 
+         
+                if($('.selectoffice').css('display') == 'none')
+                    {
+            
+               
+                    }
                 else
+                    { 
+                        if(selectyes == "")
+                        {
+                            summary+=valid_select(this,'Office Select',"1");
+                          
+                          }
+                    }
+         
+  
+    if(summary!=="")
+    {
+        alert(summary);
+                                
+                      var contact = document.forms["contact"].querySelectorAll("input");
+                      var selectadd=$("#addcom").val();      
+                                for(var i=0; i< contact.length; i++)
+                                {                         
+                                   if(selectadd == "RESIDANCE"){
+                                        if(contact[i].type === "text" &&  contact[i].value === "")
+                                    {
+                                                $(".level2ReFlat").css("background","white");
+                                                $(".level2ReBuid").css("background","white");
+                                                $(".level2ReRoad").css("background","white");
+                                                $(".level2ReArea").css("background","white");
+                                                $(".level2NameOffice").css("background","white");
+                                                $(".level2OfFlat").css("background","white");
+                                                $(".level2OfBuil").css("background","white");
+                                                $(".level2OfRoad").css("background","white");
+                                                $(".level2OfArea").css("background","white");
+                                                $(".level2OfTown").css("background","white");
+                                                $(".level2OfState").css("background","white");
+                                                $(".level2OfPin").css("background","white");
+                                                $(".level2OfCoun").css("background","white");
+                                                
+                                              
+                                                contact[i].style.backgroundColor = "#eeac9a";
+                                               
+                                                
+                                    }else{
+                                                 contact[i].style.backgroundColor="white";
+                                    }
+                                }
+                                
+                                 if(selectadd == "OFFICE"){
+                                        if(contact[i].type === "text" &&  contact[i].value === "")
+                                    {
+                                                $(".level2ReFlat").css("background","white");
+                                                $(".level2ReBuid").css("background","white");
+                                                $(".level2ReRoad").css("background","white");
+                                                $(".level2ReArea").css("background","white");
+                                                $(".level2ReTown").css("background","white");
+                                                $(".level2ReState").css("background","white");
+                                                $(".level2RePin").css("background","white");
+                                                $(".level2ReCoun").css("background","white");
+                                                $(".level2OfFlat").css("background","white");
+                                                $(".level2OfBuil").css("background","white");
+                                                $(".level2OfRoad").css("background","white");
+                                                $(".level2OfArea").css("background","white");
+                                                contact[i].style.backgroundColor = "#eeac9a";
+                                                 
+                                                
+                                    }else{
+                                                 contact[i].style.backgroundColor="white";
+                                    }
+                                }
+                                } 
+                                 $(function(){
+                                         if($(".addcom,.RState,.RCountry,.OState,.OCountry").val()!=='')
+                                        {
+                                             $(".addcom,.RState,.RCountry,.OState,.OCountry").css('background-color','white');
+                                        }
+                                        else
+                                        {
+                                             $(".addcom,.RState,.RCountry,.OState,.OCountry").css('background-color','#eeac9a');    
+                                        }
+                                   
+                                        });    
+                       
+        return false;
+                
+     }else
      return true;
-
      
    }
      
