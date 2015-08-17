@@ -661,7 +661,7 @@ $(document).ready(function() {
            
        //code For Aadhar Card Info Onblur
        
-       $("#AadharNo").blur(function () {
+    $("#AadharNo").blur(function () {
            var ano=$("#AadharNo").val();
            if(ano!="")
            {
@@ -678,7 +678,68 @@ $(document).ready(function() {
                $('.adinfo').hide();
            }
         });
+        
+        
+            //verification prof of doc onselect
+    $("#POI,#POA,#Pdob").change(function(){
     
+      if(($("#POI").val()=="AADHAR CARD ISSUED BY UIDAI") || ($("#POA").val()=="AADHAR CARD ISSUED BY UIDAI" )
+              || ($("#Pdob").val()=="AADHAAR CARD ISSUED BY UIDAI" ))
+      {
+          if($("#AadharNo").val()=='')
+          {
+                        $("#Tab5").removeClass("select");
+                        $("#Tab6").removeClass("select");
+                        $("#Tab3").removeClass("select");
+                        $("#Tab2").removeClass("select");
+                        $("#Tab1").removeClass("select");
+                        $("#Tab7").removeClass("select");
+			$("#Tab4").addClass("select");
+                        
+			$("#Tab1I").slideUp();
+			$("#Tab2I").slideUp();
+                        $("#Tab3I").slideUp();
+                        $("#Tab7I").slideUp();
+                        $("#Tab5I").slideUp();
+                        $("#Tab6I").slideUp();
+                        $("#Tab4I").slideDown();
+                        $("#AadharNo").focus();
+                    }
+      }
+    });
+    
+    
+    //Salary on checked
+     $('#Salary').change(function(){
+        if($("#ONameofoffice").val()=='')
+        {
+                        $("#Tab5").removeClass("select");
+                        $("#Tab6").removeClass("select");
+                        $("#Tab4").removeClass("select");
+                        $("#Tab2").removeClass("select");
+                        $("#Tab1").removeClass("select");
+                        $("#Tab7").removeClass("select");
+			$("#Tab3").addClass("select");
+                        
+			$("#Tab1I").slideUp();
+			$("#Tab2I").slideUp();
+                        $("#Tab4I").slideUp();
+                        $("#Tab7I").slideUp();
+                        $("#Tab5I").slideUp();
+                        $("#Tab6I").slideUp();
+                        $("#Tab3I").slideDown();
+                        $("#selectyes").val('Y');
+                        $('.office').show();
+                        $("#ONameofoffice").focus();
+        }
+          
+         
+     });
+     
+         
+        
+        
+        
     //RA yes Or No onchange
   
            var selectedval1=$("#Rdetail").val();
