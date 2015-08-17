@@ -611,6 +611,14 @@ if(isset($_POST['OtherSubmit']))
                 $AadharNo =$_POST['AadharNo'];
                 $_SESSION['5-4-5'] = $AadharNo;
                 
+                if(isset($_POST['AadharNo']))
+                {
+                        $Uver="1";
+                }else{
+                        $Uver="0";
+                    
+                }
+                
                 if(isset($_POST['Salary']))
                 {
                         $Salary="Y";
@@ -681,6 +689,15 @@ if(isset($_POST['OtherSubmit']))
                 $PAN4=$_POST['PAN4'];
                 $_SESSION['5-4-16'] = $PAN4;
                 
+                $ANAME=$_POST['AName'];
+                $_SESSION['5-4-17'] = $ANAME;
+                
+                $AYOB=$_POST['Ayob'];
+                $_SESSION['5-4-18'] = $AYOB;
+                
+                $AGEN=$_POST['Agen'];
+                $_SESSION['5-4-19'] = $AGEN;
+                
 	$sql = " UPDATE `cust_qc_other_info` SET 
 	
 		`CATEGORY,C,2`='$Cat',
@@ -704,10 +721,10 @@ if(isset($_POST['OtherSubmit']))
                 `OLD_PAN2,C,10` = '$PAN2' ,
                 `OLD_PAN3,C,10` = '$PAN3' ,
                 `OLD_PAN4,C,10` = '$PAN4' ,
-                 `UID_VER,C,1`='',
-                 `UID_NAME,C,80`='',
-                 `UID_YOB,C,4`='',
-                 `UID_SEX,C,1`='',
+                 `UID_VER,C,1` = '$Uver' ,
+                `UID_NAME,C,80` = '$ANAME' ,
+                `UID_YOB,C,4` = '$AYOB' ,
+                `UID_SEX,C,1` = '$GID' ,
                 `STATUS,N,1` = '2' 
 
 		WHERE `FORM_ID,C,18` = '$_SESSION[QC_Form_ID]';";
