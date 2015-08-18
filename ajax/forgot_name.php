@@ -4,6 +4,7 @@ require 'conn.inc.php';
 
 if(isset($_GET['name']))
 {
+	
 	$search = $_GET['name'];
 	if(!empty($search)){
 	
