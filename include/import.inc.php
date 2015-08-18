@@ -165,9 +165,8 @@ margin-left:1%;
 
 if(isset($_POST['batch_submit']))
 {
+    
 	
-
-
     $Date = date('d/m/Y');
     $AG_Code = $_POST['ag_co']; 
     $DOR = $_POST['dor'];

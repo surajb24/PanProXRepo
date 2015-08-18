@@ -35,9 +35,8 @@
                     include 'verification.form.inc.php';
                     
                     include 'kyc.form.inc.php';
-	
-			
-		?>
+                    
+                ?>
 
 	</div>
         </div>

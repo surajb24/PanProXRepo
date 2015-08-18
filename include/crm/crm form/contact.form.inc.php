@@ -70,7 +70,7 @@
                 <th class="required">Town/City/District</th>
                     <td>
                         <input type="text" name="RTCD" id="RTCD" class="RTCD req" placeholder="TOWN/CITY/DISTRICT" maxlength="25" onkeyup="ValidFirstSpace(this);" style="text-transform: uppercase;" onblur="this.value = this.value.toUpperCase();"
-                               value="<?php echo $_SESSION['2-3-6'];?>">
+                              value="<?php echo $_SESSION['2-3-6'];?>">
                     </td>
             </tr>
             
@@ -105,7 +105,7 @@
                 <th class="required">Country Name</th>
                     <td>
                         
-                        <select name="RCountry" id="RCountry" class="RCountry" <!--onblur="valid_select(this,'Country','0');"-->  >
+                        <select name="RCountry" id="RCountry" class="RCountry" onchange="displayisd();" <!--onblur="valid_select(this,'Country','0');"-->">
 
 		            <option value="<?php if(!empty($_SESSION['2-3-9'])) { echo $_SESSION['2-3-9']; } else { echo ""; } ?>">
                                             <?php if(!empty($_SESSION['2-3-9'])) { echo $_SESSION['2-3-9']; } else { echo "Select Country"; } ?>
@@ -211,7 +211,7 @@
             <tr class="office">
                 <th class="required">Country Name</th>
                     <td>
-                        <select name="OCountry" id="OCountry" class="OCountry req" <!--onblur="valid_select(this,'Country','0');"--->>
+                        <select name="OCountry" id="OCountry" class="OCountry req" onchange="displayisd1();" <!--onblur="valid_select(this,'Country','0');"--->>
                                                 <option value="<?php if(!empty($_SESSION['2-3-18'])) { echo $_SESSION['2-3-18']; } else { echo ""; }?>">
                                                 <?php if(!empty($_SESSION['2-3-18'])) { echo $_SESSION['2-3-18']; } else { echo "Select Country"; }?>
                                                 </option>  
@@ -235,7 +235,10 @@
                 <td>
                     <input type="text" name="OAScode" id="OAScode" class="OAScode" placeholder="AREA/STD CODE" maxlength="5" onkeypress="return ValidNum(event);"
                            value="<?php echo $_SESSION['2-3-20'];?>">
-                    </td>
+                    
+                    <div id="OAScode1"></div>
+                    
+                </td>
             </tr>
             
             <tr >
@@ -254,6 +257,7 @@
                     </td>
             </tr>
             
+            
         </table>
         <br>
         <br>
@@ -271,6 +275,58 @@
         </div> 
         
     </form>  
-    
+            
 </div>
+
+
+<script>
+    
+    
+function displayisd(){
+
+
+if(window.XMLHttpRequest){
+
+	
+	xmlhttp=new XMLHttpRequest();
+	}else{
+	xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	xmlhttp.onreadystatechange=function(){
+		if(xmlhttp.readyState==4 && xmlhttp.status==200){
+			document.getElementById("OAScode").value=xmlhttp.responseText;
+                        
+		}
+	}
+	
+	xmlhttp.open("GET","../ajax/isd_code.php?RCountry="+document.contact.RCountry.value,true);
+
+	xmlhttp.send();
+}
+
+
+function displayisd1(){
+
+if(window.XMLHttpRequest){
+
+	
+	xmlhttp=new XMLHttpRequest();
+	}else{
+	xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	xmlhttp.onreadystatechange=function(){
+		if(xmlhttp.readyState==4 && xmlhttp.status==200){
+			document.getElementById("OAScode").value=xmlhttp.responseText;
+                        
+		}
+	}
+	
+	xmlhttp.open("GET","../ajax/isd_code.php?RCountry="+document.contact.OCountry.value,true);
+
+	xmlhttp.send();
+}
+
+
+
+</script>
 

@@ -1,3 +1,4 @@
+
 <?php
 
 include '../include/window.header.inc.php';
@@ -7,25 +8,25 @@ include '../include/window.header.inc.php';
     
 
          
-        echo '<iframe id="content" src="../'.$_SESSION['Level1_Doc_Path'].'"></iframe>';
+    echo '<iframe id="content" src="../'.$_SESSION['Level1_Doc_Path'].'"></iframe>';
 
 
     
- //Div For Pdf End
+//Div For Pdf End
                 
- //Div For Form start
-       
-
-                
-        include '../include/level1.form.php';
-           
-
-   
-
- //Div For Form End
+//Div For Form start
+    ?>
+    
+<?php
+    include '../include/level1.form.php';
+    
+//Div For Form End
               
 
 ?>
+
+
+
 
 <script>
 
