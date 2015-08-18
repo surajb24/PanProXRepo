@@ -72,6 +72,9 @@
 function display(){
 
 if(window.XMLHttpRequest){
+
+	
+
 	xmlhttp=new XMLHttpRequest();
 	}else{
 	xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
@@ -81,7 +84,9 @@ if(window.XMLHttpRequest){
 			document.getElementById("hint").innerHTML=xmlhttp.responseText;
 		}
 	}
-	xmlhttp.open("GET","../ajax/forgot_name.php?name="+document.frm.name.value,true);
+	
+	xmlhttp.open("GET","forgot_name.php?name="+document.frm.name.value,true);
+
 	xmlhttp.send();
 }
 </script>
