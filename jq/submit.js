@@ -538,14 +538,42 @@ function valid_Other()
                 {
                     var f=document.getElementById("AadharNo").getAttribute("placeholder");
                     summary+=adhr((document.getElementById("AadharNo")),f,"1");
-        
+                     
                 }
        
                 
             }
             
+             if($('.adinfo').css('display') == 'none')
+            {
+            
+               
+            }
+            else
+            {
+              
+         
+             
+                 if(AName == '')
+                {
+                    var f=document.getElementById("AName").getAttribute("placeholder");
+                    summary+=valid_required((document.getElementById("AName")),f,"1");
+                     
+                }
                 
-    
+                if(Ayob == '')
+                {
+                    var f=document.getElementById("Ayob").getAttribute("placeholder");
+                    summary+=valid_required((document.getElementById("Ayob")),f,"1");
+                     
+                }
+                
+                if(Agen == ''){
+                     summary+=valid_select(this,'Gender',"1");
+                  
+                }        
+          
+           }
             if($('.appcom').css('display') == 'none')
             {
             
@@ -586,7 +614,7 @@ function valid_Other()
                             for(var i=0; i < textFields.length; i++){
                             if(textFields[i].type == "text" && textFields[i].value == "")
                             {
-                                $(".AadharNo").css("background","white");   
+                                $(".AadharNo").css("background","white");    var etel="1";
                                 $(".PAN1").css("background","white");
                                 $(".PAN2").css("background","white");
                                 $(".PAN3").css("background","white");

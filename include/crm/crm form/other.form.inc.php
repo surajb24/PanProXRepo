@@ -73,7 +73,7 @@
                 
                  <tr class="adarAA">
 			
-                    <th >AADHAR No</th>
+                    <th>AADHAR No</th>
                     <td>
 
                         <input type="text" name="AadharNo"  id="AadharNo" class="AadharNo"  placeholder="AADHAR NO" minlength="12" maxlength="12" onkeypress="return ValidNum(event);" onblur="adhr(this);"
@@ -88,7 +88,7 @@
                     <th class="required">Name On AADHAR Card</th>
                     <td>
 
-                        <input type="text" name="AName"  id="AName" class="AName"  placeholder="AADHAR NAME" maxlength="80" onkeypress="return ValidAlpha(event);" onkeyup="ValidFirstSpace(this);" onblur="this.value = this.value.toUpperCase();" 
+                        <input type="text" name="AName"  id="AName" class="AName"  placeholder="AADHAR NAME" maxlength="80" onkeypress="return ValidAlpha(event);" onkeyup="ValidFirstSpace(this);" onblur="valid_required(this,'Adhar Name','0');" 
           
                             style="text-transform: uppercase;"   value="<?php echo $_SESSION['2-4-17']; ?>">
                     </td><td></td>
@@ -100,7 +100,7 @@
                     <th class="required">Year Of Birth On AADHAR Card</th>
                     <td>
 
-                        <input type="text" name="Ayob"  id="Ayob" class="Ayob"  placeholder="AADHAR YOB" minlength="4" maxlength="4" onkeypress="return ValidNum(event);" 
+                        <input type="text" name="Ayob"  id="Ayob" class="Ayob"  placeholder="AADHAR YOB" minlength="4" maxlength="4" onkeypress="return ValidNum(event);"  onblur="valid_required(this,'Adhar year','0'),this.value = this.value.toUpperCase();"
           
                              value="<?php echo $_SESSION['2-4-18']; ?>">
                     </td><td></td>
