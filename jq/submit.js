@@ -536,15 +536,16 @@ function valid_Other()
                
                 if(AadharNo !== '')
                 {
-                    var f=document.getElementById("AadharNo").getAttribute("placeholder");
-                    summary+=adhr((document.getElementById("AadharNo")),f,"1");
-                     
+                   if(AadharNo <12)
+                   {
+                    summary=summary+"Aadhar card value should not be less than 12 digits";
+                    } 
                 }
        
                 
             }
             
-             if($('.adinfo').css('display') == 'none')
+          /*   if($('.adinfo').css('display') == 'none')
             {
             
                
@@ -573,7 +574,7 @@ function valid_Other()
                   
                 }        
           
-           }
+           }*/
             if($('.appcom').css('display') == 'none')
             {
             

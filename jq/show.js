@@ -662,8 +662,10 @@ $(document).ready(function() {
        //code For Aadhar Card Info Onblur
        
     $("#AadharNo").blur(function () {
+          
            var ano=$("#AadharNo").val();
-           if(ano!="")
+           var len=ano.length;
+           if(ano!="" && len==12)
            {
               
            if (confirm("Aadhar Card Info Display!")==true ) {
