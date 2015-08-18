@@ -745,6 +745,7 @@ function Valid_Conatct()
     var summary ="";
     
     var selectaddcont = document.getElementById("addcom").value;
+    var b = document.getElementById("selectyes").value;
     var selectyesss = document.getElementById("selectyes").value;
     var RTCD = document.getElementById("RTCD").value;
     var RState = document.getElementById("RState").value;
@@ -768,18 +769,11 @@ function Valid_Conatct()
                      }
            else{
                                 
-                   if((selectaddcont == "RESIDANCE") )
-                   {
-                        $(".addcom").css("backgroundColor","white");
-                                
+     
+                              if((selectaddcont == "RESIDANCE"))
+                              {  
                         //Residence Address  
-                         if($('.residence').css('display') == 'none')
-                        {
-            
-               
-                        }
-                        else
-                          {
+                   
                               
                               
                         if(resid == "1"){
@@ -816,8 +810,7 @@ function Valid_Conatct()
                         }
                         
                         
-                    
-                     }
+                
                   
                      if($('.selectoffice').css('display') == 'none')
                         {
@@ -834,20 +827,11 @@ function Valid_Conatct()
                           
                           } 
                           }
-                  }
+                              }
                      //office  Address
                      
-                   if( (selectaddcont == "OFFICE"))
-                          {
-                        $(".addcom").css("backgroundColor","white");
-                          if($('.office').css('display') == 'none')
-                        {
-            
-               
-                         }
-                        else
-                          {
-                              
+                if((selectaddcont == "OFFICE"|| b == "Y"))
+                              {           
                           
                     if(ONameoffice =='')
                     {
@@ -887,9 +871,8 @@ function Valid_Conatct()
                             summary+=valid_select(this,'Country',"1");
                             
                      }
-                      }  
-                                                           
-                }    
+          
+                              }
          } 
 
          
