@@ -677,6 +677,21 @@ if(isset($_POST['OtherSubmit']))
                 
                 $_SESSION['5-4-12'] = $NI;
                 
+                 if(isset($_POST['NI'])&&!isset($_POST['IOS'])&&!isset($_POST['Salary'])&&!isset($_POST['BPC'])&&!isset($_POST['IHP'])&&!isset($_POST['CG']))
+                {
+                        $SCode=89;
+                }else if(!isset($_POST['NI'])&&isset($_POST['IOS'])&&!isset($_POST['Salary'])&&!isset($_POST['BPC'])&&!isset($_POST['IHP'])&&!isset($_POST['CG']))
+                {
+                        $SCode=99;
+                    
+                }
+                
+                else if(!isset($_POST['NI'])&&!isset($_POST['IOS'])&&isset($_POST['Salary'])&&!isset($_POST['BPC'])&&!isset($_POST['IHP'])&&!isset($_POST['CG']))
+                {
+                    $SCode=50;
+                }
+                
+                
                 $PAN1=$_POST['PAN1'];
                 $_SESSION['5-4-13'] = $PAN1;
                 

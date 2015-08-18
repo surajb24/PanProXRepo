@@ -544,36 +544,7 @@ function valid_Other()
                 
             }
             
-                    
-                  if($('.adinfo').css('display') == 'none')
-                    {
-                       
-               
-                     }
-                            else
-                            {
-                                 
-
-                                 if(AName == '')
-                                {
-                                    var f=document.getElementById("AName").getAttribute("placeholder");
-                                    summary+=valid_required((document.getElementById("AName")),f,"1");
-
-                                }
-
-                                if(Ayob == '')
-                                {
-                                    var f=document.getElementById("Ayob").getAttribute("placeholder");
-                                    summary+=valid_required((document.getElementById("Ayob")),f,"1");
-
-                                }
-
-                                if(Agen == ''){
-                                     summary+=valid_select(this,'Gender',"1");
-
-                                }        
-
-                           }  
+                
     
             if($('.appcom').css('display') == 'none')
             {
