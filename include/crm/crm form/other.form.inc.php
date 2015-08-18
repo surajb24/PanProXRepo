@@ -128,7 +128,7 @@
                     <th ROWSPAN="4" class="required">Source Of Income</th>
                     <td>
                                                
-                       <input type="checkbox" name="Salary"  id="Salary" class="chk" onchange="emptyContactSession();" value="Y"<?php if($_SESSION['2-4-6']=="Y") { echo "checked"; } ?>> Salary
+                       <input type="checkbox" name="Salary"  id="Salary" class="chk" onchange="emptyContactSession(this);" value="Y"<?php if($_SESSION['2-4-6']=="Y") { echo "checked"; } ?>> Salary
                                               
 
                     </td>

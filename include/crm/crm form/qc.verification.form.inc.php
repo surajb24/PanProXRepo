@@ -36,7 +36,7 @@
             <tr>
                 <th class="required" >Proof of Identity</th>
                 <td>
-                    <select name="POI" id="POI" class="POI req" onblur="valid_select(this,'Identity Proof','0')" onchange="emptyOtherSession();" >
+                    <select name="POI" id="POI" class="POI req" onblur="valid_select(this,'Identity Proof','0')" onchange="emptyOtherSession(this);" >
                                  <option value="<?php if(!empty($_SESSION['5-6-3'])) { echo $_SESSION['5-6-3']; } else { "";}?>">
                                         <?php if(!empty($_SESSION['5-6-3'])) { echo $_SESSION['5-6-3']; } else { echo 'Select Proof Of Identity'; } ?>
                                 </option>
@@ -48,7 +48,7 @@
             <tr>
                 <th class="required">Proof of Address</th>
                     <td>
-                       <select name="POA" id="POA" class="POA req" onblur="valid_select(this,'Address Proof','0');" onchange="emptyOtherSession();" >
+                       <select name="POA" id="POA" class="POA req" onblur="valid_select(this,'Address Proof','0');" onchange="emptyOtherSession(this);" >
                             <option value="<?php if(!empty($_SESSION['5-6-4'])) { echo $_SESSION['5-6-4']; } else { "";}?>">
                                         <?php if(!empty($_SESSION['5-6-4'])) { echo $_SESSION['5-6-4']; } else { echo 'Select Proof Of Address'; } ?>
                             </option>
@@ -61,7 +61,7 @@
             <tr>
                 <th class="required">Proof of Date of Birth</th>
                 <td>
-                    <select name="Pdob" id="Pdob" class="Pdob req" onchange="emptyOtherSession();" >
+                    <select name="Pdob" id="Pdob" class="Pdob req" onchange="emptyOtherSession(this);" >
                                 <option value="<?php if(!empty($_SESSION['5-6-5'])) { echo $_SESSION['5-6-5']; } else { "";}?>">
                                         <?php if(!empty($_SESSION['5-6-5'])) { echo $_SESSION['5-6-5']; } else { echo 'Select Proof Of DOB'; } ?>
                                 </option>

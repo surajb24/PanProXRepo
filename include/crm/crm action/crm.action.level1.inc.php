@@ -410,7 +410,7 @@ if(isset($_POST['Contactsubmit']))
                 $Email =$_POST['Email'];
                 $_SESSION['2-3-22'] = $Email; 
                 
-                
+                $_SESSION['offyn']=$_POST['selectyes'];
                 
 	$sql = " UPDATE `cust_address_info_l1` SET 
 	
@@ -452,7 +452,7 @@ if(isset($_POST['Contactsubmit']))
 		
 		`TEL_ISD,C,7` = '$Ccode',
 				
-		`TEL_NO,C,13` = '$TelNo',
+		
 		
 		`TEL_STD,C,7` = '$OAScode',
 		

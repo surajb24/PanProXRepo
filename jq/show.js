@@ -717,28 +717,30 @@ $(document).ready(function() {
     
     //Salary on checked
      $('#Salary').change(function(){
-        if($("#ONameofoffice").val()=='')
+      if ($('#Salary').is(':checked')) 
         {
-                        $("#Tab5").removeClass("select");
-                        $("#Tab6").removeClass("select");
-                        $("#Tab4").removeClass("select");
-                        $("#Tab2").removeClass("select");
-                        $("#Tab1").removeClass("select");
-                        $("#Tab7").removeClass("select");
-			$("#Tab3").addClass("select");
-                        
-			$("#Tab1I").slideUp();
-			$("#Tab2I").slideUp();
-                        $("#Tab4I").slideUp();
-                        $("#Tab7I").slideUp();
-                        $("#Tab5I").slideUp();
-                        $("#Tab6I").slideUp();
-                        $("#Tab3I").slideDown();
-                        $("#selectyes").val('Y');
-                        $('.office').show();
-                        $("#ONameofoffice").focus();
-        }
-          
+          if($("#ONameofoffice").val()=='')
+          {
+                          $("#Tab5").removeClass("select");
+                          $("#Tab6").removeClass("select");
+                          $("#Tab4").removeClass("select");
+                          $("#Tab2").removeClass("select");
+                          $("#Tab1").removeClass("select");
+                          $("#Tab7").removeClass("select");
+                          $("#Tab3").addClass("select");
+
+                          $("#Tab1I").slideUp();
+                          $("#Tab2I").slideUp();
+                          $("#Tab4I").slideUp();
+                          $("#Tab7I").slideUp();
+                          $("#Tab5I").slideUp();
+                          $("#Tab6I").slideUp();
+                          $("#Tab3I").slideDown();
+                          $("#selectyes").val('Y');
+                          $('.office').show();
+                          $("#ONameofoffice").focus();
+          }
+      }    
          
      });
      
