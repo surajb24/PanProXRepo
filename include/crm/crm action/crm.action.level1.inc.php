@@ -1028,7 +1028,7 @@ if(isset($_POST['VerificationSubmit']))
                         $("#Tab2").removeClass("select");
                         $("#Tab1").removeClass("select");
 			$("#Tab7").removeClass("select");
-                        $("#Tab6").addClass("select");
+                        $("#Tab6").removeClass("select");
 			$("#Tab1I").slideUp();
 			$("#Tab2I").slideUp();
                         $("#Tab3I").slideUp();

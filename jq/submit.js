@@ -461,6 +461,9 @@ function valid_Other()
             var rgno = document.getElementById("RegNo").value;
             var AadharNo = document.getElementById("AadharNo").value;
             var countryv = document.getElementById("CountryC").value;
+            var AName = document.getElementById("AName").value;
+            var Ayob = document.getElementById("Ayob").value;
+            var Agen = document.getElementById("Agen").value;
             var isd=document.getElementById("ISD").value;
             var chk="1";
             var code=document.getElementById("SCode").value;
@@ -540,8 +543,37 @@ function valid_Other()
        
                 
             }
-          
             
+             if($('.adinfo').css('display') == 'none')
+            {
+            
+               
+            }
+            else
+            {
+              
+         
+             
+                 if(AName == '')
+                {
+                    var f=document.getElementById("AName").getAttribute("placeholder");
+                    summary+=valid_required((document.getElementById("AName")),f,"1");
+                     
+                }
+                
+                if(Ayob == '')
+                {
+                    var f=document.getElementById("Ayob").getAttribute("placeholder");
+                    summary+=valid_required((document.getElementById("Ayob")),f,"1");
+                     
+                }
+                
+                if(Agen == ''){
+                     summary+=valid_select(this,'Gender',"1");
+                  
+                }        
+          
+           }
             if($('.appcom').css('display') == 'none')
             {
             
@@ -798,7 +830,7 @@ function Valid_Conatct()
                         if(selectyesss == "")
                         {
                             
-                            summary+=valid_select(this,'Office Select',"1");
+                            summary+=valid_select(this,'Yes or No Office Address',"1");
                           
                           } 
                           }
@@ -1033,7 +1065,7 @@ function Valid_Conatct_level2()
                         if(selectyes == "")
                         {
                             
-                            summary+=valid_select(this,'Office Select',"1");
+                            summary+=valid_select(this,'Yes or No Office Address',"1");
                           
                           } 
                           }
@@ -1098,20 +1130,7 @@ function Valid_Conatct_level2()
                                                            
                 }    
          } 
-         
-                if($('.selectoffice').css('display') == 'none')
-                    {
-            
-               
-                    }
-                else
-                    { 
-                        if(selectyes == "")
-                        {
-                            summary+=valid_select(this,'Office Select',"1");
-                          
-                          }
-                    }
+
          
   
     if(summary!=="")

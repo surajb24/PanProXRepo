@@ -5,7 +5,7 @@
             <table class="table2" >
                 <tr>
                     <th class="required">FORM ID</th>
-                    <td class="required"><?php echo $_SESSION['QC_Form_ID']; ?></td>
+                    <td class="required"><?php echo $_SESSION['QC_Form_ID']; ?></td> <td></td>
                 </tr> 
                 
                	<tr class="appcom">
@@ -25,7 +25,7 @@
 		
                             </select>
                         </td>
-                            <td></td>
+                        <td></td>
                         
 		</tr> 
                 

@@ -117,7 +117,7 @@
                 <th class="required">Please Select Office address</th>
                 <td>
                     <select name="selectyes" id="selectyes" class="selectyes">
-                        <option>---Select---</option>
+                        <option value="">---Select---</option>
                         <option value="Y">Yes</option>
                         <option value="N">No</option>
                     </select>

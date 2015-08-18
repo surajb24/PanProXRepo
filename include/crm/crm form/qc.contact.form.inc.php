@@ -32,7 +32,7 @@
             <tr class="residence">
 
 
-                <th >Flat/Room/Door/Block No</th>
+                <th>Flat/Room/Door/Block No</th>
 
                     <td>
 
@@ -59,7 +59,8 @@
             
             <tr class="residence">
 
-                <th >Area/Locality/Taluka/Sub-Division</th>
+
+                <th>Area/Locality/Taluka/Sub-Division</th>
 
                     <td>
                         <input type="text" name="RALT" id="RALT" class="RALT resii" placeholder="AREA/LOCALITY/TALUKA" maxlength="25" onkeyup="ValidFirstSpace(this);" style="text-transform: uppercase;" onblur="valid_required(this,'Area/Taluka','0'),this.value = this.value.toUpperCase();"
@@ -149,7 +150,8 @@
             
             <tr class="office">
 
-                <th >Flat/Room/Door/Block No</th>
+
+                <th>Flat/Room/Door/Block No</th>
 
                     <td>
                         <input type="text" name="OFRDB" id="OFRDB" class="OFRDB offye" placeholder="FLAT/ROOM NO" maxlength="25" onkeyup="ValidFirstSpace(this);" style="text-transform: uppercase;" onblur="this.value = this.value.toUpperCase();"
@@ -176,7 +178,7 @@
             
             <tr class="office">
 
-                <th >Area/Locality/Taluka/Sub-Division</th>
+                <th>Area/Locality/Taluka/Sub-Division</th>
 
                 <td>
                     <input type="text" name="OALTS" id="OALTS" class="OALTS offye" placeholder="AREA/LOCALITY/TALUKA" maxlength="25" onkeyup="ValidFirstSpace(this);" style="text-transform: uppercase;" onblur="this.value = this.value.toUpperCase();"
