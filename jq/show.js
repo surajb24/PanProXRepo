@@ -680,7 +680,7 @@ $(document).ready(function() {
         });
         
         
-            //verification prof of doc onselect
+ //verification prof of doc onselect
     $("#POI,#POA,#Pdob").change(function(){
     
       if(($("#POI").val()=="AADHAR CARD ISSUED BY UIDAI") || ($("#POA").val()=="AADHAR CARD ISSUED BY UIDAI" )
@@ -703,7 +703,13 @@ $(document).ready(function() {
                         $("#Tab5I").slideUp();
                         $("#Tab6I").slideUp();
                         $("#Tab4I").slideDown();
+                        alert("Aadhar No details are mandatory");
+                        document.other.AadharNo.setAttribute("onblur","valid_required(this,'Aadhar No','0')");
                         $("#AadharNo").focus();
+                    }
+                    else
+                    {
+                     $("#AadharNo").removeAttr("onblur","valid_required(this,'Aadhar No','0')");   
                     }
       }
     });

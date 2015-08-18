@@ -1,4 +1,6 @@
 
+<div id="response"></div>    
+
 <div class="div_tab">
     
 <div id="wrapper_tab">
@@ -40,4 +42,3 @@
 	</div>
         </div>
 </div>
-

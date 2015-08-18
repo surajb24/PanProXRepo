@@ -22,3 +22,77 @@ include '../include/window.header.inc.php';
  
         
 ?>
+
+<script>
+
+function emptyContactSession()
+{
+    // initialize 
+    if(window.XMLHttpRequest)
+    {
+
+        xmlhttp = new XMLHttpRequest();
+
+    }
+    else
+    {
+        
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        
+    }
+    
+    //response
+    xmlhttp.onreadystatechange=function()
+    {
+
+        if(xmlhttp.readyState==4 && xmlhttp.status==200)
+        {
+            
+            document.getElementById("response").innerHTML = xmlhttp.responseText;
+            
+        }
+        
+    }
+    
+    //passing varaible
+    xmlhttp.open("GET","../ajax/sessionEmptyContact.php?ContactSession=Empty",true);
+    xmlhttp.send();
+    
+}    
+    
+
+function emptyOtherSession()
+{
+    // initialize 
+    if(window.XMLHttpRequest)
+    {
+
+        xmlhttp = new XMLHttpRequest();
+
+    }
+    else
+    {
+        
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        
+    }
+    
+    //response
+    xmlhttp.onreadystatechange=function()
+    {
+
+        if(xmlhttp.readyState==4 && xmlhttp.status==200)
+        {
+            document.getElementById("response").innerHTML = xmlhttp.responseText;
+        }
+        
+    }
+    
+    //passing varaible
+    xmlhttp.open("GET","../ajax/sessionEmptyOther.php?OtherSession=Empty",true);
+    xmlhttp.send();
+    
+}    
+
+
+</script>
