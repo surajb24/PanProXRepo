@@ -74,34 +74,38 @@ function emptyOtherSession(e)
     var proofval=e.value;
     if(proofval==="AADHAR CARD ISSUED BY UIDAI"||proofval==="AADHAAR CARD ISSUED BY UIDAI")
     {
-        // initialize 
-        if(window.XMLHttpRequest)
+        var aadhar=document.getElementById('AadharNo').value;
+        if(aadhar=='')
         {
-
-            xmlhttp = new XMLHttpRequest();
-
-        }
-        else
-        {
-
-            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-
-        }
-
-        //response
-        xmlhttp.onreadystatechange=function()
-        {
-
-            if(xmlhttp.readyState==4 && xmlhttp.status==200)
+            // initialize 
+            if(window.XMLHttpRequest)
             {
-                document.getElementById("response").innerHTML = xmlhttp.responseText;
+
+                xmlhttp = new XMLHttpRequest();
+
+            }
+            else
+            {
+
+                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+
             }
 
-        }
+            //response
+            xmlhttp.onreadystatechange=function()
+            {
 
-        //passing varaible
-        xmlhttp.open("GET","../ajax/sessionEmptyOther.php?OtherSession=Empty",true);
-        xmlhttp.send();
+                if(xmlhttp.readyState==4 && xmlhttp.status==200)
+                {
+                    document.getElementById("response").innerHTML = xmlhttp.responseText;
+                }
+
+            }
+
+            //passing varaible
+            xmlhttp.open("GET","../ajax/sessionEmptyOther.php?OtherSession=Empty",true);
+            xmlhttp.send();
+        }
     }
 }    
 
