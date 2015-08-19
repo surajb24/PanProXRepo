@@ -669,14 +669,24 @@ $(document).ready(function() {
            {
               
            if (confirm("Aadhar Card Info Display!")==true ) {
+             
+             $('#AName').val('');
+             $('#Ayob').val('');
+             $('#Agen').val('');
              $('.adinfo').show();
             
              } else {
+                 $('#AName').val('');
+                 $('#Ayob').val('');
+                 $('#Agen').val('');
                 $('.adinfo').hide();
             }
            }
            else
            {
+               $('#AName').val('');
+               $('#Ayob').val('');
+               $('#Agen').val('');
                $('.adinfo').hide();
            }
         });
@@ -1425,8 +1435,18 @@ $(document).ready(function() {
            else
            {
                $('.ra1').hide();
-             
-
+               $('#Rtitle').val('');
+               $('#Rlast').val('');
+               $('#Rfirst').val('');
+               $('#Rmiddle').val('');
+               $('#Rflat').val('');
+               $('#Rbuilding').val('');
+               $('#Rroad').val('');
+               $('#Rarea').val('');
+               $('#Rtown').val('');
+               $('#Rstate').val('');
+               $('#Rpincode').val('');
+               
            }
 
         });
