@@ -482,9 +482,9 @@ function valid_Other()
                 if(poa === "AADHAR CARD ISSUED BY UIDAI" || pdob === "AADHAAR CARD ISSUED BY UIDAI" || poi === "AADHAR CARD ISSUED BY UIDAI")
                     {
                
-                alert('Aadhar Card is Mondatory');
-                $('#AadharNo').focus();
-                return false;
+                     alert('Aadhar Card is Mondatory');
+                     $('#AadharNo').focus();
+                      return false;
                         
                     }
             
@@ -578,7 +578,7 @@ function valid_Other()
                 
             }
             
-          /*   if($('.adinfo').css('display') == 'none')
+            if($('.adinfo').css('display') == 'none')
             {
             
                
@@ -607,7 +607,7 @@ function valid_Other()
                   
                 }        
           
-           }*/
+           }
             if($('.appcom').css('display') == 'none')
             {
             
