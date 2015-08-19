@@ -1392,7 +1392,7 @@ $(document).ready(function() {
                             break;
                             
             case 'Tab5':
-                            $("#Rtitle").focus();
+                            $("#Rdetail").focus();
                             break;
                             
             case 'Tab6':
@@ -1404,6 +1404,14 @@ $(document).ready(function() {
             }
             }
             });       
+     
+        
+        
+          
+        
+        
+        
+        
         
             //Ra yes or no
         $("#Rdetail").change(function() { 

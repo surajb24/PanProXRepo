@@ -56,7 +56,7 @@ if(isset($_POST['level2app_submit']))
 			$("#Tab9").addClass("select");
 			$("#Tab8I").slideUp();
 			$("#Tab9I").slideDown();
-						
+			 $(".title2").focus();			
                     	}); 
 
 		</script>';
@@ -165,6 +165,7 @@ if(isset($_POST['level2personal_submit']))
                    $("#Tab9I").slideUp();
                    $("#Tab8I").slideUp();
                    $("#Tab10I").slideDown();
+                   $(".addcomleve2").focus();		
 			
 		}); 
 				

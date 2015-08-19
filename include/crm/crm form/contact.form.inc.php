@@ -268,7 +268,7 @@
         
         <div align="center" class="buttons">
 		
-            <button type="submit" id="Contactsubmit" class="Contactsubmit btns" name="Contactsubmit" onclick="return Valid_Conatct();">Submit</button>
+            <button type="submit" id="Contactsubmit" class="Contactsubmit btns primarysubmit" name="Contactsubmit" onclick="return Valid_Conatct();">Submit</button>
             <button type="button" id="Contactpre"  name="Contactpre" class="Contactpre btns">Previous</button>
             <button type="button" id="Contactnext"  name="Contactnext" class="Contactnext btns">Next</button>
             <button type="submit" class="btns" id=""  name="Level1_Final" >Final Submit</button>

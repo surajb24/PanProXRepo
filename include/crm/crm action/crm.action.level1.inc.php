@@ -83,7 +83,7 @@ if(isset($_POST['app_submit']))
 			$("#Tab2").addClass("select");
 			$("#Tab1I").slideUp();
 			$("#Tab2I").slideDown();
-                                                                         
+                         $("#title").focus();                                                
                                                 var a=$(".apptype").val();
                                                 if(a=="CORRECTION")
                                                 {
@@ -254,7 +254,7 @@ if(isset($_POST['Personalsubmit']))
                                                $("#Tab2I").slideUp();
                                                $("#Tab1I").slideUp();
                                                $("#Tab3I").slideDown();
-                                               
+                                                $("#addcom").focus();
                                                 var a=$(".apptype").val();
                                                 if(a=="CORRECTION")
                                                 {
@@ -495,7 +495,7 @@ if(isset($_POST['Contactsubmit']))
                                                 $("#Tab2I").slideUp();
                                                 $("#Tab1I").slideUp();
                                                 $("#Tab4I").slideDown();
-                                                
+                                                 $("#SOA").focus();
                                                 var a=$(".apptype").val();
                                                 if(a=="CORRECTION")
                                                 {
@@ -753,7 +753,7 @@ if(isset($_POST['OtherSubmit']))
                                                 $("#Tab2I").slideUp();
                                                 $("#Tab1I").slideUp();
                                                 $("#Tab5I").slideDown();
-                                                
+                                                 $("#Rdetail").focus();
                                                 var a=$(".apptype").val();
                                                 if(a=="CORRECTION")
                                                 {
@@ -907,7 +907,7 @@ if(isset($_POST['Rasubmit']))
                             $("#Tab5I").slideUp();
                             $("#Tab6I").slideDown();
                             $("#Tab7I").slideUp();
-						
+			    $("#Photo").focus();		
                     }); 
 
 		</script>';
@@ -1040,7 +1040,7 @@ if(isset($_POST['VerificationSubmit']))
                         $("#Tab2").removeClass("select");
                         $("#Tab1").removeClass("select");
 			$("#Tab7").addClass("select");
-                        $("#Tab6").addClass("select");
+                        $("#Tab6").removeClass("select");
 			$("#Tab1I").slideUp();
 			$("#Tab2I").slideUp();
                         $("#Tab3I").slideUp();
