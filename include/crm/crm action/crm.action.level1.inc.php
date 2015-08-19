@@ -354,6 +354,8 @@ if(isset($_POST['Contactsubmit']))
                 
                $RCounrty=  select_id($ID, $TabelName, $ColumnName, $Condition);
              
+               $_SESSION['offyn']=$_POST['selectyes'];
+               
                 //office addresss 
                 
                 $ONameofoffice =$_POST['ONameofoffice'];
@@ -410,7 +412,7 @@ if(isset($_POST['Contactsubmit']))
                 $Email =$_POST['Email'];
                 $_SESSION['2-3-22'] = $Email; 
                 
-                $_SESSION['offyn']=$_POST['selectyes'];
+                
                 
 	$sql = " UPDATE `cust_address_info_l1` SET 
 	
@@ -495,7 +497,7 @@ if(isset($_POST['Contactsubmit']))
                                                 $("#Tab2I").slideUp();
                                                 $("#Tab1I").slideUp();
                                                 $("#Tab4I").slideDown();
-                                                 $("#SOA").focus();
+                                                
                                                 var a=$(".apptype").val();
                                                 if(a=="CORRECTION")
                                                 {

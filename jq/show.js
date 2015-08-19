@@ -266,9 +266,9 @@ $(document).ready(function() {
             $('#ORSLP').val('');
             $('#OALTS').val('');
             $('#OTCD').val('');
-            $('#OState').remove();
+            $('#OState').val('');
             $('#OPZcode').val('');
-            $('#OCountry').remove();
+            $('#OCountry').val('');
             $('#Ccode').val('');
             
             
@@ -718,8 +718,8 @@ $(document).ready(function() {
                         $("#Tab6I").slideUp();
                         $("#Tab4I").slideDown();
                         alert("Aadhar No details are mandatory");
-                        document.other.AadharNo.setAttribute("onblur","valid_required(this,'Aadhar No','0')");
-                        $("#AadharNo").focus();
+                       // document.other.AadharNo.setAttribute("onblur","valid_required(this,'Aadhar No','0')");
+                       // $("#AadharNo").focus();
                     }
                     else
                     {

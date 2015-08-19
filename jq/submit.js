@@ -775,47 +775,45 @@ function valid_communication(flag)
 
 function Valid_Conatct()
 {
-    
-    var summary ="";
-    
+     
+       var summary ="";
+   
     var selectaddcont = document.getElementById("addcom").value;
-    var b = document.getElementById("selectyes").value;
-    var selectyesss = document.getElementById("selectyes").value;
+    var selectyes = document.getElementById("selectyes").value;
+    // var b = document.getElementById("selectyes").value;
     var RTCD = document.getElementById("RTCD").value;
     var RState = document.getElementById("RState").value;
     var RPZcode = document.getElementById("RPZcode").value;
     var RCountry = document.getElementById("RCountry").value;  
-    var ONameoffice = document.getElementById("ONameofoffice").value;
-    var Ostate = document.getElementById("OState").value;
-    var OPZcode = document.getElementById("OPZcode").value;
+    var ONameofoffice = document.getElementById("ONameofoffice").value;
+    var OTCD = document.getElementById("OTCD").value;
+    var OState = document.getElementById("OState").value;
+   var OPZcode = document.getElementById("OPZcode").value;
     var OCountry = document.getElementById("OCountry").value;
-    var resid="1";
+    var chk="1";
     var office="1";
-    var etel="1";
+    var rel="1";
+
     
    // var TelNo = document.getElementById("TelNo").value;
  
 
 
                     if(selectaddcont == ""){
+                      
                             summary+=valid_select(this,'Address For Communication',"1");
-                          
+                           
                      }
            else{
                                 
-     
-                              if((selectaddcont == "RESIDANCE"))
-                              {  
-                        //Residence Address  
-                   
-                              
-                              
-                        if(resid == "1"){
-           
-                                                summary +=valid_textbox(resid);
-                                               
-                                              }
+                   if((selectaddcont == "RESIDANCE") )
+                   {
                      
+                              
+                              
+                               if(chk == "1"){
+                                                summary +=valid_textbox(chk);
+                                            }
                                             
                         if(RTCD == '')
                          {
@@ -824,60 +822,72 @@ function Valid_Conatct()
                    
                         }
 
-                        if(RPZcode == '')
+
+                           if(RState == "")
+                        {
+                            summary+=valid_select(this,'State',"1");
+                          
+                        }
+                        
+                           if(RPZcode == '')
                          {
                          var c=document.getElementById("RPZcode").getAttribute("placeholder");
                          summary+=valid_required((document.getElementById("RPZcode")),c,"1");
                    
                         }
                         
-                       if(RState == "")
-                        {
-                            summary+=valid_select(this,'State',"1");
-                          
-                        }
+                    
 
                         if(RCountry == "")
                         {
                                summary+=valid_select(this,'Country',"1");
 
                         }
-                        
-                        
-                
-                  
-                     if($('.selectoffice').css('display') == 'none')
+
+                         
+                 
+                             if($('.selectoffice').css('display') == 'none')
                         {
             
                         
                         }
                         else
                           {
-                             
-                        if(selectyesss == "")
-                        {
-                            
-                            summary+=valid_select(this,'Yes or No Office Address',"1");
-                          
-                          } 
+                           
+                                if(selectyes == "")
+                            {
+
+
+                                   summary+=valid_select(this,'Yes or No Office Address',"1");
+
+                            }
+
+                           
+                   
                           }
-                              }
+                  }
+                 
                      //office  Address
                      
-                if((selectaddcont == "OFFICE"|| b == "Y"))
-                              {           
+                  if( (selectaddcont == "OFFICE"|| selectyes == "Y"))
+                          {
+      
+
+                              
                           
-                    if(ONameoffice =='')
+                    if(ONameofoffice =='')
                     {
                         var c=document.getElementById("ONameofoffice").getAttribute("placeholder");
                         summary+=valid_required((document.getElementById("ONameofoffice")),c,"1");
                        
 
-                    } 
-               
+                    }
+                    
+                    
                      if(office == "1"){
                                                 summary +=valid_office(office);
                                               }
+                     
                      
                     
                     if(OTCD =='')
@@ -888,6 +898,13 @@ function Valid_Conatct()
 
                     }
                     
+                    if(OState == "")
+                     {
+                            summary+=valid_select(this,'State',"1");
+                           
+                     }
+                    
+                    
                      if(OPZcode =='')
                     {
                         var c=document.getElementById("OPZcode").getAttribute("placeholder");
@@ -896,24 +913,23 @@ function Valid_Conatct()
 
                     }
 
-                     if(Ostate == ""){
-                            summary+=valid_select(this,'State',"1");
-                           
-                     }
                      
-                     if(OCountry == ""){
+                     
+                     if(OCountry == "")
+                     {
                             summary+=valid_select(this,'Country',"1");
                             
                      }
-          
-                              }
+                    }  
+                                                           
+                  
+                               if(rel == "1"){
+                                                summary +=valid_communication(rel);
+                                            }
          } 
 
          
-                             if(etel == "1"){
-                      
-                                                summary +=valid_communication(office);
-                                              }
+  
     if(summary!=="")
     {
         alert(summary);
@@ -925,23 +941,23 @@ function Valid_Conatct()
                                    if(selectadd == "RESIDANCE"){
                                         if(contact[i].type === "text" &&  contact[i].value === "")
                                     {
-                                                $(".RAdd").css("background","white");
-                                                $(".RNPremises").css("background","white");
-                                                $(".RALT").css("background","white");
-                                                $(".RRSL").css("background","white");
-                                                $(".ONameofoffice").css("background","white");
-                                                $(".OFRDB").css("background","white");
-                                                $(".OPremises").css("background","white");
-                                                $(".ORSLP").css("background","white");
-                                                $(".OALTS").css("background","white");
-                                                $(".OTCD").css("background","white");
-                                                $(".OPZcode").css("background","white");
-                                                $(".Ccode").css("background","white");
-                                                $(".OAScode").css("background","white");
-                                                $(".TelNo").css("background","white");
+                                                $(".level2ReFlat").css("background","white");
+                                                $(".level2ReBuid").css("background","white");
+                                                $(".level2ReRoad").css("background","white");
+                                                $(".level2ReArea").css("background","white");
+                                                $(".level2NameOffice").css("background","white");
+                                                $(".level2OfFlat").css("background","white");
+                                                $(".level2OfBuil").css("background","white");
+                                                $(".level2OfRoad").css("background","white");
+                                                $(".level2OfArea").css("background","white");
+                                                $(".level2OfTown").css("background","white");
+                                                $(".level2OfState").css("background","white");
+                                                $(".level2OfPin").css("background","white");
+                                                $(".level2OfCoun").css("background","white");
+                                                
                                               
                                                 contact[i].style.backgroundColor = "#eeac9a";
-                                                 $(".Email").css("background","white");
+                                               
                                                 
                                     }else{
                                                  contact[i].style.backgroundColor="white";
@@ -951,21 +967,20 @@ function Valid_Conatct()
                                  if(selectadd == "OFFICE"){
                                         if(contact[i].type === "text" &&  contact[i].value === "")
                                     {
-                                                $(".RAdd").css("background","white");
-                                                $(".RNPremises").css("background","white");
-                                                $(".RALT").css("background","white");
-                                                $(".RRSL").css("background","white");
-                                                $(".RPZcode").css("background","white");
-                                                $(".RTCD").css("background","white");
-                                                $(".OFRDB").css("background","white");
-                                                $(".OPremises").css("background","white");
-                                                $(".ORSLP").css("background","white");
-                                                $(".OALTS").css("background","white");
-                                                $(".Ccode").css("background","white");
-                                                $(".OAScode").css("background","white");
-                                                $(".TelNo").css("background","white");
+                                                $(".level2ReFlat").css("background","white");
+                                                $(".level2ReBuid").css("background","white");
+                                                $(".level2ReRoad").css("background","white");
+                                                $(".level2ReArea").css("background","white");
+                                                $(".level2ReTown").css("background","white");
+                                                $(".level2ReState").css("background","white");
+                                                $(".level2RePin").css("background","white");
+                                                $(".level2ReCoun").css("background","white");
+                                                $(".level2OfFlat").css("background","white");
+                                                $(".level2OfBuil").css("background","white");
+                                                $(".level2OfRoad").css("background","white");
+                                                $(".level2OfArea").css("background","white");
                                                 contact[i].style.backgroundColor = "#eeac9a";
-                                                 $(".Email").css("background","white");
+                                                 
                                                 
                                     }else{
                                                  contact[i].style.backgroundColor="white";
@@ -973,13 +988,13 @@ function Valid_Conatct()
                                 }
                                 } 
                                  $(function(){
-                                         if($(".addcom,.RState,.RCountry,.OState,.OCountry").val()!=='')
+                                         if($(".addcomleve2,.level2ReState,.level2ReCoun,.selectyes,.level2OfState,.level2OfCoun").val()!=='')
                                         {
-                                             $(".addcom,.RState,.RCountry,.OState,.OCountry").css('background-color','white');
+                                             $(".addcomleve2,.level2ReState,.level2ReCoun,.selectyes,.level2OfState,.level2OfCoun").css('background-color','white');
                                         }
                                         else
                                         {
-                                             $(".addcom,.RState,.RCountry,.OState,.OCountry").css('background-color','#eeac9a');    
+                                             $(".addcomleve2,.level2ReState,.level2ReCoun,.selectyes,.level2OfState,.level2OfCoun").css('background-color','#eeac9a');    
                                         }
                                    
                                         });    
@@ -1002,7 +1017,7 @@ function Valid_Conatct_level2()
     
     var selectaddcont = document.getElementById("addcom").value;
     var selectyes = document.getElementById("selectyes").value;
-     var b = document.getElementById("selectyes").value;
+    // var b = document.getElementById("selectyes").value;
     var level2ReTown = document.getElementById("level2ReTown").value;
     var level2ReState = document.getElementById("level2ReState").value;
     var level2RePin = document.getElementById("level2RePin").value;
@@ -1081,7 +1096,7 @@ function Valid_Conatct_level2()
                   }
                      //office  Address
                      
-                   if( (selectaddcont == "OFFICE"|| b == "Y"))
+                   if( (selectaddcont == "OFFICE"|| selectyes == "Y"))
                           {
       
              
