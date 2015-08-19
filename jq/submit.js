@@ -173,11 +173,13 @@ function valid_Person(){
             var summary ="";
 
             var selectper = document.getElementById("title").value;
+            
             var lname = document.getElementById("Lname").value;
             var appre = document.getElementById("Abb").value;
             var date=document.getElementById("date").value;
             var fname=document.getElementById("Fname").value;
             var other=document.getElementById("other").value;
+           
             var otitle=document.getElementById("otitle").value;
             var olname=document.getElementById("OLname").value;
             var ofname=document.getElementById("OFname").value;
