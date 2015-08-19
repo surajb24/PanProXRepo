@@ -269,6 +269,8 @@ $(document).ready(function() {
             $('#OState').remove();
             $('#OPZcode').val('');
             $('#OCountry').remove();
+            $('#Ccode').val('');
+            
             
             
              
