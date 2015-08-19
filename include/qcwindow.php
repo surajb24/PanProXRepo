@@ -23,75 +23,86 @@ include '../include/window.header.inc.php';
         
 ?>
 
+
 <script>
 
-function emptyContactSession()
+function emptyContactSession(e)
 {
-    // initialize 
-    if(window.XMLHttpRequest)
-    {
-
-        xmlhttp = new XMLHttpRequest();
-
-    }
-    else
-    {
-        
-        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-        
-    }
-    
-    //response
-    xmlhttp.onreadystatechange=function()
-    {
-
-        if(xmlhttp.readyState==4 && xmlhttp.status==200)
+   var offname= docement.getElementById('ONameofoffice').value;
+   if(offname==='')
+   {
+        // initialize 
+        if(window.XMLHttpRequest)
         {
-            
-            document.getElementById("response").innerHTML = xmlhttp.responseText;
-            
+
+            xmlhttp = new XMLHttpRequest();
+
         }
-        
+        else
+        {
+
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+
+        }
+
+        //response
+        xmlhttp.onreadystatechange=function()
+        {
+
+            if(xmlhttp.readyState==4 && xmlhttp.status==200)
+            {
+
+                document.getElementById("response").innerHTML = xmlhttp.responseText;
+
+            }
+
+        }
+
+        //passing varaible
+        xmlhttp.open("GET","../ajax/sessionEmptyContact.php?ContactSession=Empty",true);
+        xmlhttp.send();
     }
-    
-    //passing varaible
-    xmlhttp.open("GET","../ajax/sessionEmptyContact.php?ContactSession=Empty",true);
-    xmlhttp.send();
-    
 }    
     
 
-function emptyOtherSession()
+function emptyOtherSession(e)
 {
-    // initialize 
-    if(window.XMLHttpRequest)
+    var proofval=e.value;
+    if(proofval==="AADHAR CARD ISSUED BY UIDAI"||proofval==="AADHAAR CARD ISSUED BY UIDAI")
     {
-
-        xmlhttp = new XMLHttpRequest();
-
-    }
-    else
-    {
-        
-        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-        
-    }
-    
-    //response
-    xmlhttp.onreadystatechange=function()
-    {
-
-        if(xmlhttp.readyState==4 && xmlhttp.status==200)
+        var aadhar=document.getElementById('AadharNo').value;
+        if(aadhar=='')
         {
-            document.getElementById("response").innerHTML = xmlhttp.responseText;
+            // initialize 
+            if(window.XMLHttpRequest)
+            {
+
+                xmlhttp = new XMLHttpRequest();
+
+            }
+            else
+            {
+
+                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+
+            }
+
+            //response
+            xmlhttp.onreadystatechange=function()
+            {
+
+                if(xmlhttp.readyState==4 && xmlhttp.status==200)
+                {
+                    document.getElementById("response").innerHTML = xmlhttp.responseText;
+                }
+
+            }
+
+            //passing varaible
+            xmlhttp.open("GET","../ajax/sessionEmptyOther.php?OtherSession=Empty",true);
+            xmlhttp.send();
         }
-        
     }
-    
-    //passing varaible
-    xmlhttp.open("GET","../ajax/sessionEmptyOther.php?OtherSession=Empty",true);
-    xmlhttp.send();
-    
 }    
 
 
