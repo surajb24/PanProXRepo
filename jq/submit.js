@@ -1107,7 +1107,7 @@ function Valid_Conatct_level2()
     {
         alert(summary);
                                 
-                      var contact = document.forms["contact"].querySelectorAll("input");
+                      var contact = document.forms["contact2"].querySelectorAll("input");
                       var selectadd=$("#addcom").val();      
                                 for(var i=0; i< contact.length; i++)
                                 {                         
@@ -1161,13 +1161,13 @@ function Valid_Conatct_level2()
                                 }
                                 } 
                                  $(function(){
-                                         if($(".addcom,.RState,.RCountry,.OState,.OCountry").val()!=='')
+                                         if($(".addcomleve2,.level2ReState,.level2ReCoun,.selectyes,.level2OfState,.level2OfCoun").val()!=='')
                                         {
-                                             $(".addcom,.RState,.RCountry,.OState,.OCountry").css('background-color','white');
+                                             $(".addcomleve2,.level2ReState,.level2ReCoun,.selectyes,.level2OfState,.level2OfCoun").css('background-color','white');
                                         }
                                         else
                                         {
-                                             $(".addcom,.RState,.RCountry,.OState,.OCountry").css('background-color','#eeac9a');    
+                                             $(".addcomleve2,.level2ReState,.level2ReCoun,.selectyes,.level2OfState,.level2OfCoun").css('background-color','#eeac9a');    
                                         }
                                    
                                         });    
