@@ -143,6 +143,13 @@ function validatedob(e) {
                 var mm  = parseInt(pdate[1]);  
                 var yy = parseInt(pdate[2]);
 	
+        if(dd < 1 )
+         {
+              document.getElementById("dterequre").innerHTML = "Day cant be less than 1";
+           e.value='';
+           t=0;
+            }
+        
          if(mm < 1 )
          {
               document.getElementById("dterequre").innerHTML = "Month cant be less than 1";

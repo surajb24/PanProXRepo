@@ -266,9 +266,9 @@ $(document).ready(function() {
             $('#ORSLP').val('');
             $('#OALTS').val('');
             $('#OTCD').val('');
-            $('#OState').val('');
+            $('#OState').remove();
             $('#OPZcode').val('');
-            $('#OCountry').val('');
+            $('#OCountry').remove();
             
             
              
@@ -460,7 +460,7 @@ $(document).ready(function() {
        else
        {
            $('.appA').hide();
-           $("#otitle").val('');
+           $("#otitle").remove();
            $("#OLname").val('');
            $("#OFname").val('');
            $("#OMname").val('');   
@@ -672,13 +672,13 @@ $(document).ready(function() {
              
              $('#AName').val('');
              $('#Ayob').val('');
-             $('#Agen').val('');
+             $('#Agen').remove();
              $('.adinfo').show();
             
              } else {
                  $('#AName').val('');
                  $('#Ayob').val('');
-                 $('#Agen').val('');
+                 $('#Agen').remove();
                 $('.adinfo').hide();
             }
            }
@@ -686,7 +686,7 @@ $(document).ready(function() {
            {
                $('#AName').val('');
                $('#Ayob').val('');
-               $('#Agen').val('');
+               $('#Agen').remove();
                $('.adinfo').hide();
            }
         });
@@ -845,7 +845,7 @@ $(document).ready(function() {
                                 $('#ao_type').val('');
                                 $('#range_code').val('');
                                 $('#ao_no').val('');
-                                $('#Rtitle').val('');
+                                $('#Rtitle').remove();
                                 $('#Rlast').val('');
                                 $('#Rfirst').val('');
                                 $('#Rmiddle').val('');
@@ -854,7 +854,7 @@ $(document).ready(function() {
                                 $('#Rroad').val('');
                                 $('#Rarea').val('');
                                 $('#Rtown').val('');
-                                $('#Rstate').val('');
+                                $('#Rstate').remove();
                                 $('#Rpincode').val('');
                                 $('#raTable').hide();
                                 $("#selectyes").removeAttr("onblur","valid_select(this,'Required','0')");
@@ -888,9 +888,9 @@ $(document).ready(function() {
             $('#ORSLP').val('');
             $('#OALTS').val('');
             $('#OTCD').val('');
-            $('#OState').val('');
+            $('#OState').remove();
             $('#OPZcode').val('');
-            $('#OCountry').val('');
+            $('#OCountry').remove();
             
             
              
@@ -1046,7 +1046,7 @@ $(document).ready(function() {
        else
        {
            $('.appA').hide();
-           $("#otitle").val('');
+           $("#otitle").remove();
            $("#OLname").val('');
            $("#OFname").val('');
            $("#OMname").val('');   
@@ -1434,8 +1434,10 @@ $(document).ready(function() {
            }
            else
            {
-               $('.ra1').hide();
-               $('#Rtitle').val('');
+            
+                 
+               $('#Rtitle').remove();
+              
                $('#Rlast').val('');
                $('#Rfirst').val('');
                $('#Rmiddle').val('');
@@ -1444,9 +1446,9 @@ $(document).ready(function() {
                $('#Rroad').val('');
                $('#Rarea').val('');
                $('#Rtown').val('');
-               $('#Rstate').val('');
+               $('#Rstate').remove();
                $('#Rpincode').val('');
-               
+               $('.ra1').hide();
            }
 
         });
