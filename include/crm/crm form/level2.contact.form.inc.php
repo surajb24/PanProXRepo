@@ -117,7 +117,8 @@
                 <th class="required">Please Select Office address</th>
                 <td>
                     <select name="selectyes" id="selectyes" class="selectyes">
-                        <option value="">---Select---</option>
+                        <option value="<?php if(!empty($_SESSION['offyn'])) { echo $_SESSION['offyn']; } else { "";}?>">
+                       <?php if(!empty($_SESSION['offyn'])) { echo $_SESSION['offyn']; } else { echo 'Select Office Address '; } ?></option>
                         <option value="Y">Yes</option>
                         <option value="N">No</option>
                     </select>
