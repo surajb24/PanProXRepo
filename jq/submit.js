@@ -538,7 +538,7 @@ function valid_Other()
                 {
                    if(AadharNo <12)
                    {
-                    summary=summary+"Aadhar card value should not be less than 12 digits";
+                    summary=summary+"Aadhar card value should not be less than 12 digits\n";
                     } 
                 }
        

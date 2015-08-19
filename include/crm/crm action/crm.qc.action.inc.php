@@ -710,6 +710,13 @@ if(isset($_POST['OtherSubmit']))
                 $AGEN=$_POST['Agen'];
                 $_SESSION['5-4-19'] = $AGEN;
                 
+                $ID='SEX_ID,C,1';
+                $TabelName='sex';
+                $ColumnName='SEX_NAME,C,6';
+                $Condition =$AGEN;
+                
+               $GID = select_id($ID, $TabelName, $ColumnName, $Condition);
+                
 	$sql = " UPDATE `cust_qc_other_info` SET 
 	
 		`CATEGORY,C,2`='$Cat',
