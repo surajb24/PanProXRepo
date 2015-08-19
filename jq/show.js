@@ -1436,10 +1436,11 @@ $(document).ready(function() {
            }
            else
            {
-            
+
                  
                $('#Rtitle').remove();
               
+
                $('#Rlast').val('');
                $('#Rfirst').val('');
                $('#Rmiddle').val('');

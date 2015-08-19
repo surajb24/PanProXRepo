@@ -33,6 +33,7 @@ include '../include/window.header.inc.php';
 function emptyContactSession(e)
 {
    var offname= docement.getElementById('ONameofoffice').value;
+   
    if(offname==='')
    {
         // initialize 
@@ -75,8 +76,11 @@ function emptyOtherSession(e)
     if(proofval==="AADHAR CARD ISSUED BY UIDAI"||proofval==="AADHAAR CARD ISSUED BY UIDAI")
     {
         var aadhar=document.getElementById('AadharNo').value;
+        
         if(aadhar=='')
         {
+            
+            
             // initialize 
             if(window.XMLHttpRequest)
             {
