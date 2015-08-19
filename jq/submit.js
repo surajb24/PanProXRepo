@@ -1483,9 +1483,7 @@ function Valid_Verification()
                             
                      }
                 
-                   
-                     
-    
+                       
     if(summary!="")
     {
         alert(summary);
