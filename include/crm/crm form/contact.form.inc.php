@@ -212,7 +212,7 @@
             <tr class="office">
                 <th class="required">Country Name</th>
                     <td>
-                        <select name="OCountry" id="OCountry" class="OCountry req" onchange="displayisd1();" <!--onblur="valid_select(this,'Country','0');"--->>
+                        <select name="OCountry" id="OCountry" class="OCountry req" onchange="displayisd();" <!--onblur="valid_select(this,'Country','0');"--->>
                                                 <option value="<?php if(!empty($_SESSION['2-3-18'])) { echo $_SESSION['2-3-18']; } else { echo ""; }?>">
                                                 <?php if(!empty($_SESSION['2-3-18'])) { echo $_SESSION['2-3-18']; } else { echo "Select Country"; }?>
                                                 </option>  
@@ -267,8 +267,11 @@
 
         
         <div align="center" class="buttons">
-		
-            <button type="submit" id="Contactsubmit" class="Contactsubmit btns" name="Contactsubmit" onclick="return Valid_Conatct();">Submit</button>
+
+
+            <button typeaddcomval="submit" id="Contactsubmit" class="Contactsubmit btns" name="Contactsubmit" onclick="return Valid_Conatct();">Submit</button>
+
+
             <button type="button" id="Contactpre"  name="Contactpre" class="Contactpre btns">Previous</button>
             <button type="button" id="Contactnext"  name="Contactnext" class="Contactnext btns">Next</button>
             <button type="submit" class="btns" id=""  name="Level1_Final" >Final Submit</button>
@@ -281,53 +284,44 @@
 
 
 <script>
-    
-    
-function displayisd(){
+                             
+   
+                function displayisd()
+                {
+                    
+                    
+                    var addcomval = document.getElementById('addcom').value;
+                    
+                                        
+                    if(addcomval === 'RESIDANCE')
+                    {
+                        var CountryVal = document.getElementById('RCountry').value;
+                    }
+                    
+                    if(addcomval === 'OFFICE')
+                    {
+                        var CountryVal = document.getElementById('OCountry').value;
+                    }
+                    
+                    if(window.XMLHttpRequest){
 
+                    xmlhttp=new XMLHttpRequest();
+                    }else{
+                    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+                    }
+                    xmlhttp.onreadystatechange=function(){
+                            if(xmlhttp.readyState==4 && xmlhttp.status==200){
+                                    document.getElementById("OAScode").value=xmlhttp.responseText;
 
-if(window.XMLHttpRequest){
+                            }
+                    }
 
-	
-	xmlhttp=new XMLHttpRequest();
-	}else{
-	xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-	}
-	xmlhttp.onreadystatechange=function(){
-		if(xmlhttp.readyState==4 && xmlhttp.status==200){
-			document.getElementById("OAScode").value=xmlhttp.responseText;
-                        
-		}
-	}
-	
-	xmlhttp.open("GET","../ajax/isd_code.php?RCountry="+document.contact.RCountry.value,true);
+                    xmlhttp.open("GET","../ajax/isd_code.php?RCountry="+CountryVal,true);
 
-	xmlhttp.send();
-}
-
-
-function displayisd1(){
-
-if(window.XMLHttpRequest){
-
-	
-	xmlhttp=new XMLHttpRequest();
-	}else{
-	xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-	}
-	xmlhttp.onreadystatechange=function(){
-		if(xmlhttp.readyState==4 && xmlhttp.status==200){
-			document.getElementById("OAScode").value=xmlhttp.responseText;
-                        
-		}
-	}
-	
-	xmlhttp.open("GET","../ajax/isd_code.php?RCountry="+document.contact.OCountry.value,true);
-
-	xmlhttp.send();
-}
-
-
+                    xmlhttp.send();
+                    
+                }
+            
 
 </script>
 

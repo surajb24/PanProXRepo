@@ -108,7 +108,7 @@
                 <th class="required">Country Name</th>
                     <td>
                         
-                       <select name="RCountry" id="RCountry" class="RCountry" onchange="qcdisplayisd();"onblur="valid_select(this,'Country','0');">
+                       <select name="RCountry" id="RCountry" class="RCountry" onchange="displayisd1();"onblur="valid_select(this,'Country','0');">
 
 		            <option value="<?php if(!empty($_SESSION['5-3-9'])) { echo $_SESSION['5-3-9']; } else { echo ""; } ?>">
                                             <?php if(!empty($_SESSION['5-3-9'])) { echo $_SESSION['5-3-9']; } else { echo "Select Country"; } ?>
@@ -224,7 +224,7 @@
             <tr class="office">
                 <th class="required">Country Name</th>
                     <td>
-                        <select name="OCountry" id="OCountry" class="OCountry" onchange="qcdisplayisd1();"<!--onblur="valid_select(this,'Country','0');"--->>
+                        <select name="OCountry" id="OCountry" class="OCountry" onchange="displayisd1();"<!--onblur="valid_select(this,'Country','0');"--->>
                                                 <option value="<?php if(!empty($_SESSION['5-3-18'])) { echo $_SESSION['5-3-18']; } else { echo ""; }?>">
                                                 <?php if(!empty($_SESSION['5-3-18'])) { echo $_SESSION['5-3-18']; } else { echo "Select Country"; }?>
                                                 </option>  
@@ -290,53 +290,41 @@
 
 
 <script>
-    
-    
-function qcdisplayisd(){
+                                         
+                function displayisd1()
+                {
+                                      
+                    var addcomval = document.getElementById('addcom').value;
+                    
+                                        
+                    if(addcomval === 'RESIDANCE')
+                    {
+                        var CountryVal = document.getElementById('RCountry').value;
+                    }
+                    
+                    if(addcomval === 'OFFICE')
+                    {
+                        var CountryVal = document.getElementById('OCountry').value;
+                    }
+                    
+                    if(window.XMLHttpRequest){
 
+                    xmlhttp=new XMLHttpRequest();
+                    }else{
+                    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+                    }
+                    xmlhttp.onreadystatechange=function(){
+                            if(xmlhttp.readyState==4 && xmlhttp.status==200){
+                                    document.getElementById("OAScode").value=xmlhttp.responseText;
 
+                            }
+                    }
 
-if(window.XMLHttpRequest){
+                    xmlhttp.open("GET","../ajax/isd_code.php?RCountry="+CountryVal,true);
 
-	
-	xmlhttp=new XMLHttpRequest();
-	}else{
-	xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-	}
-	xmlhttp.onreadystatechange=function(){
-		if(xmlhttp.readyState==4 && xmlhttp.status==200){
-			document.getElementById("OAScode").value=xmlhttp.responseText;
-                        
-		}
-	}
-	
-	xmlhttp.open("GET","../ajax/isd_code.php?RCountry="+document.contact.RCountry.value,true);
-
-	xmlhttp.send();
-}
-
-
-function qcdisplayisd1(){
-
-if(window.XMLHttpRequest){
-
-	
-	xmlhttp=new XMLHttpRequest();
-	}else{
-	xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-	}
-	xmlhttp.onreadystatechange=function(){
-		if(xmlhttp.readyState==4 && xmlhttp.status==200){
-			document.getElementById("OAScode").value=xmlhttp.responseText;
-                        
-		}
-	}
-	
-	xmlhttp.open("GET","../ajax/isd_code.php?RCountry="+document.contact.OCountry.value,true);
-
-	xmlhttp.send();
-}
-
-
+                    xmlhttp.send();
+                    
+                }
+             
 
 </script>

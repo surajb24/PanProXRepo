@@ -1,4 +1,3 @@
-
 <?php
 
 include '../include/window.header.inc.php';
@@ -24,8 +23,6 @@ include '../include/window.header.inc.php';
               
 
 ?>
-
-
 
 
 <script>

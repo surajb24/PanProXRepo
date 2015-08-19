@@ -10,9 +10,9 @@ if(isset($_GET['RCountry']))
         
 	if(!empty($search)){
 	
-	$sql="SELECT `CNT_NO,N,3`,`CNT_NAME,C,45` from `country` 
+	$sql="SELECT `ISD,C,3` from `isd_code` 
 		
-		WHERE  `CNT_NAME,C,45` LIKE '$search%';"; 
+		WHERE  `COUNTRY,C,45` = '$search';"; 
         
 	$result=mysqli_query($conn,$sql);
 	

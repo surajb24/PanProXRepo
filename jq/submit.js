@@ -85,7 +85,7 @@ function validation_App(){
                         }
                         
                         $(function(){
-                           
+                            
                                      if($(".apptype").val()=="")
                                         {
                                         $(".apptype").css('background-color','#eeac9a');
@@ -553,6 +553,8 @@ function valid_Other()
             }
             
             
+
+
             //var d = document.getElementById("AadharNo"); 
             
             
@@ -561,12 +563,26 @@ function valid_Other()
             
             if($('.adarAA').css('display') == 'none')
             {
+
             
-               
+            if (typeof valid_required(this,'Aadhar No','0') != 'undefined' && $.isFunction(valid_required(this,'Aadhar No','0'))){
+            
+                 alert("hiii");
+               /* if(AadharNo == '')
+                { 
+                   
+                    var f=document.getElementById("AadharNo").getAttribute("placeholder");
+                    summary+=valid_required((document.getElementById("AadharNo")),f,"1");
+                     
+                }*/
             }
-            else
-            {
-               
+            else{
+                
+              alert("nooo");  
+                
+            }
+       
+ 
                 if(AadharNo !== '')
                 {
                    if(AadharNo <12)
@@ -576,7 +592,7 @@ function valid_Other()
                 }
        
                 
-            }
+       
             
             if($('.adinfo').css('display') == 'none')
             {
@@ -1508,4 +1524,4 @@ function Valid_Verification()
   
 
 
-
+}
