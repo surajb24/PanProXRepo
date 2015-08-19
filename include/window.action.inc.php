@@ -838,7 +838,7 @@ function QC_Fetch_11($QC_From_ID)
             $_SESSION['5-3-20'] = $row[45];
             $_SESSION['5-3-21'] = $row[46];
             $_SESSION['5-3-22'] = $row[47];
-
+            $_SESSION['offyn'];
             //other
 
             $_SESSION['5-4-1'] = $row[48];
@@ -1022,7 +1022,7 @@ function QC_Fetch_8($QC_From_ID)
            $_SESSION['5-3-20'] = $row[45];
            $_SESSION['5-3-21'] = $row[46];
            $_SESSION['5-3-22'] = $row[47];
-
+           $_SESSION['offyn'];
             //other
             $_SESSION['5-4-1'] = $row[48];
             $_SESSION['5-4-2'] = $row[49];

@@ -255,7 +255,7 @@ if(isset($_POST['Level2contactsubmit']))
                 
                 $level2ReCoun =select_id($ID, $TabelName, $ColumnName, $Condition);
                
-                $_SESSION['offyn']=$_POST['selectyes'];
+               
                 
                 $level2NameOffice=$_POST['level2NameOffice'];
                $_SESSION['3-3-10'] = $level2NameOffice;
@@ -300,6 +300,7 @@ if(isset($_POST['Level2contactsubmit']))
                 
                 $level2OfCoun =select_id($ID, $TabelName, $ColumnName, $Condition);
                
+                 $_SESSION['offyn']=$_POST['selectyes'];
                 $sql = "UPDATE `cust_address_info_l2` SET 
                         
                         `ADDR_FLAG,C,1` = '$addresscomlevel2',
