@@ -693,6 +693,7 @@ function Compare_Fetch($Compare_Form_ID)
             $_SESSION['4-3-18'] = $row[94];
             $_SESSION['3-3-18'] = $row[95];
 
+             $_SESSION['offyn'];
         }
         
    
