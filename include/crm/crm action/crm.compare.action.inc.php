@@ -252,6 +252,8 @@ if(isset($_POST['Level2contactsubmit']))
                 
                 $level2ReCoun =select_id($ID, $TabelName, $ColumnName, $Condition);
                
+                $_SESSION['offyn']=$_POST['selectyes'];
+                
                 $level2NameOffice=$_POST['level2NameOffice'];
                $_SESSION['4-3-10'] = $level2NameOffice;
                 

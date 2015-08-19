@@ -79,7 +79,7 @@
                         
                         <select name="level2ReState" id='level2ReState' class='level2ReState req' <!--onblur="valid_select(this,'State','0');"--> placeholder="STATE/UNION TERRITORY">
                                 <option value="<?php if(!empty($_SESSION['3-3-7'])) { echo $_SESSION['3-3-7']; } else { "";}?>">
-                                <?php if(!empty($_SESSION['3-3-7'])) { echo $_SESSION['337']; } else { echo "Select State"; } ?></option>
+                                <?php if(!empty($_SESSION['3-3-7'])) { echo $_SESSION['3-3-7']; } else { echo "Select State"; } ?></option>
                                  </option>  					
 			<?php State(); ?>
 		            
