@@ -969,6 +969,7 @@ function Valid_Conatct_level2()
     
     var selectaddcont = document.getElementById("addcom").value;
     var selectyes = document.getElementById("selectyes").value;
+     var b = document.getElementById("selectyes").value;
     var level2ReTown = document.getElementById("level2ReTown").value;
     var level2ReState = document.getElementById("level2ReState").value;
     var level2RePin = document.getElementById("level2RePin").value;
@@ -994,16 +995,7 @@ function Valid_Conatct_level2()
                                 
                    if((selectaddcont == "RESIDANCE") )
                    {
-                        $(".addcom").css("backgroundColor","white");
-                                
-                        //Residence Address  
-                         if($('.residence').css('display') == 'none')
-                        {
-            
-               
-                        }
-                        else
-                          {
+                     
                               
                               
                                if(chk == "1"){
@@ -1037,7 +1029,7 @@ function Valid_Conatct_level2()
                         }
 
                          
-                     }
+                 
                              if($('.selectoffice').css('display') == 'none')
                         {
             
@@ -1056,16 +1048,10 @@ function Valid_Conatct_level2()
                   }
                      //office  Address
                      
-                   if( (selectaddcont == "OFFICE"))
+                   if( (selectaddcont == "OFFICE"|| b == "Y"))
                           {
-                        $(".addcom").css("backgroundColor","white");
-                          if($('.office').css('display') == 'none')
-                        {
-            
-               
-                         }
-                        else
-                          {
+      
+             
                               
                           
                     if(level2NameOffice =='')
@@ -1112,7 +1098,7 @@ function Valid_Conatct_level2()
                      }
                     }  
                                                            
-                }    
+                  
          } 
 
          

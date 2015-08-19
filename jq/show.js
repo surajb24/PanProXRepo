@@ -1054,6 +1054,7 @@ $(document).ready(function() {
         
         var add = $("#addcom").val();
         var b = $("#apptype").val();
+        
 
         if(b === "CORRECTION")
         {
