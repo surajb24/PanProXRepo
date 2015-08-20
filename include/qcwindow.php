@@ -68,39 +68,43 @@ function emptyContactSession(e)
 function emptyOtherSession(e)
 {
     var proofval=e.value;
+    var AadharNo = document.getElementById('AadharNo');
+    var name = document.getElementById('AName');
+    var yob = document.getElementById('Ayob');
+    var gender = document.getElementById('Agen');
     if(proofval==="AADHAR CARD ISSUED BY UIDAI"||proofval==="AADHAAR CARD ISSUED BY UIDAI")
     {
-        var aadhar=document.getElementById('AadharNo').value;
-        if(aadhar=='')
+        if(AadharNo === '' || name === '' || yob === '' || gender === '')
         {
-            // initialize 
-            if(window.XMLHttpRequest)
+        // initialize 
+        if(window.XMLHttpRequest)
+        {
+
+            xmlhttp = new XMLHttpRequest();
+
+        }
+        else
+        {
+
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+
+        }
+
+        //response
+        xmlhttp.onreadystatechange=function()
+        {
+
+            if(xmlhttp.readyState==4 && xmlhttp.status==200)
             {
-
-                xmlhttp = new XMLHttpRequest();
-
-            }
-            else
-            {
-
-                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-
-            }
-
-            //response
-            xmlhttp.onreadystatechange=function()
-            {
-
-                if(xmlhttp.readyState==4 && xmlhttp.status==200)
-                {
-                    document.getElementById("response").innerHTML = xmlhttp.responseText;
-                }
-
+                document.getElementById("response").innerHTML = xmlhttp.responseText;
             }
 
-            //passing varaible
-            xmlhttp.open("GET","../ajax/sessionEmptyOther.php?OtherSession=Empty",true);
-            xmlhttp.send();
+        }
+
+        //passing varaible
+        xmlhttp.open("GET","../ajax/sessionEmptyOther.php?OtherSession=Empty",true);
+        xmlhttp.send();
+        
         }
     }
 }    

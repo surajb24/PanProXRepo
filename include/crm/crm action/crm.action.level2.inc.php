@@ -21,8 +21,7 @@ if(isset($_POST['level2app_submit']))
                 $level2app_no=$_POST['level2app_no'];    
                 $_SESSION['3-1-2'] = $level2app_no;
                  
-                $level2inword_no=strtoupper($_POST['level2inword_no']);    
-                $_SESSION['3-1-3'] = $level2inword_no;
+                
                  
                 $level2coupon_No=$_POST['level2coupon_No'];    
                 $_SESSION['3-1-4'] = $level2coupon_No;
@@ -33,7 +32,7 @@ if(isset($_POST['level2app_submit']))
 			
                         `FORM_TYPE,C,1` = '$level2apptype',
 			`APPLN_NO,C,10` = '$level2app_no',
-			`INWARD_NO,N,10,0` = '$level2inword_no',
+			
 			`COUPON_NO,C,10` = '$level2coupon_No',
                                                 `STATUS,N,1` = '2',
 			

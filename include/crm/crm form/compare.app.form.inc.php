@@ -45,12 +45,12 @@
                     <th>Inward No</th>
                     <td>
                                 
-                                <?php if(empty($_SESSION['4-1-3'])) { echo '<p>'.$_SESSION['2-1-3'].'</p>'; }  ?>
+                                
                                 
                                 <input type="text" name="level2inword_no"  id="level2inword_no" class="level2inword_no"  placeholder="INWARD NO"
-                                value="<?php echo $_SESSION['4-1-3']; ?>">
+                                       value="<?php echo $_SESSION['2-1-3']; ?>" readonly="true" >
                                 
-                                <?php if(empty($_SESSION['4-1-3'])) { echo '<p>'.$_SESSION['3-1-3'].'</p>'; }  ?>
+                                
                              
                     </td>
                     

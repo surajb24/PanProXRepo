@@ -85,9 +85,23 @@ margin-left:1%;
                     <th>Agency Code:</th>
 
                     <td>	
-                        <input type="text" name="ag_co" placeholder="Agency Code">
+                        <select name="ag_co" required="true">
+                            <option value="">Select</option>
+                            <?php agencyCode();?>
+                        </select>
                     </td>
                 
+                </tr>
+                
+                <tr>
+                    
+                    <th>Batch Date: </th>
+
+                    <td>
+
+                        <input type="text" name="BatchDate" required="true" placeholder="dd/mm/yyyy">
+                    </td>
+                    
                 </tr>
                 
                 <tr>
@@ -96,7 +110,7 @@ margin-left:1%;
 
                     <td>
 
-                        <input type="text" name="dor" placeholder="dd/mm/yyyy">
+                        <input type="text" name="dor" required="true" placeholder="dd/mm/yyyy">
                     </td>
                     
                 </tr>
@@ -107,8 +121,9 @@ margin-left:1%;
 
                     <td>
                         
-                        <select name="pdc_co" >
-
+                        <select name="pdc_co" required="true" >
+                            
+                            <option value="">Select</option>>
                             <option value="001">001</option>
                             <option value="002">002</option>
                             <option value="003">003</option>
@@ -126,8 +141,9 @@ margin-left:1%;
                     
                     <td>
                         
-                        <select name="bat_type" >
-
+                        <select name="bat_type" required="true" >
+                            
+                            <option value="">Select</option>>
                             <option value="N">Regular</option>
                             <option value="M">Marketing</option>
                             <option value="U">UTI AMC</option>

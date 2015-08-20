@@ -38,15 +38,7 @@
                     
                 </tr>
                 
-                <tr>
-			
-                    <th>Inward No</th>
-                    <td>
-                        <input type="text" name="level2inword_no"  id="level2inword_no" class="level2inword_no"  placeholder="INWARD NO"
-                               value="<?php echo $_SESSION['3-1-3']; ?>">
-                    </td>
-                    
-		</tr>
+                
                 
                 <tr>
 			
