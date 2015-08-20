@@ -458,11 +458,13 @@ function valid_Other()
 {
             
             var summary ="";
-
+           
             var smo = document.getElementById("SOA").value;
             var rgno = document.getElementById("RegNo").value;
             var AadharNo = document.getElementById("AadharNo").value;
+           
             var countryv = document.getElementById("CountryC").value;
+             
             var AName = document.getElementById("AName").value;
             var Ayob = document.getElementById("Ayob").value;
             var Agen = document.getElementById("Agen").value;
@@ -470,7 +472,7 @@ function valid_Other()
             var chk="1";
             var code=document.getElementById("SCode").value;
             
-            
+          /*
             
             var poa = $("#POA").val();
             var pdob = $("#Pdob").val();
@@ -495,7 +497,7 @@ function valid_Other()
                 return true;
             }
            
-           
+           */
            
                              
              if($('.appcom').css('display') == 'none')
@@ -509,7 +511,7 @@ function valid_Other()
               if(smo == ''){
                   
                     summary+=valid_select(this,'Status Applicant',"1");
-                  
+                 
                 }
        
                 
@@ -554,36 +556,13 @@ function valid_Other()
                 
             }
             
-            
-
-
-            //var d = document.getElementById("AadharNo"); 
-            
-            
-        
-                        
-            
-            if($('.adarAA').css('display') == 'none')
+              if($('.adarAA').css('display') == 'none')
             {
-
             
-            if (typeof valid_required(this,'Aadhar No','0') != 'undefined' && $.isFunction(valid_required(this,'Aadhar No','0'))){
-            
-                 alert("hiii");
-               /* if(AadharNo == '')
-                { 
-                   
-                    var f=document.getElementById("AadharNo").getAttribute("placeholder");
-                    summary+=valid_required((document.getElementById("AadharNo")),f,"1");
-                     
-                }*/
+               
             }
-            else{
-                
-              alert("nooo");  
-                
-            }
-       
+           else
+           {
  
                 if(AadharNo !== '')
                 {
@@ -592,19 +571,19 @@ function valid_Other()
                     summary=summary+"Aadhar card value should not be less than 12 digits\n";
                     } 
                 }
-       
-                
-       
+            }
+              
+              
             
             if($('.adinfo').css('display') == 'none')
             {
             
-               
+                
             }
             else
             {
               
-         
+        
              
                  if(AName == '')
                 {
@@ -626,6 +605,7 @@ function valid_Other()
                 }        
           
            }
+           
             if($('.appcom').css('display') == 'none')
             {
             
@@ -1524,4 +1504,4 @@ function Valid_Verification()
   
 
 
-}
+
