@@ -474,31 +474,7 @@ function valid_Other()
             var len=AadharNo.length;
             
           
-            /*
-            var poa = $("#POA").val();
-            var pdob = $("#Pdob").val();
-            var poi = $("#POI").val();
             
-            
-            if(AadharNo==="")
-            
-            {
-                           
-                if(poa === "AADHAR CARD ISSUED BY UIDAI" || pdob === "AADHAAR CARD ISSUED BY UIDAI" || poi === "AADHAR CARD ISSUED BY UIDAI")
-                    {
-               
-                     alert('Aadhar Card is Mondatory');
-                     $('#AadharNo').focus();
-                      return false;
-                        
-                    }
-            
-            }else{
-                
-                return true;
-            }*/
-           
-           
                              
              if($('.appcom').css('display') == 'none')
             {
@@ -564,14 +540,42 @@ function valid_Other()
             }
            else
            {
- 
-                if(AadharNo !== '')
+               if(AadharNo !== '')
                 {
                    if(len <12)
                    {
                     summary=summary+"Aadhar card value should not be less than 12 digits\n";
                     } 
                 }
+               
+                else
+                {
+                    var poa = $("#POA").val();
+                    var pdob = $("#Pdob").val();
+                    var poi = $("#POI").val();
+
+
+                    if(AadharNo==="")
+
+                    {
+
+                        if(poa === "AADHAR CARD ISSUED BY UIDAI" || pdob === "AADHAAR CARD ISSUED BY UIDAI" || poi === "AADHAR CARD ISSUED BY UIDAI")
+                            {
+                            summary=summary+"Aadhar Card Number is Mondatory";
+                           
+                             $('#AadharNo').focus();
+                              return false;
+
+                            }
+
+                    }else{
+
+                        return true;
+                    }
+
+               }
+ 
+                
             }
               
               
