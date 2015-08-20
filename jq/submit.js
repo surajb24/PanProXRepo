@@ -471,9 +471,10 @@ function valid_Other()
             var isd=document.getElementById("ISD").value;
             var chk="1";
             var code=document.getElementById("SCode").value;
+            var len=AadharNo.length;
             
-          /*
-            
+          
+            /*
             var poa = $("#POA").val();
             var pdob = $("#Pdob").val();
             var poi = $("#POI").val();
@@ -482,7 +483,7 @@ function valid_Other()
             if(AadharNo==="")
             
             {
-                                
+                           
                 if(poa === "AADHAR CARD ISSUED BY UIDAI" || pdob === "AADHAAR CARD ISSUED BY UIDAI" || poi === "AADHAR CARD ISSUED BY UIDAI")
                     {
                
@@ -495,9 +496,8 @@ function valid_Other()
             }else{
                 
                 return true;
-            }
+            }*/
            
-           */
            
                              
              if($('.appcom').css('display') == 'none')
@@ -556,6 +556,7 @@ function valid_Other()
                 
             }
             
+              
               if($('.adarAA').css('display') == 'none')
             {
             
@@ -566,7 +567,7 @@ function valid_Other()
  
                 if(AadharNo !== '')
                 {
-                   if(AadharNo <12)
+                   if(len <12)
                    {
                     summary=summary+"Aadhar card value should not be less than 12 digits\n";
                     } 
@@ -646,7 +647,7 @@ function valid_Other()
                             for(var i=0; i < textFields.length; i++){
                             if(textFields[i].type == "text" && textFields[i].value == "")
                             {
-                                $(".AadharNo").css("background","white");    var etel="1";
+                                $(".AadharNo").css("background","white");    
                                 $(".PAN1").css("background","white");
                                 $(".PAN2").css("background","white");
                                 $(".PAN3").css("background","white");

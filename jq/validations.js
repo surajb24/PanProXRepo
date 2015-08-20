@@ -1,28 +1,4 @@
-/*
-function ValidateName(e) {
 
-    var str = e.value;
-   
-      if(str.charAt(0) === ' ')
-       {
-          e.value = '';
-       }
-
-     if(!str.match(/^[a-zA-Z ]+$/))
-    {
- 
-      /* var str1 = str.slice(-1);
-        var str2 = str.replace(str1, ''); 
-        e.value = str2;
-        e.value ="";
-     }
-   
-}
-*/
-//End Name Validation
-
-
-    
     
     
     $(document).ready(function()

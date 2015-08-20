@@ -720,10 +720,11 @@ $(document).ready(function() {
                         alert("Aadhar No details are mandatory");
                        // document.other.AadharNo.setAttribute("onblur","valid_required(this,'Aadhar No','0')");
                        // $("#AadharNo").focus();
+                       
                     }
                     else
                     {
-                     $("#AadharNo").removeAttr("onblur","valid_required(this,'Aadhar No','0')");   
+                     //$("#AadharNo").removeAttr("onblur","valid_required(this,'Aadhar No','0')");   
                     }
       }
     });
