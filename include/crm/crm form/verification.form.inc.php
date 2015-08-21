@@ -12,7 +12,7 @@
                     
                 </tr>
             
-            <tr>
+     <!--       <tr>
                 <th class="required">Photo</th>
                     <td>
                         <SELECT name="Photo" id="Photo" class="Photo req" onblur="valid_select(this,'Photograph','0');">
@@ -24,16 +24,17 @@
                         </SELECT>
                     </td>
                 
-            </tr>
+            </tr> -->
             <tr>
-                <th class="required">Sign</th>
+                <th class="required"> [S] Sign/ [L] LTI/ [N] For None </th>
                     <td>
                         <select name="Sign" id="Sign" class="Sign req" onblur="valid_select(this,'Signature','0');">
                              <option value="<?php if(!empty($_SESSION['2-6-2'])) { echo $_SESSION['2-6-2']; } else { "";}?>">
                                         <?php if(!empty($_SESSION['2-6-2'])) { echo $_SESSION['2-6-2']; } else { echo 'Select Sign'; } ?>
                             </option>
-                            <option value="Y">Yes</option>
-                            <option value="N">No</option>
+                            <option value="S">S</option>
+                            <option value="L">L</option>
+                            <option value="N">None</option>
                          </select>
                     </td>
             </tr>

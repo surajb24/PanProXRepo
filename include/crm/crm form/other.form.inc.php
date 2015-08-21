@@ -71,6 +71,7 @@
                     
 		</tr>
                 
+                
                  <tr class="adarAA">
 			
                     <th>AADHAR No</th>
@@ -112,14 +113,10 @@
                     <th class="required">Gender On AADHAR Card</th>
                     <td>
 
+                        <input type="text" name='Agen' id='Agen' class='Agen' readonly="true" value="<?php echo $_SESSION['2-4-19'];?>" />
                         
-                        <select name="Agen" id="Agen" class="Agen" onblur="valid_select(this,'Aadhar Gender ','0');">
-                           <option value="<?php if(!empty($_SESSION['2-4-19'])) { echo $_SESSION['2-4-19']; } else { "";}?>">
-                               <?php if(!empty($_SESSION['2-4-19'])) { echo $_SESSION['2-4-19']; } else { echo 'Select Gender'; } ?></option>
-                           <?php Gender(); ?>
 		            
-	                </select>
-                    </td><td></td>
+	              </td><td></td>
                     
 		</tr>
                 

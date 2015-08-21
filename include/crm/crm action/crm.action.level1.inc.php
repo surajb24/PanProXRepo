@@ -695,14 +695,14 @@ if(isset($_POST['OtherSubmit']))
                 
                 $AGEN=$_POST['Agen'];
                 $_SESSION['2-4-19'] = $AGEN;
-                
                
-                $ID='SEX_ID,C,1';
+                 $ID='SEX_ID,C,1';
                 $TabelName='sex';
                 $ColumnName='SEX_NAME,C,6';
                 $Condition =$AGEN;
                 
                $GID = select_id($ID, $TabelName, $ColumnName, $Condition);
+               
                 
 	$sql = " UPDATE `cust_other_info` SET 
 	

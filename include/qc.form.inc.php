@@ -12,10 +12,10 @@
 		<a href="#" id="Tab4" class="tab four">Other</a>
 		<a href="#" id="Tab5" class="tab five">RA</a>
 		<a href="#" id="Tab6" class="tab six">Verification</a>
-		<a href="#" id="Tab7" class="tab seven">KYC</a>
+	<!---	<a href="#" id="Tab7" class="tab seven">KYC</a>  -->
 	
 		
-                </div>
+              </div>
 
 	<div id="panel">
 
@@ -33,7 +33,7 @@
 
                     include 'crm/crm form/qc.verification.form.inc.php';
 	
-                    include 'crm/crm form/qc.kyc.form.inc.php';
+                  /*  include 'crm/crm form/qc.kyc.form.inc.php';*/
 		?>
 
 	</div>

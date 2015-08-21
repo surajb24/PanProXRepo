@@ -469,6 +469,12 @@ $(document).ready(function() {
          
        }
        
+       //adhar gender on selection of title onload
+       
+       
+      
+       
+       
        
             
        //code For Aadhar Card Info onload
@@ -671,11 +677,45 @@ $(document).ready(function() {
            {
               
            if (confirm("Aadhar Card Info Display!")==true ) {
-             
-             $('#AName').val('');
-             $('#Ayob').val('');
-             $('#Agen').val('');
-             $('.adinfo').show();
+                $('.adinfo').show();
+
+                   var check = $('#title').val();
+
+                   var abb=$("#Abb").val(); 
+                   $('#AName').val(abb);
+
+                   var str=$("#date").val();
+                    var opera1 = str.split('/'); 
+                    lopera1 = opera1.length; 
+                    if (lopera1>1)  
+                    {  
+                      var pdate = str.split('/');  
+
+                     }  
+
+                   var yy = parseInt(pdate[2]);
+                   $('#Ayob').val(yy);
+
+                  if(check==="SHRI")
+                   {
+
+                     $('#Agen').val('');
+                     $('#Agen').val('MALE');
+                    }
+                    else if(check==="M/S")
+                    {
+                      $('#Agen').val('');
+                    }
+
+                     else 
+                    {
+
+                       $('#Agen').val('');
+                      $('#Agen').val('FEMALE');
+
+                    }
+
+
             
              } else {
                  $('#AName').val('');

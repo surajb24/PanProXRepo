@@ -16,14 +16,14 @@ $(".tab").click(function()
             $("#Tab4").removeClass('select');
             $("#Tab5").removeClass('select');
             $("#Tab6").removeClass('select');
-            $("#Tab7").removeClass('select');
+          //  $("#Tab7").removeClass('select');
             $("#Tab1I").slideDown();
             $("#Tab2I").slideUp();
             $("#Tab3I").slideUp();
             $("#Tab4I").slideUp();
             $("#Tab5I").slideUp();
             $("#Tab6I").slideUp();
-            $("#Tab7I").slideUp();
+           // $("#Tab7I").slideUp();
     }
 
     if(X=='Tab2')
@@ -34,14 +34,14 @@ $(".tab").click(function()
             $("#Tab4").removeClass('select');
             $("#Tab5").removeClass('select');
             $("#Tab6").removeClass('select');
-            $("#Tab7").removeClass('select');
+          //  $("#Tab7").removeClass('select');
             $("#Tab2I").slideDown();
             $("#Tab1I").slideUp();
             $("#Tab3I").slideUp();
             $("#Tab4I").slideUp();
             $("#Tab5I").slideUp();
             $("#Tab6I").slideUp();
-            $("#Tab7I").slideUp();
+           // $("#Tab7I").slideUp();
 
     }
 
@@ -53,14 +53,14 @@ $(".tab").click(function()
             $("#Tab4").removeClass('select');
             $("#Tab5").removeClass('select');
             $("#Tab6").removeClass('select');
-            $("#Tab7").removeClass('select');
+          //  $("#Tab7").removeClass('select');
             $("#Tab3I").slideDown();
             $("#Tab1I").slideUp();
             $("#Tab2I").slideUp();
             $("#Tab4I").slideUp();
             $("#Tab5I").slideUp();
             $("#Tab6I").slideUp();
-            $("#Tab7I").slideUp();
+          //  $("#Tab7I").slideUp();
     } 
 
     if(X=='Tab4')
@@ -71,14 +71,14 @@ $(".tab").click(function()
             $("#Tab3").removeClass('select');
             $("#Tab5").removeClass('select');
             $("#Tab6").removeClass('select');
-            $("#Tab7").removeClass('select');
+          //  $("#Tab7").removeClass('select');
             $("#Tab4I").slideDown();
             $("#Tab1I").slideUp();
             $("#Tab2I").slideUp();
             $("#Tab3I").slideUp();
             $("#Tab5I").slideUp();
             $("#Tab6I").slideUp();
-            $("#Tab7I").slideUp();
+          //  $("#Tab7I").slideUp();
     } 
 
     if(X=='Tab5')
@@ -89,14 +89,14 @@ $(".tab").click(function()
             $("#Tab3").removeClass('select');
             $("#Tab4").removeClass('select');
             $("#Tab6").removeClass('select');
-            $("#Tab7").removeClass('select');
+        //    $("#Tab7").removeClass('select');
             $("#Tab5I").slideDown();
             $("#Tab1I").slideUp();
             $("#Tab2I").slideUp();
             $("#Tab3I").slideUp();
             $("#Tab4I").slideUp();
             $("#Tab6I").slideUp();
-            $("#Tab7I").slideUp();
+          //  $("#Tab7I").slideUp();
     } 
 
     if(X=='Tab6')
@@ -107,16 +107,16 @@ $(".tab").click(function()
             $("#Tab3").removeClass('select');
             $("#Tab4").removeClass('select');
             $("#Tab5").removeClass('select');
-            $("#Tab7").removeClass('select');
+           // $("#Tab7").removeClass('select');
             $("#Tab6I").slideDown();
             $("#Tab1I").slideUp();
             $("#Tab2I").slideUp();
             $("#Tab3I").slideUp();
             $("#Tab4I").slideUp();
             $("#Tab5I").slideUp();
-            $("#Tab7I").slideUp();
+         //   $("#Tab7I").slideUp();
     }
-   if(X=='Tab7')
+  /* if(X=='Tab7')
     {
             $("#Tab7").addClass('select');
             $("#Tab1").removeClass('select');
@@ -132,7 +132,7 @@ $(".tab").click(function()
             $("#Tab4I").slideUp();
             $("#Tab5I").slideUp();
             $("#Tab6I").slideUp();
-    }
+    }*/
  
  /*level2 to tab slide up slide down */
      if(X=='Tab8')
