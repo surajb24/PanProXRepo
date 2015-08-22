@@ -100,26 +100,42 @@
 
                     </td>
             </tr>
+     
+           
+     
             
-            <tr class="residence">
+               <!---    <tr class="residence">
                 <th class="required">Country Name</th>
                     <td>
                         
-                        <select name="RCountry" id="RCountry" class="RCountry" onchange="displayisd();" <!--onblur="valid_select(this,'Country','0');"-->">
+                        <select name="RCountry" id="RCountry" class="RCountry" onchange="displayisd();" <!--onblur="valid_select(this,'Country','0');""> <!-- 
 
-		            <option value="<?php if(!empty($_SESSION['2-3-9'])) { echo $_SESSION['2-3-9']; } else { echo ""; } ?>">
-                                            <?php if(!empty($_SESSION['2-3-9'])) { echo $_SESSION['2-3-9']; } else { echo "Select Country"; } ?>
+		         <!--- <option value="  <?php//if(!empty($_SESSION['2-3-9'])) { echo $_SESSION['2-3-9']; } else { echo ""; } ?>">
+                                           <?php //if(!empty($_SESSION['2-3-9'])) { echo $_SESSION['2-3-9']; } else { echo "Select Country"; } ?>
                                             </option>  
 					
-			<?php Country(); ?>
+			<?php// Country(); ?>
 		            
 
 	               </select>	
                         
 
                     </td>
+            </tr>  --->
+            
+                        
+            <tr class="residence">
+                <th class="required">Country Name</th>
+                    <td>
+                        	
+                        
+                          <input type="text" name="RCountry" id="RCountry" class="RCountry" readonly="true" value="<?php echo $_SESSION['2-3-9'];?>" />
+                        
+
+                    </td>
             </tr>
     
+            
                 
             <tr class="selectoffice">
                 <th class="required">Please Select Office address</th>
@@ -209,25 +225,41 @@
                     </td>
             </tr>
             
+           <!--- <tr class="office">
+                <th class="required">Country Name</th>
+                    <td>
+                        <select name="OCountry" id="OCountry" class="OCountry req" onchange="displayisd();" <!--onblur="valid_select(this,'Country','0');">-
+                                                <option value="<?php //if(!empty($_SESSION['2-3-18'])) { echo $_SESSION['2-3-18']; } else { echo ""; }?>">
+                                                <?php// if(!empty($_SESSION['2-3-18'])) { echo $_SESSION['2-3-18']; } else { echo "Select Country"; }?>
+                                                </option>  
+					
+			<?php // Country(); ?>
+                        </select>	
+                    </td>
+            </tr>  -->
+            
+            
+            
+                                   
             <tr class="office">
                 <th class="required">Country Name</th>
                     <td>
-                        <select name="OCountry" id="OCountry" class="OCountry req" onchange="displayisd();" <!--onblur="valid_select(this,'Country','0');"--->>
-                                                <option value="<?php if(!empty($_SESSION['2-3-18'])) { echo $_SESSION['2-3-18']; } else { echo ""; }?>">
-                                                <?php if(!empty($_SESSION['2-3-18'])) { echo $_SESSION['2-3-18']; } else { echo "Select Country"; }?>
-                                                </option>  
-					
-			<?php Country(); ?>
-                        </select>	
+                        	
+                        
+                          <input type="text" name="OCountry" id="OCountry" class="OCountry" readonly="true" value="<?php echo $_SESSION['2-3-18'];?>" />
+                        
+
                     </td>
             </tr>
+            
             
              <tr class="office">
                 <th>Country Code</th>
                 <td>
-                    <input type="text" name="Ccode" id="Ccode" class="Ccode" placeholder="COUNTRY CODE" maxlength="3" onkeypress="return ValidNum(event);"
-                           value="<?php echo $_SESSION['2-3-19'];?>">
-                    </td>
+                   <!--- <input type="text" name="Ccode" id="Ccode" class="Ccode" placeholder="COUNTRY CODE" maxlength="3" onkeypress="return ValidNum(event);"
+                           value="<?php// echo $_SESSION['2-3-19'];?>">--->
+                      <input type="text" name='Ccode' id='Ccode' class='Ccode' readonly="true" value="<?php echo $_SESSION['2-3-19'];?>" />
+                </td>
             </tr>
      
 

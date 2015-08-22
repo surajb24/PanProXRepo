@@ -77,7 +77,7 @@ function validation_App(){
                             for(var i=0; i < textFields.length; i++){
                             if(textFields[i].type == "text" && textFields[i].value == "")
                             {
-                                textFields[i].style.backgroundColor = "#eeac9a";
+                                textFields[i].style.borderColor = "red";
                             }
                             else {
                              textFields[i].style.backgroundColor = "white";
@@ -88,7 +88,7 @@ function validation_App(){
                             
                                      if($(".apptype").val()=="")
                                         {
-                                        $(".apptype").css('background-color','#eeac9a');
+                                        $(".apptype").css('border-color','red');
                                         }
                                         
                                       });
@@ -142,7 +142,7 @@ function validapplevel2()
                             for(var i=0; i < textFields.length; i++){
                             if(textFields[i].type == "text" && textFields[i].value == "")
                             {
-                                textFields[i].style.backgroundColor = "#eeac9a";
+                                textFields[i].style.borderColor = "red";
                             }
                             else {
                              textFields[i].style.backgroundColor = "white";
@@ -154,7 +154,7 @@ function validapplevel2()
                                     
                                      if($(".level2apptype").val()=="")
                                         {
-                                        $(".level2apptype").css('background-color','#eeac9a');
+                                        $(".level2apptype").css('border-color','red');
                                         }
                                         
                                       });
@@ -278,7 +278,7 @@ function valid_Person(){
                                 $(".Mname").css("background","white");
                                 $(".OMname").css("background","white");
                                                                 
-                                textFields[i].style.backgroundColor = "#eeac9a";
+                                textFields[i].style.borderColor = "red";
                             }
                             else {
                              textFields[i].style.backgroundColor = "white";
@@ -291,7 +291,7 @@ function valid_Person(){
                                     {
                                     $(".title, .other, .Gender").css('background-color','white');
                                     }else{
-                                    $(".title, .other, .Gender").css('background-color','#eeac9a');    
+                                    $(".title, .other, .Gender").css('border-color','red');    
                                     }
                                                                         
                     });
@@ -391,7 +391,7 @@ function valid_personal_level2(){
                                                $(".Mname2").css("background","white");
                                                $(".FMname2").css("background","white");
                                             
-                                                personal1[i].style.backgroundColor = "#eeac9a";
+                                                personal1[i].style.borderColor = "red";
                                                 
                                     }else{
                                                  personal1[i].style.backgroundColor="white";
@@ -406,7 +406,7 @@ function valid_personal_level2(){
                                        
                                     $(".title2").css('background-color','white');
                                     }else{
-                                    $(".title2").css('background-color','#eeac9a');    
+                                    $(".title2").css('border-color','red');    
                                     }
                               
                     });
@@ -656,7 +656,7 @@ function valid_Other()
                                 $(".PAN2").css("background","white");
                                 $(".PAN3").css("background","white");
                                 $(".PAN4").css("background","white");
-                                textFields[i].style.backgroundColor = "#eeac9a";
+                                textFields[i].style.borderColor = "red";
                             }
                             else {
                              textFields[i].style.backgroundColor = "white";
@@ -669,7 +669,7 @@ function valid_Other()
                                         {
                                         $(".SOA,.SCode").css('background-color','white');
                                         }else{
-                                        $(".SOA,.SCode").css('background-color','#eeac9a');    
+                                        $(".SOA,.SCode").css('border-color','red');    
                                         }
                                    
                     });
@@ -959,7 +959,7 @@ function Valid_Conatct()
                                                 $(".level2OfCoun").css("background","white");
                                                 
                                               
-                                                contact[i].style.backgroundColor = "#eeac9a";
+                                                contact[i].style.borderColor = "red";
                                                
                                                 
                                     }else{
@@ -982,7 +982,7 @@ function Valid_Conatct()
                                                 $(".level2OfBuil").css("background","white");
                                                 $(".level2OfRoad").css("background","white");
                                                 $(".level2OfArea").css("background","white");
-                                                contact[i].style.backgroundColor = "#eeac9a";
+                                                contact[i].style.borderColor = "red";
                                                  
                                                 
                                     }else{
@@ -997,7 +997,7 @@ function Valid_Conatct()
                                         }
                                         else
                                         {
-                                             $(".addcomleve2,.level2ReState,.level2ReCoun,.selectyes,.level2OfState,.level2OfCoun").css('background-color','#eeac9a');    
+                                             $(".addcomleve2,.level2ReState,.level2ReCoun,.selectyes,.level2OfState,.level2OfCoun").css('border-color','red');    
                                         }
                                    
                                         });    
@@ -1180,7 +1180,7 @@ function Valid_Conatct_level2()
                                                 $(".level2OfCoun").css("background","white");
                                                 
                                               
-                                                contact[i].style.backgroundColor = "#eeac9a";
+                                                contact[i].style.borderColor = "red";
                                                
                                                 
                                     }else{
@@ -1203,7 +1203,7 @@ function Valid_Conatct_level2()
                                                 $(".level2OfBuil").css("background","white");
                                                 $(".level2OfRoad").css("background","white");
                                                 $(".level2OfArea").css("background","white");
-                                                contact[i].style.backgroundColor = "#eeac9a";
+                                                contact[i].style.borderColor = "red";
                                                  
                                                 
                                     }else{
@@ -1218,7 +1218,7 @@ function Valid_Conatct_level2()
                                         }
                                         else
                                         {
-                                             $(".addcomleve2,.level2ReState,.level2ReCoun,.selectyes,.level2OfState,.level2OfCoun").css('background-color','#eeac9a');    
+                                             $(".addcomleve2,.level2ReState,.level2ReCoun,.selectyes,.level2OfState,.level2OfCoun").css('border-color','red');    
                                         }
                                    
                                         });    
@@ -1356,14 +1356,14 @@ function Valid_RA()
                                     {
                                                 $(".Rmiddle,.Rflat,.Rbuilding,.Rroad,.Rarea").css("background","white");
                                              
-                                                represent[i].style.backgroundColor = "#eeac9a";
+                                                represent[i].style.borderColor = "red";
                                                 
                                     }else{
                                                  represent[i].style.backgroundColor="white";
                                     }
                                 }
                                  $(function(){
-                                        $('.Rtitle,.Rstate').css("background","#eeac9a");
+                                        $('.Rtitle,.Rstate').css("border-color","red");
                                         
                                         if($(".Rtitle,.Rstate").val()!=="")
                                          {
@@ -1386,7 +1386,7 @@ function Valid_RA()
             alert(summary);
         
                  $(function(){
-                        $('.Rdetail').css("background","#eeac9a");
+                        $('.Rdetail').css("border-color","red");
                                         
                              if($(".Rdetail").val()!=="")
                                {
@@ -1484,14 +1484,14 @@ function Valid_Verification()
                                         if(verification[i].type == "text" &&  verification[i].value == "")
                                     {
                                                 $(".NOD").css("background","white");
-                                                verification[i].style.backgroundColor = "#eeac9a";
+                                                verification[i].style.borderColor = "red";
                                                 
                                     }else{
                                                  verification[i].style.backgroundColor="white";
                                     }
                                 }
                                  $(function(){
-                                        $('.Photo,.Sign,.POI,.POA,.date,.Capacity').css("background","#eeac9a");
+                                        $('.Photo,.Sign,.POI,.POA,.date,.Capacity').css("border","red");
                                         
                                         if($(".Photo,.Sign,.POI,.POA,.Capacity").val()!=="")
                                          {

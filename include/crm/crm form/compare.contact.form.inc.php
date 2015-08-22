@@ -127,12 +127,17 @@
                 <th class="required">Country Name</th>
                     <td>
                             <?php if(empty($_SESSION['4-3-9'])) { echo '<p>'.$_SESSION['2-3-9'].'</p>'; }?>                                    
-                                <select name="level2ReCoun" id="level2ReCoun" class="level2ReCoun" onblur="valid_select(this,'Country','0');" Placeholder="COUNTRY" onchange="return address(this);">
-                                <option value="<?php if(!empty($_SESSION['4-3-9'])) { echo $_SESSION['4-3-9']; } else { echo ""; } ?>">
-                                        <?php if(!empty($_SESSION['4-3-9'])) { echo $_SESSION['4-3-9']; } else { echo "Select Country"; } ?>
+                                
+                                <!---<select name="level2ReCoun" id="level2ReCoun" class="level2ReCoun" onblur="valid_select(this,'Country','0');" Placeholder="COUNTRY" onchange="return address(this);">
+                                <option value="<?php // if(!empty($_SESSION['4-3-9'])) { echo $_SESSION['4-3-9']; } else { echo ""; } ?>">
+                                        <?php // if(!empty($_SESSION['4-3-9'])) { echo $_SESSION['4-3-9']; } else { echo "Select Country"; } ?>
                                 </option>  
-                                        <?php Country(); ?>
-                                </select>
+                                        <?php // Country(); ?>
+                                </select>--->
+                        
+                                     
+                          <input type="text" name="level2ReCoun" id="level2ReCoun" class="level2ReCoun" readonly="true" value="<?php echo $_SESSION['4-3-9'];?>" />
+
                             <?php if(empty($_SESSION['4-3-9'])) { echo '<p>'.$_SESSION['3-3-9'].'</p>'; }?>    
                                 
                     </td>
@@ -268,12 +273,16 @@
                     <td>
                         <?php if(empty($_SESSION['4-3-18'])) { echo '<p>'.$_SESSION['2-3-18'].'</p>'; }?>
                         
-                        <select name="level2OfCoun" id="level2OfCoun" class="level2OfCoun"  placeholder="COUNTRY" <!--onblur="valid_select(this,'Country','0');"--->>
-                                <option value="<?php if(!empty($_SESSION['4-3-18'])) { echo $_SESSION['4-3-18']; } else { echo ""; } ?>">
-                                        <?php if(!empty($_SESSION['4-3-18'])) { echo $_SESSION['4-3-18']; } else { echo "Select Country"; } ?>
+                       <!--- <select name="level2OfCoun" id="level2OfCoun" class="level2OfCoun"  placeholder="COUNTRY" <!--onblur="valid_select(this,'Country','0');">
+                                <option value="<?php // if(!empty($_SESSION['4-3-18'])) { echo $_SESSION['4-3-18']; } else { echo ""; } ?>">
+                                        <?php // if(!empty($_SESSION['4-3-18'])) { echo $_SESSION['4-3-18']; } else { echo "Select Country"; } ?>
                                 </option>  
                                         <?php Country(); ?>
-                        </select>
+                        </select> -->
+                        
+                       
+                                <input type="text" name="level2OfCoun" id="level2OfCoun" class="level2OfCoun" readonly="true" value="<?php echo $_SESSION['4-3-18'];?>" />
+
                         
                         <?php if(empty($_SESSION['4-3-18'])) { echo '<p>'.$_SESSION['3-3-18'].'</p>'; }?>
                         

@@ -99,15 +99,26 @@
                     </td>
             </tr>
             
-            <tr class="residence">
+       <!--     <tr class="residence">
                 <th class="required">Country Name</th>
                     <td>
-                        <select name="level2ReCoun" id="level2ReCoun" class="level2ReCoun req" <!--onblur="valid_select(this,'Country','0');"--> Placeholder="COUNTRY" onchange="return address(this);">
-                                <option value="<?php if(!empty($_SESSION['3-3-9'])) { echo $_SESSION['3-3-9']; } else { echo ""; } ?>">
-                                        <?php if(!empty($_SESSION['3-3-9'])) { echo $_SESSION['3-3-9']; } else { echo "Select Country"; } ?>
+                        <select name="level2ReCoun" id="level2ReCoun" class="level2ReCoun req" <!--onblur="valid_select(this,'Country','0');" Placeholder="COUNTRY" onchange="return address(this);">
+                                <option value="<?php // if(!empty($_SESSION['3-3-9'])) { echo $_SESSION['3-3-9']; } else { echo ""; } ?>">
+                                        <?php  //if(!empty($_SESSION['3-3-9'])) { echo $_SESSION['3-3-9']; } else { echo "Select Country"; } ?>
                                 </option>  
-                                        <?php Country(); ?>
+                                        <?php // Country(); ?>
                         </select>
+                    </td>
+            </tr>  -->            
+            
+              <tr class="residence">
+                <th class="required">Country Name</th>
+                    <td>
+                        	
+                        
+                          <input type="text" name="level2ReCoun" id="level2ReCoun" class="level2ReCoun" readonly="true" value="<?php echo $_SESSION['3-3-9'];?>" />
+                        
+
                     </td>
             </tr>
             
@@ -189,6 +200,8 @@
 					
                     </td>
             </tr>
+            
+            
             <tr class="office">
                 <th class="required">Pin code/Zip code</th>
                     <td>
@@ -199,16 +212,30 @@
 
                     </td>
             </tr>
+            
+            
+          <!---  <tr class="office">
+                <th class="required">Country Name</th>
+                    <td>
+                        <select name="level2OfCoun" id="level2OfCoun" class="level2OfCoun"  placeholder="COUNTRY" <!--onblur="valid_select(this,'Country','0');">
+                                <option value="<?php// if(!empty($_SESSION['3-3-18'])) { echo $_SESSION['3-3-18']; } else { echo ""; } ?>">
+                                        <?php //if(!empty($_SESSION['3-3-18'])) { echo $_SESSION['3-3-18']; } else { echo "Select Country"; } ?>
+                                </option>  
+                                        <?php //Country(); ?>
+                        </select>
+                                              
+                    </td>
+            </tr>--->
+            
+            
             <tr class="office">
                 <th class="required">Country Name</th>
                     <td>
-                        <select name="level2OfCoun" id="level2OfCoun" class="level2OfCoun"  placeholder="COUNTRY" <!--onblur="valid_select(this,'Country','0');"-->>
-                                <option value="<?php if(!empty($_SESSION['3-3-18'])) { echo $_SESSION['3-3-18']; } else { echo ""; } ?>">
-                                        <?php if(!empty($_SESSION['3-3-18'])) { echo $_SESSION['3-3-18']; } else { echo "Select Country"; } ?>
-                                </option>  
-                                        <?php Country(); ?>
-                        </select>
-                                              
+                        	
+                        
+                          <input type="text" name="level2OfCoun" id="level2OfCoun" class="level2OfCoun" readonly="true" value="<?php echo $_SESSION['3-3-18'];?>" />
+                        
+
                     </td>
             </tr>
            	     

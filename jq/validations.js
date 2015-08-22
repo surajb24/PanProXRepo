@@ -22,7 +22,7 @@
             var chk=y[1];
              if(chk =='req')
             {
-                $(this).css("background-color", "#eeac9a");
+                $(this).css("border-color", "red");
             }
             else
             {
@@ -75,7 +75,7 @@
               if(text == "")
               {
                   
-                    $(this).css("background-color", "#eeac9a");
+                    $(this).css("border-color", "red");
               }
               else
               {
