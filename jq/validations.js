@@ -26,44 +26,44 @@
             }
             else
             {
-            $('#Mname').css("background-color", "white");
-            $('#FMname').css("background-color", "white");
-            $('#OMname').css("background-color", "white");
-            $('#RNPremises').css("background-color", "white");
-            $('#RRSL').css("background-color", "white");
-            $('#OPremises').css("background-color", "white");
-            $('#ORSLP').css("background-color", "white");
-            $('#Ccode').css("background-color", "white");
-            $('#OAScode').css("background-color", "white");
-            $('#Email').css("background-color", "white");
-            $("#AadharNo").css("background","white");
-            $('#PAN1').css("background-color", "white");
-            $('#PAN2').css("background-color", "white");
-            $('#PAN3').css("background-color", "white");
-            $('#PAN4').css("background-color", "white");
-            $('#Rtitle').css("background-color", "white");
-            $('#Rlast').css("background-color", "white");
-            $('#Rfirst').css("background-color", "white");
-            $('#Rmiddle').css("background-color", "white");
-            $('#Rflat').css("background-color", "white");
-            $('#Rbuilding').css("background-color", "white");
-            $('#Rroad').css("background-color", "white");
-            $('#Rarea').css("background-color", "white");
-            $('#Rtown').css("background-color", "white");
-            $('#Rstate').css("background-color", "white");
-            $('#Rpincode').css("background-color", "white");
-            $('#NOD').css("background-color", "white");
-            $('#Mname').css("background-color", "white");
-            $('#FMname').css("background-color", "white");
-            $('#level2ReBuid').css("background-color", "white");
-            $('#level2ReRoad').css("background-color", "white");
-            $('#level2OfBuil').css("background-color", "white");
-            $('#level2OfRoad').css("background-color", "white");
+            $('#Mname').css("border-color", "white");
+            $('#FMname').css("border-color", "white");
+            $('#OMname').css("border-color", "white");
+            $('#RNPremises').css("border-color", "white");
+            $('#RRSL').css("border-color", "white");
+            $('#OPremises').css("border-color", "white");
+            $('#ORSLP').css("border-color", "white");
+            $('#Ccode').css("border-color", "white");
+            $('#OAScode').css("border-color", "white");
+            $('#Email').css("border-color", "white");
+            $("#AadharNo").css("border","white");
+            $('#PAN1').css("border-color", "white");
+            $('#PAN2').css("border-color", "white");
+            $('#PAN3').css("border-color", "white");
+            $('#PAN4').css("border-color", "white");
+            $('#Rtitle').css("border-color", "white");
+            $('#Rlast').css("border-color", "white");
+            $('#Rfirst').css("border-color", "white");
+            $('#Rmiddle').css("border-color", "white");
+            $('#Rflat').css("border-color", "white");
+            $('#Rbuilding').css("border-color", "white");
+            $('#Rroad').css("border-color", "white");
+            $('#Rarea').css("border-color", "white");
+            $('#Rtown').css("border-color", "white");
+            $('#Rstate').css("border-color", "white");
+            $('#Rpincode').css("border-color", "white");
+            $('#NOD').css("border-color", "white");
+            $('#Mname').css("border-color", "white");
+            $('#FMname').css("border-color", "white");
+            $('#level2ReBuid').css("border-color", "white");
+            $('#level2ReRoad').css("border-color", "white");
+            $('#level2OfBuil').css("border-color", "white");
+            $('#level2OfRoad').css("border-color", "white");
             
             }  
         }
         else {
-            $(this).css("background-color", "white");
+            $(this).css("border-color", "white");
         } 
      });
      
@@ -79,7 +79,7 @@
               }
               else
               {
-                  $(this).css("background-color", "white");
+                  $(this).css("border-color", "white");
               }           
     });
     

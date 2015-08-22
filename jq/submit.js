@@ -77,10 +77,12 @@ function validation_App(){
                             for(var i=0; i < textFields.length; i++){
                             if(textFields[i].type == "text" && textFields[i].value == "")
                             {
+                                $(".inword_no").css("border-color","white");
                                 textFields[i].style.borderColor = "red";
+                                
                             }
                             else {
-                             textFields[i].style.backgroundColor = "white";
+                             textFields[i].style.borderColor = "white";
                             }
                         }
                         
@@ -145,7 +147,7 @@ function validapplevel2()
                                 textFields[i].style.borderColor = "red";
                             }
                             else {
-                             textFields[i].style.backgroundColor = "white";
+                             textFields[i].style.borderColor = "white";
                             }
                         }
                         
@@ -274,14 +276,14 @@ function valid_Person(){
                             {
                             if(textFields[i].type == "text" && textFields[i].value == "")
                             {
-                                $(".FMname").css("background","white");
-                                $(".Mname").css("background","white");
-                                $(".OMname").css("background","white");
+                                $(".FMname").css("border-color","white");
+                                $(".Mname").css("border-color","white");
+                                $(".OMname").css("border-color","white");
                                                                 
                                 textFields[i].style.borderColor = "red";
                             }
                             else {
-                             textFields[i].style.backgroundColor = "white";
+                             textFields[i].style.borderColor = "white";
                             }
                         }
                         
@@ -289,7 +291,7 @@ function valid_Person(){
                                         
                                     if($(".title").val()!=="")        
                                     {
-                                    $(".title, .other, .Gender").css('background-color','white');
+                                    $(".title, .other, .Gender").css('border-color','white');
                                     }else{
                                     $(".title, .other, .Gender").css('border-color','red');    
                                     }
@@ -388,13 +390,13 @@ function valid_personal_level2(){
                                     
                                         if(personal1[i].type === "text" &&  personal1[i].value === "")
                                     {
-                                               $(".Mname2").css("background","white");
-                                               $(".FMname2").css("background","white");
+                                               $(".Mname2").css("border-color","white");
+                                               $(".FMname2").css("border-color","white");
                                             
                                                 personal1[i].style.borderColor = "red";
                                                 
                                     }else{
-                                                 personal1[i].style.backgroundColor="white";
+                                                 personal1[i].style.borderColor="white";
                                     }
                                 }
                         
@@ -404,7 +406,7 @@ function valid_personal_level2(){
                                     if($(".title2").val()!=="")        
                                     {
                                        
-                                    $(".title2").css('background-color','white');
+                                    $(".title2").css('border-color','white');
                                     }else{
                                     $(".title2").css('border-color','red');    
                                     }
@@ -651,15 +653,15 @@ function valid_Other()
                             for(var i=0; i < textFields.length; i++){
                             if(textFields[i].type == "text" && textFields[i].value == "")
                             {
-                                $(".AadharNo").css("background","white");    
-                                $(".PAN1").css("background","white");
-                                $(".PAN2").css("background","white");
-                                $(".PAN3").css("background","white");
-                                $(".PAN4").css("background","white");
+                                $(".AadharNo").css("border-color","white");    
+                                $(".PAN1").css("border-color","white");
+                                $(".PAN2").css("border-color","white");
+                                $(".PAN3").css("border-color","white");
+                                $(".PAN4").css("border-color","white");
                                 textFields[i].style.borderColor = "red";
                             }
                             else {
-                             textFields[i].style.backgroundColor = "white";
+                             textFields[i].style.borderColor = "white";
                             }
                         }
                         
@@ -667,7 +669,7 @@ function valid_Other()
                             
                                         if($(".SOA,.SCode").val()!=='')
                                         {
-                                        $(".SOA,.SCode").css('background-color','white');
+                                        $(".SOA,.SCode").css('border-color','white');
                                         }else{
                                         $(".SOA,.SCode").css('border-color','red');    
                                         }
@@ -944,60 +946,60 @@ function Valid_Conatct()
                                    if(selectadd == "RESIDANCE"){
                                         if(contact[i].type === "text" &&  contact[i].value === "")
                                     {
-                                                $(".level2ReFlat").css("background","white");
-                                                $(".level2ReBuid").css("background","white");
-                                                $(".level2ReRoad").css("background","white");
-                                                $(".level2ReArea").css("background","white");
-                                                $(".level2NameOffice").css("background","white");
-                                                $(".level2OfFlat").css("background","white");
-                                                $(".level2OfBuil").css("background","white");
-                                                $(".level2OfRoad").css("background","white");
-                                                $(".level2OfArea").css("background","white");
-                                                $(".level2OfTown").css("background","white");
-                                                $(".level2OfState").css("background","white");
-                                                $(".level2OfPin").css("background","white");
-                                                $(".level2OfCoun").css("background","white");
+                                                $(".RAdd").css("border-color","white");
+                                                $(".RNPremises").css("border-color","white");
+                                                $(".RRSL").css("border-color","white");
+                                                $(".RALT").css("border-color","white");
+                                                $(".ONameofoffice").css("border-color","white");
+                                                $(".OFRDB").css("border-color","white");
+                                                $(".OPremises").css("border-color","white");
+                                                $(".ORSLP").css("border-color","white");
+                                                $(".OALTS").css("border-color","white");
+                                                $(".OTCD").css("border-color","white");
+                                                $(".OState").css("border-color","white");
+                                                $(".OPZcode").css("border-color","white");
+                                                $(".OCountry").css("border-color","white");
                                                 
                                               
                                                 contact[i].style.borderColor = "red";
                                                
                                                 
                                     }else{
-                                                 contact[i].style.backgroundColor="white";
+                                                 contact[i].style.borderColor="white";
                                     }
                                 }
                                 
                                  if(selectadd == "OFFICE"){
                                         if(contact[i].type === "text" &&  contact[i].value === "")
                                     {
-                                                $(".level2ReFlat").css("background","white");
-                                                $(".level2ReBuid").css("background","white");
-                                                $(".level2ReRoad").css("background","white");
-                                                $(".level2ReArea").css("background","white");
-                                                $(".level2ReTown").css("background","white");
-                                                $(".level2ReState").css("background","white");
-                                                $(".level2RePin").css("background","white");
-                                                $(".level2ReCoun").css("background","white");
-                                                $(".level2OfFlat").css("background","white");
-                                                $(".level2OfBuil").css("background","white");
-                                                $(".level2OfRoad").css("background","white");
-                                                $(".level2OfArea").css("background","white");
+                                                $(".RAdd").css("border-color","white");
+                                                $(".RNPremises").css("border-color","white");
+                                                $(".RRSL").css("border-color","white");
+                                                $(".RALT").css("border-color","white");
+                                                $(".RTCD").css("border-color","white");
+                                                $(".RState").css("border-color","white");
+                                                $(".RPZcode").css("border-color","white");
+                                                $(".RCountry").css("border-color","white");
+                                                $(".OFRDB").css("border-color","white");
+                                                $(".OPremises").css("border-color","white");
+                                                $(".ORSLP").css("border-color","white");
+                                                $(".OALTS").css("border-color","white");
                                                 contact[i].style.borderColor = "red";
                                                  
                                                 
                                     }else{
-                                                 contact[i].style.backgroundColor="white";
+                                                 contact[i].style.borderColor="white";
                                     }
                                 }
                                 } 
                                  $(function(){
-                                         if($(".addcomleve2,.level2ReState,.level2ReCoun,.selectyes,.level2OfState,.level2OfCoun").val()!=='')
+                                         if($(".addcom,.RState,.selectyes,.OState").val()!=='')
                                         {
-                                             $(".addcomleve2,.level2ReState,.level2ReCoun,.selectyes,.level2OfState,.level2OfCoun").css('background-color','white');
+                                             $(".addcom,.RState,.selectyes,.OState").css('border-color','white');
                                         }
                                         else
                                         {
-                                             $(".addcomleve2,.level2ReState,.level2ReCoun,.selectyes,.level2OfState,.level2OfCoun").css('border-color','red');    
+                                             $(".addcom,.RState,.selectyes,.OState").css('border-color','red');    
                                         }
                                    
                                         });    
@@ -1165,56 +1167,56 @@ function Valid_Conatct_level2()
                                    if(selectadd == "RESIDANCE"){
                                         if(contact[i].type === "text" &&  contact[i].value === "")
                                     {
-                                                $(".level2ReFlat").css("background","white");
-                                                $(".level2ReBuid").css("background","white");
-                                                $(".level2ReRoad").css("background","white");
-                                                $(".level2ReArea").css("background","white");
-                                                $(".level2NameOffice").css("background","white");
-                                                $(".level2OfFlat").css("background","white");
-                                                $(".level2OfBuil").css("background","white");
-                                                $(".level2OfRoad").css("background","white");
-                                                $(".level2OfArea").css("background","white");
-                                                $(".level2OfTown").css("background","white");
-                                                $(".level2OfState").css("background","white");
-                                                $(".level2OfPin").css("background","white");
-                                                $(".level2OfCoun").css("background","white");
+                                                $(".level2ReFlat").css("border-color","white");
+                                                $(".level2ReBuid").css("border-color","white");
+                                                $(".level2ReRoad").css("border-color","white");
+                                                $(".level2ReArea").css("border-color","white");
+                                                $(".level2NameOffice").css("border-color","white");
+                                                $(".level2OfFlat").css("border-color","white");
+                                                $(".level2OfBuil").css("border-color","white");
+                                                $(".level2OfRoad").css("border-color","white");
+                                                $(".level2OfArea").css("border-color","white");
+                                                $(".level2OfTown").css("border-color","white");
+                                                $(".level2OfState").css("border-color","white");
+                                                $(".level2OfPin").css("border-color","white");
+                                                $(".level2OfCoun").css("border-color","white");
                                                 
                                               
                                                 contact[i].style.borderColor = "red";
                                                
                                                 
                                     }else{
-                                                 contact[i].style.backgroundColor="white";
+                                                 contact[i].style.borderColor="white";
                                     }
                                 }
                                 
                                  if(selectadd == "OFFICE"){
                                         if(contact[i].type === "text" &&  contact[i].value === "")
                                     {
-                                                $(".level2ReFlat").css("background","white");
-                                                $(".level2ReBuid").css("background","white");
-                                                $(".level2ReRoad").css("background","white");
-                                                $(".level2ReArea").css("background","white");
-                                                $(".level2ReTown").css("background","white");
-                                                $(".level2ReState").css("background","white");
-                                                $(".level2RePin").css("background","white");
-                                                $(".level2ReCoun").css("background","white");
-                                                $(".level2OfFlat").css("background","white");
-                                                $(".level2OfBuil").css("background","white");
-                                                $(".level2OfRoad").css("background","white");
-                                                $(".level2OfArea").css("background","white");
+                                                $(".level2ReFlat").css("border-color","white");
+                                                $(".level2ReBuid").css("border-color","white");
+                                                $(".level2ReRoad").css("border-color","white");
+                                                $(".level2ReArea").css("border-color","white");
+                                                $(".level2ReTown").css("border-color","white");
+                                                $(".level2ReState").css("border-color","white");
+                                                $(".level2RePin").css("border-color","white");
+                                                $(".level2ReCoun").css("border-color","white");
+                                                $(".level2OfFlat").css("border-color","white");
+                                                $(".level2OfBuil").css("border-color","white");
+                                                $(".level2OfRoad").css("border-color","white");
+                                                $(".level2OfArea").css("border-color","white");
                                                 contact[i].style.borderColor = "red";
                                                  
                                                 
                                     }else{
-                                                 contact[i].style.backgroundColor="white";
+                                                 contact[i].style.borderColor="white";
                                     }
                                 }
                                 } 
                                  $(function(){
                                          if($(".addcomleve2,.level2ReState,.level2ReCoun,.selectyes,.level2OfState,.level2OfCoun").val()!=='')
                                         {
-                                             $(".addcomleve2,.level2ReState,.level2ReCoun,.selectyes,.level2OfState,.level2OfCoun").css('background-color','white');
+                                             $(".addcomleve2,.level2ReState,.level2ReCoun,.selectyes,.level2OfState,.level2OfCoun").css('border-color','white');
                                         }
                                         else
                                         {
@@ -1354,12 +1356,12 @@ function Valid_RA()
                                     
                                         if(represent[i].type == "text" &&  represent[i].value == "")
                                     {
-                                                $(".Rmiddle,.Rflat,.Rbuilding,.Rroad,.Rarea").css("background","white");
+                                                $(".Rmiddle,.Rflat,.Rbuilding,.Rroad,.Rarea").css("border-color","white");
                                              
                                                 represent[i].style.borderColor = "red";
                                                 
                                     }else{
-                                                 represent[i].style.backgroundColor="white";
+                                                 represent[i].style.borderColor="white";
                                     }
                                 }
                                  $(function(){
@@ -1367,7 +1369,7 @@ function Valid_RA()
                                         
                                         if($(".Rtitle,.Rstate").val()!=="")
                                          {
-                                                $(".Rtitle,.Rstate").css('background-color','white');
+                                                $(".Rtitle,.Rstate").css('border-color','white');
                                           }  
                                         
                                     });    
@@ -1390,7 +1392,7 @@ function Valid_RA()
                                         
                              if($(".Rdetail").val()!=="")
                                {
-                                $(".Rdetail").css('background-color','white');
+                                $(".Rdetail").css('border-color','white');
                                 }  
                                         
                  });    
@@ -1483,11 +1485,11 @@ function Valid_Verification()
                                     
                                         if(verification[i].type == "text" &&  verification[i].value == "")
                                     {
-                                                $(".NOD").css("background","white");
+                                                $(".NOD").css("border-color","white");
                                                 verification[i].style.borderColor = "red";
                                                 
                                     }else{
-                                                 verification[i].style.backgroundColor="white";
+                                                 verification[i].style.borderColor="white";
                                     }
                                 }
                                  $(function(){
@@ -1495,7 +1497,7 @@ function Valid_Verification()
                                         
                                         if($(".Photo,.Sign,.POI,.POA,.Capacity").val()!=="")
                                          {
-                                                $(".Photo,.Sign,.POI,.POA,.Capacity").css('background-color','white');
+                                                $(".Photo,.Sign,.POI,.POA,.Capacity").css('border-color','white');
                                           }  
                                         
                                     });    

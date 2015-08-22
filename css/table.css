@@ -19,6 +19,14 @@ p
 }
 
 
+.note{
+    
+    float: left;
+    font-size: 11px;
+    margin-left: 6%
+    
+}
+
 .table2{
 font-family:Arial, Helvetica, sans-serif;
 	font-size:12px;

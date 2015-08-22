@@ -1,8 +1,22 @@
 <div id="Tab3I">
     <center>
     <form name="contact" action="" method="post">
+      
+            
         
         <table class="table2">
+            
+            <tr>
+                
+                <th>Note</th>
+                <td>(a)<span style="color:red "> * </span>  One of the Residence Address field is mandatory<BR>
+                    (b) <span style="color:red ">**</span>  One of the Office Address field is mandatory<BR>
+                    (c) <span style="color:red "> #</span>  Either fill Telephone or Email id field <BR>
+                
+                </td>
+                
+            </tr>
+        
             
             <tr>
                 <th class="required">FORM ID</th>
@@ -30,12 +44,12 @@
             
             
             <tr class="residence" >
-                <th colspan="2" style="color:green">Residence Address</th>
+                <th colspan="2" style="color:green;background-color: #F3F3F3;">Residence Address</th>
             </tr> 
             
             <tr class="residence">
 
-                    <th>Flat/Room/Door/Block No</th>
+                <th>Flat/Room/Door/Block No &nbsp;&nbsp;<span style="color:red;">*</span></th>
                     <td>
 
                         <input type="text" name="RAdd" id="RAdd" class="RAdd resii" placeholder="FLAT/ROOM/BLOCK NO" maxlength="25" onkeyup="ValidFirstSpace(this)" style="text-transform: uppercase;" onblur="this.value = this.value.toUpperCase();"  value="<?php echo $_SESSION['2-3-2'];?>">
@@ -43,7 +57,7 @@
             </tr>
             
             <tr class="residence">
-                <th>Name of Premises/Building/Village</th>
+                <th>Name of Premises/Building/Village&nbsp;&nbsp;<span style="color:red;">*</span></th>
                     <td>
                         <input type="text" name="RNPremises" id="RNPremises" class="RNPremises resii" placeholder="NAME OF PREMISES" maxlength="25" onkeyup="ValidFirstSpace(this);" style="text-transform: uppercase;" onblur="this.value = this.value.toUpperCase();"
                                value="<?php echo $_SESSION['2-3-3'];?>">
@@ -51,7 +65,7 @@
             </tr>
             
             <tr class="residence">
-                <th>Road/Street/Lane/Post Office</th>
+                <th>Road/Street/Lane/Post Office&nbsp;&nbsp;<span style="color:red;">*</span></th>
                     <td>
                         <input type="text" name="RRSL" id="RRSL" class="RRSL resii" placeholder="ROAD/STREET/LANE" maxlength="25" onkeyup="ValidFirstSpace(this);" style="text-transform: uppercase;" onblur="this.value = this.value.toUpperCase();"
                                value="<?php echo $_SESSION['2-3-4'];?>"> 
@@ -59,7 +73,7 @@
             </tr>
             
             <tr class="residence">
-                <th>Area/Locality/Taluka/Sub-Division</th>
+                <th>Area/Locality/Taluka/Sub-Division&nbsp;&nbsp;<span style="color:red;">*</span></th>
                     <td>
                         <input type="text" name="RALT" id="RALT" class="RALT resii" placeholder="AREA/LOCALITY/TALUKA" maxlength="25" onkeyup="ValidFirstSpace(this);" style="text-transform: uppercase;" onblur="this.value = this.value.toUpperCase();"
                                value="<?php echo $_SESSION['2-3-5'];?>">
@@ -151,7 +165,7 @@
             
            
             <tr class="office">
-                <th colspan="2" style="color:green;">Office Address <span style="color:red;">(Please fill atleast one address field like Flat/Room/Door No or Name Of Premises/Building/Village)</span></th>
+                <th colspan="2" style="color: black;background-color: #E2E2E2; font-weight: normal;font-size: 15px;">Office Address <span style="color:red;">(Please fill atleast one address field like Flat/Room/Door No or Name Of Premises/Building/Village)</span></th>
             </tr>
             
             <tr class="office">
@@ -163,7 +177,7 @@
                     </td>
             </tr>
             <tr class="office">
-                <th>Flat/Room/Door/Block No</th>
+                <th>Flat/Room/Door/Block No&nbsp;&nbsp;<span style="color:red;">**</span></th>
                     <td>
                         <input type="text" name="OFRDB" id="OFRDB" class="OFRDB offye" placeholder="FLAT/ROOM NO" maxlength="25" onkeyup="ValidFirstSpace(this);"  onblur="this.value = this.value.toUpperCase();" style="text-transform: uppercase;"
                                  value="<?php echo $_SESSION['2-3-11']; ?>">
@@ -171,7 +185,7 @@
             </tr>
             
             <tr class="office">
-                <th>Name of Premises/Building/Village</th>
+                <th>Name of Premises/Building/Village&nbsp;&nbsp;<span style="color:red;">**</span></th>
                     <td>
                         <input type="text" name="OPremises" id="OPremises" class="OPremises offye" placeholder="NAME OF PREMISES" maxlength="25" onkeyup="ValidFirstSpace(this);"  onblur="this.value = this.value.toUpperCase();" style="text-transform: uppercase;"
                                  value="<?php echo $_SESSION['2-3-12']; ?>">
@@ -179,7 +193,7 @@
             </tr>
             
             <tr class="office">
-                <th>Road/Street/Lane/Post Office</th>
+                <th>Road/Street/Lane/Post Office&nbsp;&nbsp;<span style="color:red;">**</span></th>
                     <td>
                         <input type="text" name="ORSLP" id="ORSLP" class="ORSLP offye" placeholder="ROAD/STREET/LANE" maxlength="25" onkeyup="ValidFirstSpace(this);" onblur="this.value = this.value.toUpperCase();" style="text-transform: uppercase;"
                                  value="<?php echo $_SESSION['2-3-13']; ?>">
@@ -187,7 +201,7 @@
             </tr>
             
             <tr class="office">
-                <th>Area/Locality/Taluka/Sub-Division</th>
+                <th>Area/Locality/Taluka/Sub-Division&nbsp;&nbsp;<span style="color:red;">**</span></th>
                 <td>
                     <input type="text" name="OALTS" id="OALTS" class="OALTS offye" placeholder="AREA/LOCALITY/TALUKA" maxlength="25" onkeyup="ValidFirstSpace(this);" onblur="this.value = this.value.toUpperCase();" style="text-transform: uppercase;"                            value="<?php echo $_SESSION['2-3-14']; ?>">
                     </td>
@@ -275,7 +289,7 @@
             </tr>
             
             <tr >
-                <th>Telephone/Mobile Number</th>
+                <th>Telephone/Mobile Number&nbsp;&nbsp;<span style="color:red;">#</span></th>
                 <td>
                     <input type="text" name="TelNo" id="TelNo" class="TelNo comm" placeholder="TELEPHONE/MOBILE NO" maxlength="13" onkeypress="return ValidNum(event);" 
                            value="<?php echo $_SESSION['2-3-21'];?>">
@@ -283,7 +297,7 @@
             </tr>
             
             <tr >
-                <th>Email ID</th>
+                <th>Email ID&nbsp;&nbsp;<span style="color:red;">#</span></th>
                     <td>
                         <input type="text" name="Email" id="Email" class="Email comm" placeholder="EMAIL ID"  onkeyup="firstCharSpace(this);" onblur="isValidEmail();" style="background-color: white;"
                                value="<?php echo $_SESSION['2-3-22'];?>"><div id="idreturns" style="color:red;"></div>
