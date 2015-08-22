@@ -37,7 +37,7 @@
             </tr>    
                 
             <tr class="ra1">
-                <th colspan="2">Full Name(Full expanded name:Initials are not permitted)</th>
+                <th colspan="2" style="color: black;background-color: #E2E2E2; font-weight: normal;font-size: 15px;">Full Name(Full expanded name:Initials are not permitted)</th>
             </tr>
             
             
@@ -80,7 +80,7 @@
                 
             </tr>
             <tr class="ra1">
-                <th colspan="2" style="color:red;">Address</th>
+                <th colspan="2"  style="color: black;background-color: #E2E2E2; font-weight: normal;font-size: 15px;">Address</th>
             </tr>
             
             <tr class="ra1">

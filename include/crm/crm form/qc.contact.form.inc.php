@@ -40,7 +40,7 @@
             
             
             <tr class="residence" >
-                <th colspan="2"  style="color:green;background-color: #F3F3F3;">Residence Address</th>
+                <th colspan="2"  style="color: black;background-color: #E2E2E2; font-weight: normal;font-size: 15px;">Residence Address</th>
             </tr> 
             
             <tr class="residence">
@@ -149,6 +149,9 @@
                     </td>
                 </tr>
     
+                  <tr class="">
+               <th colspan="2" style="color: black;background-color: #E2E2E2; font-weight: normal;font-size: 15px;">Office Address </th>
+            </tr>
             
             <tr class="selectoffice">
                 <th class="required">Please Select Office address</th>
@@ -163,9 +166,7 @@
             </tr>
             
            
-            <tr class="office">
-               <th colspan="2" style="color:green;">Office Address <span style="color:red;">(Please fill atleast one address field like Flat/Room/Door No or Name Of Premises/Building/Village)</span></th>
-            </tr>
+          
             
             <tr class="office">
                 <th class="required">Name of office</th>

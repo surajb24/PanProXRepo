@@ -11,6 +11,7 @@ body
   font:1em normal Arial,sans-serif;
   color:#34495E;
   margin:0;
+ 
 }
 
 p
@@ -46,6 +47,8 @@ border-right:1px solid rgb(208, 208, 208);
 text-align: left;
 padding:7px;
 width:50%;
+ font-weight: normal;
+
 
 }
 
