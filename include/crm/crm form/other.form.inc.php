@@ -167,7 +167,7 @@
                     <td>
                         <input type="checkbox" name="BPC"  id="BPC" class="chk" <?php if($_SESSION['2-4-10'] == "Y") { echo "checked"; } ?> />Income From Business
                     </td>
-                    <td>Code<input type="text"  name="SCode" id="SCode" class="chkcode req" placeholder="Business code" maxlength="2" size="2" onblur="valid_required(this,'Business Code..','0');" onkeyup="isNumber(this);" value="<?php echo $_SESSION['2-4-11']; ?>"></td>
+                    <td>Code&nbsp;<input type="text"  name="SCode" id="SCode" class="chkcode req" style="width:30px;" placeholder="Business code" maxlength="2" size="2" onblur="valid_required(this,'Business Code..','0');" onkeyup="isNumber(this);" value="<?php echo $_SESSION['2-4-11']; ?>"></td>
 
                 </tr>
                 

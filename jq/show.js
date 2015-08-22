@@ -1276,6 +1276,7 @@ $(document).ready(function() {
             {
                 
                 $(".office").show();
+                $(".residencetitle").hide();
                 $(".residence").hide();
                  var $form = $("#addcom").closest('form');
              
@@ -1325,6 +1326,7 @@ $(document).ready(function() {
 
                 $(".residence").show();
                 $(".office").hide();
+                $(".officetitle").hide();
                 var $form = $("#addcom").closest('form');
                if($form.attr('name') == 'contact')
               
@@ -1377,7 +1379,9 @@ $(document).ready(function() {
             if(add === "RESIDANCE")
             {
                 $(".residence").show();
+                 $(".residencetitle").hide();
                 $(".office").hide();
+                 $(".officetitle").show();
                 $(".selectoffice").show();
                 var $form = $("#addcom").closest('form');
                if($form.attr('name') == 'contact')
@@ -1430,6 +1434,7 @@ $(document).ready(function() {
                
                   $(".office").show();
                   $(".residence").show();
+                    $(".residencetitle").show();
                     $(".selectoffice").hide();
                    var $form = $("#addcom").closest('form');
              

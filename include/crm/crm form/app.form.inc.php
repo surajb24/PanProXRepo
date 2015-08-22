@@ -54,7 +54,7 @@
 			
                     <th class="required">Area Code</th>
                     <td>
-                        <input type="text" name="ac"  id="ac" class="ac req"  placeholder="AC" maxlength="3" size="3" onblur="valid_required(this,'Area Code number','0'),this.value = this.value.toUpperCase();" onkeypress="return ValidAlpha(event);" onkeyup="ValidFirstSpace(this);" style="text-transform: uppercase;" value="<?php echo $_SESSION['2-1-5'];?>"/>
+                        <input type="text" name="ac"  id="ac" class="ac req"  placeholder="AC" style="width:50px;" maxlength="3" size="3" onblur="valid_required(this,'Area Code number','0'),this.value = this.value.toUpperCase();" onkeypress="return ValidAlpha(event);" onkeyup="ValidFirstSpace(this);" style="text-transform: uppercase;" value="<?php echo $_SESSION['2-1-5'];?>"/>
                     </td>
                     
                 </tr>
@@ -63,7 +63,7 @@
 			
                     <th class="required">AO Type</th>
                     <td>
-                        <input type="text" name="ao_type"  id="ao_type" class="ao_type req"  placeholder="AO TYPE" maxlength="2" size="3" onblur="valid_required(this,'Ao Type..','0'),this.value = this.value.toUpperCase();" onkeypress="return ValidAlpha(event);" onkeyup="ValidFirstSpace(this);" style="text-transform: uppercase;" value="<?php echo $_SESSION['2-1-6'];?>"/>
+                        <input type="text" name="ao_type"  id="ao_type" class="ao_type req" style="width:50px;"  placeholder="AO TYPE" maxlength="2" size="3" onblur="valid_required(this,'Ao Type..','0'),this.value = this.value.toUpperCase();" onkeypress="return ValidAlpha(event);" onkeyup="ValidFirstSpace(this);" style="text-transform: uppercase;" value="<?php echo $_SESSION['2-1-6'];?>"/>
                     </td>
                     
 		</tr>
@@ -72,7 +72,7 @@
 			
                     <th class="required">Range Code</th>
                     <td>
-                        <input type="text" name="range_code"  id="range_code" class="range_code req"  placeholder="RC" maxlength="3" size="3" onblur="valid_required(this,'Range code number','0');" onkeypress="return ValidNum(event);" value="<?php echo $_SESSION['2-1-7'];?>"/>
+                        <input type="text" name="range_code"  id="range_code" class="range_code req" style="width:50px;"  placeholder="RC" maxlength="3" size="3" onblur="valid_required(this,'Range code number','0');" onkeypress="return ValidNum(event);" value="<?php echo $_SESSION['2-1-7'];?>"/>
                     </td>
                     
                 </tr>
@@ -81,7 +81,7 @@
 			
                     <th class="required">Ao No</th>
                     <td>
-                        <input type="text" name="ao_no"  id="ao_no" class="ao_no req"  placeholder="AO NO" maxlength="2" size="3" onblur="valid_required(this,'AO number','0');" onkeypress="return ValidNum(event);" value="<?php echo $_SESSION['2-1-8'];?>"/>
+                        <input type="text" name="ao_no"  id="ao_no" class="ao_no req" style="width:50px;" placeholder="AO NO" maxlength="2" size="3" onblur="valid_required(this,'AO number','0');" onkeypress="return ValidNum(event);" value="<?php echo $_SESSION['2-1-8'];?>"/>
                     </td>
                     
 		</tr>

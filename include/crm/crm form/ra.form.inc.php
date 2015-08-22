@@ -7,7 +7,7 @@
                         
             <tr>
                 
-                <th>Note</th>
+                <th class="required">Note</th>
                 <td><span style="color:red "> * </span>  One of the Residence Address field is mandatory
                 
                 </td>

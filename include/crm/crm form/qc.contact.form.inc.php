@@ -7,7 +7,7 @@
             
                <tr>
                 
-                <th>Note</th>
+                <th class="required">Note</th>
                 <td>(a)<span style="color:red "> * </span>  One of the Residence Address field is mandatory<BR>
                     (b) <span style="color:red ">**</span>  One of the Office Address field is mandatory<BR>
                     (c) <span style="color:red "> #</span>  Either fill Telephone or Email id field <BR>
